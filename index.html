@@ -1,1200 +1,807 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>أصالة التراث المصري | متحف أنتيكات عالمي</title>
-    <meta
-      name="description"
-      content="متحف أنتيكات عالمي من مصر — صدف مصري طبيعي، قطع أثاث أنتيك، شغل يدوي 100%، تصاميم فاخرة، توصيل من الكويت للعالم."
-    />
-    <meta
-      name="keywords"
-      content="أصالة التراث المصري, متحف أنتيك, صدف مصري طبيعي, أثاث أنتيك, شغل يدوي, صنع في مصر, الكويت, الخليج"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700;900&family=Cairo:wght@400;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --black: #0b0908;
-        --black-soft: #1d1713;
-        --gold: #c6a86a;
-        --gold-deep: #a8833c;
-        --beige: #f8f4ee;
-        --beige-2: #efe4c7;
-        --card: #fffdf9;
-        --text: #171512;
-        --muted: #6d6259;
-        --green: #25d366;
-        --red: #c0392b;
-        --line: rgba(17, 17, 17, 0.08);
-        --shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
-        --radius: 18px;
-      }
-
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        font-family: "Cairo", sans-serif;
-        background: linear-gradient(180deg, #f7f2ea 0%, #f1e5d2 100%);
-        color: var(--text);
-        line-height: 1.8;
-      }
-
-      img {
-        max-width: 100%;
-        display: block;
-      }
-
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-
-      .container {
-        width: min(1200px, calc(100% - 32px));
-        margin: 0 auto;
-      }
-
-      .topbar {
-        background: linear-gradient(90deg, #120d0a, #1c1713, #120d0a);
-        color: #f5ead9;
-        padding: 10px 0;
-        font-size: 14px;
-      }
-
-      .topbar-inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-      }
-
-      .topbar .brand-mini {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-weight: 700;
-      }
-
-      .topbar .brand-mini .dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: var(--gold);
-        box-shadow: 0 0 14px rgba(198, 168, 106, 0.8);
-      }
-
-      .topbar .info {
-        display: flex;
-        align-items: center;
-        gap: 18px;
-        flex-wrap: wrap;
-        opacity: 0.9;
-      }
-
-      header {
-        background: rgba(17, 12, 9, 0.92);
-        position: sticky;
-        top: 0;
-        z-index: 20;
-        backdrop-filter: blur(8px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      }
-
-      .nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 24px;
-        min-height: 76px;
-      }
-
-      .logo {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        color: #fffaf1;
-      }
-
-      .logo-mark {
-        width: 48px;
-        height: 48px;
-        border-radius: 14px;
-        background: linear-gradient(135deg, var(--gold), var(--gold-deep));
-        display: grid;
-        place-items: center;
-        font-size: 24px;
-        color: #1a120d;
-        font-weight: 900;
-        box-shadow: 0 10px 25px rgba(198, 168, 106, 0.35);
-      }
-
-      .logo-text {
-        font-weight: 800;
-        letter-spacing: 0.2px;
-      }
-
-      .logo-text span {
-        color: var(--gold);
-      }
-
-      .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 28px;
-        color: rgba(255, 250, 241, 0.9);
-        font-weight: 600;
-      }
-
-      .nav-links a {
-        transition: color 0.25s ease;
-      }
-
-      .nav-links a:hover {
-        color: var(--gold);
-      }
-
-      .nav-actions {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-      }
-
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        padding: 14px 22px;
-        border-radius: 999px;
-        font-weight: 700;
-        transition: all 0.25s ease;
-        border: 1px solid transparent;
-        cursor: pointer;
-      }
-
-      .btn-primary {
-        background: linear-gradient(135deg, var(--gold), var(--gold-deep));
-        color: #1a120d;
-        box-shadow: 0 16px 30px rgba(168, 131, 60, 0.35);
-      }
-
-      .btn-primary:hover {
-        transform: translateY(-1px);
-      }
-
-      .btn-secondary {
-        background: transparent;
-        border-color: rgba(255, 255, 255, 0.18);
-        color: #fffaf1;
-      }
-
-      .hero {
-        background:
-          linear-gradient(110deg, rgba(11, 9, 8, 0.86) 0%, rgba(11, 9, 8, 0.78) 35%, rgba(11, 9, 8, 0.55) 100%),
-          url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80")
-            center/cover no-repeat;
-        min-height: 760px;
-        display: flex;
-        align-items: center;
-        color: #fff;
-      }
-
-      .hero-wrap {
-        display: grid;
-        grid-template-columns: 1.3fr 0.7fr;
-        gap: 40px;
-        align-items: center;
-        padding: 70px 0 80px;
-      }
-
-      .hero-copy {
-        max-width: 760px;
-      }
-
-      .eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: rgba(198, 168, 106, 0.12);
-        border: 1px solid rgba(198, 168, 106, 0.32);
-        border-radius: 999px;
-        color: #f0d9a2;
-        padding: 8px 16px;
-        font-size: 14px;
-        font-weight: 700;
-        margin-bottom: 18px;
-      }
-
-      .eyebrow::before {
-        content: "🐚";
-      }
-
-      h1 {
-        font-family: "Amiri", serif;
-        font-size: clamp(3rem, 6vw, 6rem);
-        line-height: 1.05;
-        margin-bottom: 18px;
-        color: #fffaf1;
-      }
-
-      .hero-sub {
-        font-size: 1.15rem;
-        color: rgba(255, 250, 241, 0.82);
-        margin-bottom: 28px;
-        max-width: 620px;
-      }
-
-      .hero-actions {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        flex-wrap: wrap;
-      }
-
-      .hero-metrics {
-        display: flex;
-        align-items: center;
-        gap: 24px;
-        flex-wrap: wrap;
-        margin-top: 30px;
-      }
-
-      .metric {
-        min-width: 140px;
-      }
-
-      .metric strong {
-        display: block;
-        font-size: 1.9rem;
-        color: var(--gold);
-        font-family: "Amiri", serif;
-      }
-
-      .metric span {
-        color: rgba(255, 255, 255, 0.72);
-        font-size: 0.95rem;
-      }
-
-      .hero-card {
-        width: 100%;
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: var(--shadow);
-        border-radius: 28px;
-        padding: 24px;
-        backdrop-filter: blur(6px);
-      }
-
-      .product-showcase {
-        background: rgba(255, 255, 255, 0.08);
-        border-radius: 24px;
-        overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.12);
-      }
-
-      .product-showcase img {
-        width: 100%;
-        height: 420px;
-        object-fit: cover;
-      }
-
-      .showcase-info {
-        padding: 22px 18px 18px;
-      }
-
-      .showcase-info h3 {
-        font-size: 1.5rem;
-        margin-bottom: 8px;
-      }
-
-      .showcase-info p {
-        color: rgba(255, 250, 241, 0.8);
-        font-size: 0.96rem;
-      }
-
-      .section {
-        padding: 90px 0;
-      }
-
-      .section-head {
-        text-align: center;
-        margin-bottom: 36px;
-      }
-
-      .section-head .line {
-        width: 120px;
-        height: 3px;
-        border-radius: 99px;
-        background: linear-gradient(90deg, transparent, var(--gold), transparent);
-        margin: 0 auto 16px;
-      }
-
-      .section-head h2 {
-        font-family: "Amiri", serif;
-        font-size: clamp(2.2rem, 5vw, 4rem);
-        color: var(--black-soft);
-      }
-
-      .section-head p {
-        color: var(--muted);
-        max-width: 720px;
-        margin: 12px auto 0;
-      }
-
-      .feature-grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 22px;
-      }
-
-      .feature-card {
-        background: rgba(255, 255, 255, 0.7);
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        padding: 26px 20px 20px;
-        box-shadow: 0 16px 35px rgba(17, 17, 17, 0.03);
-      }
-
-      .icon-shell {
-        width: 64px;
-        height: 64px;
-        border-radius: 18px;
-        display: grid;
-        place-items: center;
-        font-size: 2rem;
-        background: linear-gradient(135deg, #f9f0d7, #e8d5a5);
-        margin-bottom: 18px;
-        box-shadow: inset 0 0 0 1px rgba(168, 131, 60, 0.2);
-      }
-
-      .feature-card h3 {
-        font-size: 1.25rem;
-        margin-bottom: 10px;
-        color: var(--black-soft);
-      }
-
-      .feature-card p {
-        font-size: 0.96rem;
-        color: var(--muted);
-      }
-
-      .categories {
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.1));
-      }
-
-      .category-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 24px;
-      }
-
-      .category-card {
-        background: var(--card);
-        border-radius: 22px;
-        overflow: hidden;
-        border: 1px solid var(--line);
-        box-shadow: 0 18px 40px rgba(17, 17, 17, 0.04);
-      }
-
-      .category-card img {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-      }
-
-      .category-body {
-        padding: 22px 22px 28px;
-      }
-
-      .category-tag {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        font-size: 0.8rem;
-        color: var(--gold-deep);
-        background: rgba(198, 168, 106, 0.1);
-        padding: 7px 12px;
-        border-radius: 999px;
-        font-weight: 700;
-      }
-
-      .category-tag::before {
-        content: "🐚";
-      }
-
-      .category-body h3 {
-        margin: 16px 0 10px;
-        font-size: 1.5rem;
-        color: var(--black-soft);
-      }
-
-      .category-body p {
-        color: var(--muted);
-        font-size: 0.97rem;
-      }
-
-      .story {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 44px;
-        align-items: center;
-      }
-
-      .story-image {
-        position: relative;
-      }
-
-      .story-image img {
-        width: 100%;
-        height: 560px;
-        object-fit: cover;
-        border-radius: 28px;
-        box-shadow: var(--shadow);
-      }
-
-      .story-badge {
-        position: absolute;
-        left: 20px;
-        bottom: 24px;
-        background: rgba(11, 9, 8, 0.82);
-        color: #fff8ed;
-        padding: 16px 18px;
-        border-radius: 18px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(6px);
-      }
-
-      .story-badge strong {
-        display: block;
-        font-size: 1.3rem;
-        color: var(--gold);
-        font-family: "Amiri", serif;
-      }
-
-      .story-copy h2 {
-        font-family: "Amiri", serif;
-        font-size: clamp(2.5rem, 5.5vw, 4rem);
-        margin-bottom: 18px;
-        color: var(--black-soft);
-      }
-
-      .story-copy p {
-        color: var(--muted);
-        margin-bottom: 20px;
-      }
-
-      .quality-list {
-        list-style: none;
-        display: grid;
-        gap: 16px;
-        margin-top: 26px;
-      }
-
-      .quality-list li {
-        display: flex;
-        align-items: flex-start;
-        gap: 12px;
-        color: var(--text);
-        font-weight: 600;
-      }
-
-      .quality-list li::before {
-        content: "🐚";
-        font-size: 1.2rem;
-      }
-
-      .highlight-band {
-        background: linear-gradient(135deg, var(--black), #1a120d);
-        color: #f7ead3;
-        padding: 44px 0;
-      }
-
-      .highlight-wrap {
-        display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 28px;
-        align-items: center;
-      }
-
-      .highlight-wrap h3 {
-        font-family: "Amiri", serif;
-        font-size: clamp(2.2rem, 4vw, 3.6rem);
-        margin-bottom: 16px;
-      }
-
-      .highlight-wrap p {
-        color: rgba(247, 234, 211, 0.82);
-      }
-
-      .stamp-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 18px;
-      }
-
-      .stamp {
-        background: rgba(255, 255, 255, 0.04);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 18px;
-        padding: 22px 18px;
-      }
-
-      .stamp strong {
-        display: block;
-        font-size: 2rem;
-        color: var(--gold);
-        margin-bottom: 8px;
-      }
-
-      .stamp span {
-        color: rgba(247, 234, 211, 0.82);
-      }
-
-      .products {
-        background: linear-gradient(180deg, #faf6f0, #f1ebdf);
-      }
-
-      .product-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 26px;
-      }
-
-      .product-card {
-        background: rgba(255, 255, 255, 0.65);
-        border: 1px solid var(--line);
-        border-radius: 22px;
-        overflow: hidden;
-        box-shadow: 0 18px 38px rgba(17, 17, 17, 0.04);
-      }
-
-      .product-card img {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-      }
-
-      .product-card .body {
-        padding: 20px 20px 24px;
-      }
-
-      .mini-label {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 7px 12px;
-        border-radius: 999px;
-        background: rgba(198, 168, 106, 0.12);
-        color: var(--gold-deep);
-        font-weight: 700;
-        font-size: 0.8rem;
-      }
-
-      .mini-label::before {
-        content: "🐚";
-      }
-
-      .product-card h3 {
-        margin: 16px 0 10px;
-        font-size: 1.45rem;
-        color: var(--black-soft);
-      }
-
-      .product-card p {
-        color: var(--muted);
-        font-size: 0.97rem;
-      }
-
-      .cta {
-        background: linear-gradient(180deg, rgba(17, 12, 9, 0.96), rgba(17, 12, 9, 0.92));
-        color: #f7ead3;
-      }
-
-      .cta-wrap {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 20px;
-        align-items: center;
-        padding: 36px 0;
-      }
-
-      .cta h3 {
-        font-size: clamp(2rem, 4vw, 3rem);
-        font-family: "Amiri", serif;
-      }
-
-      .cta p {
-        color: rgba(247, 234, 211, 0.78);
-        margin-top: 8px;
-      }
-
-      footer {
-        background: #0c0907;
-        color: rgba(255, 250, 241, 0.8);
-        padding: 22px 0 30px;
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
-      }
-
-      .footer-inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 18px;
-        flex-wrap: wrap;
-      }
-
-      .footer-brand {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-weight: 700;
-      }
-
-      .footer-brand .dot {
-        width: 10px;
-        height: 10px;
-        background: var(--gold);
-        border-radius: 50%;
-      }
-
-      @media (max-width: 980px) {
-        .hero-wrap,
-        .story,
-        .highlight-wrap,
-        .cta-wrap {
-          grid-template-columns: 1fr;
-        }
-
-        .feature-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .category-grid,
-        .product-grid {
-          grid-template-columns: 1fr 1fr;
-        }
-
-        .nav-links {
-          display: none;
-        }
-      }
-
-      @media (max-width: 620px) {
-        .topbar-inner,
-        .nav,
-        .hero-actions,
-        .footer-inner {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        .feature-grid,
-        .category-grid,
-        .product-grid,
-        .stamp-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .hero {
-          min-height: 680px;
-        }
-
-        .hero-card {
-          padding: 14px;
-        }
-
-        .product-showcase img {
-          height: 300px;
-        }
-
-        .story-image img {
-          height: 420px;
-        }
-
-        .btn {
-          width: 100%;
-        }
-
-        .nav-actions {
-          width: 100%;
-        }
-
-        .nav-actions .btn {
-          flex: 1;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="topbar">
-      <div class="container topbar-inner">
-        <div class="brand-mini">
-          <span class="dot"></span>
-          <span>أصالة التراث المصري</span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>أصالة مدى الحياة</title>
+  <style>
+    :root{
+      --bg: #f7f2ea;
+      --panel: #fffaf3;
+      --gold: #c89b3c;
+      --gold-soft: #e8d4a0;
+      --brown: #4d2d1d;
+      --brown-dark: #2c1a12;
+      --text: #2f241d;
+      --muted: #6a564d;
+      --line: rgba(92, 62, 42, 0.12);
+      --shadow: 0 18px 40px rgba(52, 34, 21, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body{
+      margin:0;
+      font-family: "Tahoma", "Arial", sans-serif;
+      background: linear-gradient(180deg, #f9f3ea 0%, #f5efe9 100%);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    img{ max-width:100%; display:block; }
+
+    a{ text-decoration:none; color:inherit; }
+
+    .container{
+      width:min(1200px, calc(100% - 32px));
+      margin:0 auto;
+    }
+
+    .topbar{
+      background: rgba(35,24,18,0.96);
+      color:#f5ead6;
+      padding: 12px 0;
+      font-size: 14px;
+    }
+
+    .topbar .container{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .topbar .brand-mini{
+      font-weight:700;
+      letter-spacing:0.5px;
+      color: var(--gold-soft);
+    }
+
+    .header{
+      background: linear-gradient(135deg, rgba(255,249,242,0.95), rgba(244,234,221,0.92));
+      position: sticky;
+      top:0;
+      z-index:30;
+      border-bottom:1px solid var(--line);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:22px;
+      padding: 18px 0;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:800;
+      color: var(--brown-dark);
+      font-size: 1.25rem;
+    }
+
+    .logo-mark{
+      width:46px;
+      height:46px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background: radial-gradient(circle at 30% 30%, #f5dea0, #c89b3c);
+      color:#402f1f;
+      font-size: 1.4rem;
+      box-shadow: 0 10px 24px rgba(200,155,60,0.32);
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:26px;
+      flex-wrap:wrap;
+      color: var(--brown);
+      font-weight:600;
+    }
+
+    .nav-links a{
+      position:relative;
+      transition:0.2s ease;
+    }
+
+    .nav-links a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-8px;
+      width:0;
+      height:2px;
+      background: var(--gold);
+      transition:0.25s ease;
+    }
+
+    .nav-links a:hover::after{ width:100%; }
+
+    .cta-button{
+      padding:13px 24px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--gold), #d7b15a);
+      color:#fff;
+      font-weight:800;
+      box-shadow: 0 12px 30px rgba(200,155,60,0.28);
+      transition: transform .2s ease;
+    }
+
+    .cta-button:hover{ transform: translateY(-2px); }
+
+    .hero{
+      padding: 80px 0 40px;
+      background:
+        radial-gradient(circle at top left, rgba(200,155,60,0.17), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(112,80,49,0.15), transparent 28%);
+    }
+
+    .hero-inner{
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap:40px;
+      align-items:center;
+    }
+
+    .hero-copy h1{
+      margin:0 0 16px;
+      font-size: clamp(2.3rem, 5vw, 4.2rem);
+      line-height: 1.2;
+      color: var(--brown-dark);
+    }
+
+    .hero-copy .tag{
+      display:inline-block;
+      padding:8px 16px;
+      border-radius:999px;
+      background: rgba(200,155,60,0.12);
+      border:1px solid rgba(200,155,60,0.35);
+      color: var(--brown);
+      font-weight:700;
+      margin-bottom:18px;
+    }
+
+    .hero-copy p{
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin:0 0 28px;
+      max-width: 650px;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+      margin-bottom:28px;
+    }
+
+    .secondary-btn{
+      padding:13px 24px;
+      border-radius:999px;
+      border:1px solid rgba(77,45,29,0.2);
+      color: var(--brown-dark);
+      font-weight:700;
+      background: rgba(255,255,255,0.45);
+    }
+
+    .stats{
+      display:flex;
+      gap:22px;
+      flex-wrap:wrap;
+      margin-top:18px;
+    }
+
+    .stat{
+      min-width:120px;
+      background: rgba(255,255,255,0.45);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:16px 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .stat strong{
+      display:block;
+      font-size: 1.5rem;
+      color: var(--brown-dark);
+    }
+
+    .stat span{
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .hero-visual{
+      position:relative;
+      min-height: 500px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .showcase-card{
+      position:relative;
+      width:min(480px, 90%);
+      background: linear-gradient(180deg, #fefaf4, #f3e5d6);
+      border: 1px solid rgba(92,62,42,0.1);
+      border-radius:28px;
+      padding:24px;
+      box-shadow: var(--shadow);
+      transform: rotate(2deg);
+    }
+
+    .showcase-card::before{
+      content:"";
+      position:absolute;
+      inset:14px;
+      border:1px solid rgba(200,155,60,0.28);
+      border-radius:22px;
+    }
+
+    .showcase-art{
+      background:
+        linear-gradient(135deg, rgba(115,82,51,0.8), rgba(79,53,35,0.7)),
+        url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80') center/cover no-repeat;
+      height: 360px;
+      border-radius:22px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .showcase-badge{
+      position:absolute;
+      left:16px;
+      bottom:16px;
+      background: rgba(255,255,255,0.20);
+      backdrop-filter: blur(6px);
+      color:#fff;
+      font-weight:700;
+      border:1px solid rgba(255,255,255,0.3);
+      border-radius:14px;
+      padding:10px 14px;
+    }
+
+    .section{
+      padding: 52px 0;
+    }
+
+    .heading{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:20px;
+      margin-bottom:28px;
+      flex-wrap:wrap;
+    }
+
+    .heading h2{
+      margin:0;
+      color:var(--brown-dark);
+      font-size: clamp(1.9rem, 3vw, 3rem);
+    }
+
+    .heading p{
+      margin:0;
+      color: var(--muted);
+      max-width: 560px;
+    }
+
+    .products-grid{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap:22px;
+    }
+
+    .product-card{
+      background: rgba(255,255,255,0.52);
+      border:1px solid var(--line);
+      border-radius:22px;
+      overflow:hidden;
+      box-shadow: 0 10px 24px rgba(71,48,34,0.06);
+      transition: transform .22s ease, box-shadow .22s ease;
+    }
+
+    .product-card:hover{
+      transform: translateY(-6px);
+      box-shadow: 0 18px 34px rgba(71,48,34,0.12);
+    }
+
+    .product-image{
+      height:200px;
+      background-size: cover;
+      background-position: center;
+      position:relative;
+    }
+
+    .product-image::before{
+      content:"🐚";
+      position:absolute;
+      right:16px;
+      top:14px;
+      font-size: 1.8rem;
+      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.18));
+    }
+
+    .product-body{
+      padding: 18px 18px 20px;
+    }
+
+    .product-label{
+      display:inline-block;
+      font-size: 0.72rem;
+      color: var(--brown);
+      background: rgba(200,155,60,0.1);
+      border:1px solid rgba(200,155,60,0.18);
+      padding:6px 10px;
+      border-radius:999px;
+      margin-bottom:10px;
+      font-weight:700;
+    }
+
+    .product-card h3{
+      margin:0 0 8px;
+      font-size: 1.25rem;
+      color: var(--brown-dark);
+    }
+
+    .product-card p{
+      margin:0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .feature-strip{
+      background: linear-gradient(180deg, #f5ebdc, #efe1cd);
+      border-top:1px solid rgba(77,45,29,0.12);
+      border-bottom:1px solid rgba(77,45,29,0.12);
+      padding: 18px 0;
+    }
+
+    .features{
+      display:grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap:18px;
+    }
+
+    .feature-item{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:18px 14px;
+      background: rgba(255,255,255,0.34);
+      border:1px solid rgba(92,62,42,0.12);
+      border-radius:18px;
+      color: var(--brown-dark);
+      font-weight:700;
+    }
+
+    .feature-icon{
+      width:46px;
+      height:46px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      background: linear-gradient(135deg, #f4dfad, #ccb172);
+      color: var(--brown-dark);
+      font-size: 1.5rem;
+      box-shadow: inset 0 0 0 1px rgba(77,45,29,0.12);
+    }
+
+    .process{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:22px;
+      margin-top:30px;
+    }
+
+    .step{
+      background: rgba(255,255,255,0.5);
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:24px 22px;
+      box-shadow: 0 10px 24px rgba(71,48,34,0.05);
+    }
+
+    .step-number{
+      width:46px;
+      height:46px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background: linear-gradient(135deg, var(--gold), #d7b15a);
+      color:#fff;
+      font-weight:900;
+      margin-bottom:16px;
+    }
+
+    .step h3{
+      margin:0 0 10px;
+      color: var(--brown-dark);
+    }
+
+    .step p{
+      margin:0;
+      color: var(--muted);
+    }
+
+    .cta-banner{
+      background: linear-gradient(135deg, #2d201a, #483226 35%, #1c140f);
+      color:#f7efe3;
+      padding:34px 26px;
+      border-radius:30px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      flex-wrap:wrap;
+      box-shadow: 0 18px 40px rgba(40,27,20,0.25);
+    }
+
+    .cta-banner h3{
+      margin:0 0 8px;
+      font-size: clamp(1.6rem, 3vw, 2.3rem);
+    }
+
+    .cta-banner p{
+      margin:0;
+      color: rgba(247,239,227,0.8);
+    }
+
+    .footer{
+      padding:30px 0 60px;
+      color: var(--muted);
+      text-align:center;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 980px){
+      .hero-inner{
+        grid-template-columns:1fr;
+      }
+
+      .products-grid{
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .features{
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .process{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 560px){
+      .nav{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .nav-links{
+        gap:14px 18px;
+      }
+
+      .products-grid,
+      .features{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        padding-top: 52px;
+      }
+
+      .hero-copy h1{
+        font-size: 2.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <div class="brand-mini">أصالة مدى الحياة</div>
+      <div>توريد فاخر من الكويت إلى العالم</div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <div class="logo">
+          <div class="logo-mark">🐚</div>
+          <span>المنتجات الفاخرة</span>
         </div>
-        <div class="info">
+
+        <div class="nav-links">
+          <a href="#products">منتجاتنا</a>
+          <a href="#features">المميزــــات</a>
+          <a href="#about">من نـحن</a>
+          <a href="#contact">تواصل معنا</a>
+        </div>
+
+        <a href="#contact" class="cta-button">اطلب الآن</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <div class="tag">كل منتجاتنا تحمل أصالة مدى الحياة</div>
+          <h1>مجموعة فاخرة من التحف والقطع الأثرية</h1>
+          <p>
+            نضيف إلى كل قطعة طابعًا فريدًا من الدقة والهوية والحنين إلى الأصالة،
+            عبر تشكيلات مختارة بعناية من الأخشاب الطبيعية، الصدف المصري، والديكور
+            الفاخر الذي يليق بالمساحات الراقية.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#products" class="cta-button">استكشف المنتجات</a>
+            <a href="#features" class="secondary-btn">تعرف على المميزات</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>100%</strong>
+              <span>صدف مصري طبيعي</span>
+            </div>
+            <div class="stat">
+              <strong>دائمًا</strong>
+              <span>أصالة مدى الحياة</span>
+            </div>
+            <div class="stat">
+              <strong>يوميًا</strong>
+              <span>توصيل عالمي</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="showcase-card">
+            <div class="showcase-art">
+              <div class="showcase-badge">ديكور فاخر | قوالب أصلية</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="feature-strip" id="features">
+    <div class="container">
+      <div class="features">
+        <div class="feature-item">
+          <div class="feature-icon">🐚</div>
+          <span>صدف مصري طبيعي 100%</span>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🪵</div>
+          <span>خشب زان طبيعي</span>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">✋</div>
+          <span>شغل يدوي بالكامل</span>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🚚</div>
           <span>توصيل من الكويت للعالم</span>
-          <span>شغل يدوي 100%</span>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">✨</div>
           <span>أصالة مدى الحياة</span>
         </div>
       </div>
     </div>
+  </div>
 
-    <header>
-      <div class="container nav">
-        <div class="logo">
-          <div class="logo-mark">ا</div>
-          <div class="logo-text">أصالة <span>التراث</span></div>
+  <section class="section" id="products">
+    <div class="container">
+      <div class="heading">
+        <h2>منتجاتنا</h2>
+        <p>كل منتج يحمل هوية فاخرة، وتنفيذ يدوي دقيق، وتصميم يصنع تجربة مميزة في كل مساحة.</p>
+      </div>
+
+      <div class="products-grid">
+        <article class="product-card">
+          <div class="product-image" style="background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80');"></div>
+          <div class="product-body">
+            <span class="product-label">ديكور فاخر</span>
+            <h3>أثاث ملكي</h3>
+            <p>هوية فاخرة ومظهر ملكي يضيف كرامة لكل زاوية.</p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image" style="background-image:url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80');"></div>
+          <div class="product-body">
+            <span class="product-label">مكتب</span>
+            <h3>أثاث مكتبي</h3>
+            <p>هوية مميزة للبيئة وتوازن أنيق بين الفخامة والوظيفة.</p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image" style="background-image:url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80');"></div>
+          <div class="product-body">
+            <span class="product-label">مدخل</span>
+            <h3>بيوهات ومداخل</h3>
+            <p>نقوش فاخرة ومهيبة تميز الواجهة وتمنحها حضورًا أنيقًا.</p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image" style="background-image:url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=80');"></div>
+          <div class="product-body">
+            <span class="product-label">طاولة</span>
+            <h3>ترابيزات</h3>
+            <p>سفرة وقاعة ضيافة تجمع بين الطابع الكلاسيكي والراحة العالية.</p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image" style="background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80');"></div>
+          <div class="product-body">
+            <span class="product-label">هدوء</span>
+            <h3>مباخر</h3>
+            <p>هدوء وعبق ومكانة تعكس ذوقًا فخمًا في كل جلسة.</p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image" style="background-image:url('https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80');"></div>
+          <div class="product-body">
+            <span class="product-label">ضيافة</span>
+            <h3>صواني وكسترات</h3>
+            <p>ضيافة فاخمة مع تفاصيل دقيقة وتجهيز أنيق ومفصل.</p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image" style="background-image:url('https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=900&q=80');"></div>
+          <div class="product-body">
+            <span class="product-label">فن</span>
+            <h3>طاولات زهر</h3>
+            <p>أسلوب فني مميز يضيف لمسة جمالية للأجواء الراقية.</p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image" style="background-image:url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80');"></div>
+          <div class="product-body">
+            <span class="product-label">ملمس</span>
+            <h3>عكاز صدف</h3>
+            <p>ملمس أنيق يضفي باقة فاخرة على الأجواء الداخلية.</p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image" style="background-image:url('https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=900&q=80');"></div>
+          <div class="product-body">
+            <span class="product-label">ديكور</span>
+            <h3>فازات</h3>
+            <p>ديكور مستدام يجمع بين الجمال الطبيعي والهوية العصرية.</p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image" style="background-image:url('https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&w=900&q=80');"></div>
+          <div class="product-body">
+            <span class="product-label">زخرفة</span>
+            <h3>لوحات قرآنية</h3>
+            <p>زخارف فاخرة تضيف روحًا مميزة للبيئة الدينية والراقية.</p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image" style="background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80');"></div>
+          <div class="product-body">
+            <span class="product-label">ألوان</span>
+            <h3>لولو صدف</h3>
+            <p>ألوان ودرجات لؤلؤية تخلق تجربة بصرية فريدة وجذابة.</p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image" style="background-image:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80');"></div>
+          <div class="product-body">
+            <span class="product-label">راحة</span>
+            <h3>خلايا مجالس</h3>
+            <p>راحة بفخامة تعكس إحساسًا فاخرًا في كل جلسة استرخاء.</p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image" style="background-image:url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80');"></div>
+          <div class="product-body">
+            <span class="product-label">أسلوب</span>
+            <h3>شيشة وزجاج</h3>
+            <p>أسلوب أنيق يجمع بين الفخامة والتفاصيل الدقيقة.</p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image" style="background-image:url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80');"></div>
+          <div class="product-body">
+            <span class="product-label">استخدام</span>
+            <h3>صناديق وشكمجيات</h3>
+            <p>ديكور واستخدام في آنٍ واحد، بلمسة أنيقة ومميّزة.</p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image" style="background-image:url('https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80');"></div>
+          <div class="product-body">
+            <span class="product-label">هوية</span>
+            <h3>مداخل وبيوهات</h3>
+            <p>هوية فاخرة تبرز حضور المساحة من أول لمحة.</p>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image" style="background-image:url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=80');"></div>
+          <div class="product-body">
+            <span class="product-label">أصالة</span>
+            <h3>كل منتج أصيل</h3>
+            <p>تصميم فاخر يليق بلمساتك ويعكس أصالة مدى الحياة.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <div class="heading">
+        <h2>لماذا نحن؟</h2>
+        <p>نركز على التفاصيل، ونختار خامات طبيعية، مع تقديم قطع فاخرة مصممة لتدوم طويلًا وتبقى علامة مميزة في كل مساحة.</p>
+      </div>
+
+      <div class="process">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>مواد طبيعية</h3>
+          <p>نستخدم الخشب الطبيعي، الصدف المصري، والمواد الأصيلة لتأمين جودة لا تتنازل عنها في أي قطعة.</p>
         </div>
 
-        <nav class="nav-links">
-          <a href="#home">الرئيسية</a>
-          <a href="#products">المنتجات</a>
-          <a href="#collections">المجموعات</a>
-          <a href="#about">من نحن</a>
-          <a href="#contact">تواصل معنا</a>
-        </nav>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>تصميم يدوي</h3>
+          <p>كل قطعة تتميز بتفاصيل يدوية دقيقة مع لمسة فنية عصرية تحفظ هوية المنتج وتجعله فريدًا.</p>
+        </div>
 
-        <div class="nav-actions">
-          <a class="btn btn-secondary" href="#products">تصفح المنتجات</a>
-          <a class="btn btn-primary" href="#contact">اطلب الآن</a>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>توصيل عالمي</h3>
+          <p>نوفر خدمة شحن موثوقة من الكويت إلى مختلف أنحاء العالم مع اهتمام كامل بالحفاظ على سلامة المنتج.</p>
         </div>
       </div>
-    </header>
+    </div>
+  </section>
 
-    <main id="home">
-      <section class="hero">
-        <div class="container hero-wrap">
-          <div class="hero-copy">
-            <div class="eyebrow">متحف أنتيكات عالمي</div>
-            <h1>أصالة التراث المصري في كل قطعة</h1>
-            <p class="hero-sub">
-              مجموعة فاخرة من التحف والقطع الأثرية، مصنوعة بمهارة يدوية أصيلة،
-              بخامات طبيعية وملمس فاخر يمنح كل مساحة هوية مميزة ودفئًا عربيًا أنيقًا.
-            </p>
-
-            <div class="hero-actions">
-              <a href="#products" class="btn btn-primary">اكتشف المنتجات</a>
-              <a href="#about" class="btn btn-secondary">تعرف علينا</a>
-            </div>
-
-            <div class="hero-metrics">
-              <div class="metric">
-                <strong>100%</strong>
-                <span>شغل يدوي</span>
-              </div>
-              <div class="metric">
-                <strong>أصلي</strong>
-                <span>خامات طبيعية</span>
-              </div>
-              <div class="metric">
-                <strong>عالمي</strong>
-                <span>توصيل من الكويت</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="hero-card">
-            <div class="product-showcase">
-              <img
-                src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80"
-                alt="قطع أثاث أنتيكي"
-              />
-              <div class="showcase-info">
-                <h3>أثاث ملكي أنيق</h3>
-                <p>صدف مصري طبيعي، خشب زان، شغل يدوي شامل، وروح فاخرة تخطف الأنظار.</p>
-              </div>
-            </div>
-          </div>
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="cta-banner">
+        <div>
+          <h3>لفخامة لا تُقارن… اختر أصالة مدى الحياة</h3>
+          <p>تواصل معنا اليوم لطلب منتجك المفضل أو تصميم خاص يناسب مساحتك.</p>
         </div>
-      </section>
-
-      <section class="section" id="products">
-        <div class="container">
-          <div class="section-head">
-            <div class="line"></div>
-            <h2>كل منتجاتنا تحمل أصالة مدى الحياة</h2>
-            <p>
-              نختار لكل قطعة خامات طبيعية، تفاصيل يدويّة دقيقة، وتصميمًا فخمًا
-              يليق بالمساحات الراقية والبيئات الكلاسيكية الحديثة.
-            </p>
-          </div>
-
-          <div class="feature-grid">
-            <article class="feature-card">
-              <div class="icon-shell">🐚</div>
-              <h3>صدف مصري طبيعي 100%</h3>
-              <p>أصلية وطبيعية، مع ملمس فريد يضيف دفئًا وروحًا مميزة لكل قطعة.</p>
-            </article>
-
-            <article class="feature-card">
-              <div class="icon-shell">🌿</div>
-              <h3>خشب زان طبيعي</h3>
-              <p>متانة واستقرار، مع ألوان دافئة وتجهيزات عالية الجودة.</p>
-            </article>
-
-            <article class="feature-card">
-              <div class="icon-shell">🛠️</div>
-              <h3>شغل يدوي بالكامل</h3>
-              <p>كل قطعة حسب اليد، بعناية فائقة وتفاصيل دقيقة لا تتكرر.</p>
-            </article>
-
-            <article class="feature-card">
-              <div class="icon-shell">🚚</div>
-              <h3>توصيل من الكويت للعالم</h3>
-              <p>خدمة محترفة وتوصيل آمن إلى مختلف الدول مع الاهتمام الكامل بالتغليف.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section categories" id="collections">
-        <div class="container">
-          <div class="section-head">
-            <div class="line"></div>
-            <h2>مجموعة فاخرة من التحف والقطع الأثرية</h2>
-            <p>
-              كل منتج في مجموعتنا يعكس الفن المصري القديم، مع لمسة عصرية تناسب القصور،
-              القاعات، المداخل، والديكورات الفاخرة.
-            </p>
-          </div>
-
-          <div class="category-grid">
-            <article class="category-card">
-              <img
-                src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
-                alt="أثاث ملكي"
-              />
-              <div class="category-body">
-                <div class="category-tag">أثاث ملكي</div>
-                <h3>أثاث ملكي</h3>
-                <p>ديكور فاخر وكلاسيكي، يضفي طابعًا ملكيًا أنيقًا وحضورًا مهيبًا.</p>
-              </div>
-            </article>
-
-            <article class="category-card">
-              <img
-                src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80"
-                alt="أثاث مكتبي"
-              />
-              <div class="category-body">
-                <div class="category-tag">أثاث مكتبي</div>
-                <h3>أثاث مكتبي</h3>
-                <p>هوية مميزة للبيئة، تجمع بين الفخامة والوظيفة مع تفاصيل فنية راقية.</p>
-              </div>
-            </article>
-
-            <article class="category-card">
-              <img
-                src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80"
-                alt="بيوهات ومداخل"
-              />
-              <div class="category-body">
-                <div class="category-tag">بيوهات ومداخل</div>
-                <h3>بيوهات ومداخل</h3>
-                <p>نقوش فاخرة ومهيبة، تمنح كل مدخل شخصية احترافية وقيمة جمالية عالية.</p>
-              </div>
-            </article>
-
-            <article class="category-card">
-              <img
-                src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
-                alt="ترابيزات"
-              />
-              <div class="category-body">
-                <div class="category-tag">ترابيزات</div>
-                <h3>ترابيزات</h3>
-                <p>سفرة وقاعة ضيافة، أنيقة وراقية، مناسبة للمساحات الفاخرة والضيافات الملكية.</p>
-              </div>
-            </article>
-
-            <article class="category-card">
-              <img
-                src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
-                alt="مباخر"
-              />
-              <div class="category-body">
-                <div class="category-tag">مباخر</div>
-                <h3>مباخر</h3>
-                <p>هدوء وعبق ومكانة، تجعل من كل زاوية نقطة ضيافة فاخرة ومميزة.</p>
-              </div>
-            </article>
-
-            <article class="category-card">
-              <img
-                src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80"
-                alt="صواني وكسترات"
-              />
-              <div class="category-body">
-                <div class="category-tag">صواني وكسترات</div>
-                <h3>صواني وكسترات</h3>
-                <p>ضيافة فخمة، تجمع بين الفن المصري التقليدي والهوية الراقية.</p>
-              </div>
-            </article>
-
-            <article class="category-card">
-              <img
-                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80"
-                alt="طاولات زهر"
-              />
-              <div class="category-body">
-                <div class="category-tag">طاولات زهر</div>
-                <h3>طاولات زهر</h3>
-                <p>أسلوب فني مميز، مناسبة للديكور العصري والهوية الشرقية الأصيلة.</p>
-              </div>
-            </article>
-
-            <article class="category-card">
-              <img
-                src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
-                alt="عكاز صدف"
-              />
-              <div class="category-body">
-                <div class="category-tag">عكاز صدف</div>
-                <h3>عكاز صدف</h3>
-                <p>ملمس أنيق وأداء فخم، مع تفاصيل يدويّة دقيقة تعكس أصالة الفن المصري.</p>
-              </div>
-            </article>
-
-            <article class="category-card">
-              <img
-                src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80"
-                alt="فازات"
-              />
-              <div class="category-body">
-                <div class="category-tag">فازات</div>
-                <h3>فازات</h3>
-                <p>ديكور مستدام، يعكس الأصالة والهوية العريقة في كل زاوية من المنزل.</p>
-              </div>
-            </article>
-
-            <article class="category-card">
-              <img
-                src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80"
-                alt="لوحات قرآنية"
-              />
-              <div class="category-body">
-                <div class="category-tag">لوحات قرآنية</div>
-                <h3>لوحات قرآنية</h3>
-                <p>زخارف فاخرة، تضيف لمسة روحية وجمالية متقنة في كل واجهة.</p>
-              </div>
-            </article>
-
-            <article class="category-card">
-              <img
-                src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80"
-                alt="لولو صدف"
-              />
-              <div class="category-body">
-                <div class="category-tag">لولو صدف</div>
-                <h3>لولو صدف</h3>
-                <p>ألوان ودرجات لؤلؤية، مع مظهر فني أنيق يبرز الروعة واللمسة المميزة.</p>
-              </div>
-            </article>
-
-            <article class="category-card">
-              <img
-                src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
-                alt="خلايا مجالس"
-              />
-              <div class="category-body">
-                <div class="category-tag">خلايا مجالس</div>
-                <h3>خلايا مجالس</h3>
-                <p>راحة بفخامة، ومظهر فاخر يليق بقاعة الاستقبال والجلوس الراقية.</p>
-              </div>
-            </article>
-
-            <article class="category-card">
-              <img
-                src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=900&q=80"
-                alt="شيشة وزجاج"
-              />
-              <div class="category-body">
-                <div class="category-tag">شيشة وزجاج</div>
-                <h3>شيشة وزجاج</h3>
-                <p>أسلوب أنيق يجمع بين التقاليد والفخامة في كل جلسة استرخاء.</p>
-              </div>
-            </article>
-
-            <article class="category-card">
-              <img
-                src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=900&q=80"
-                alt="صناديق وشكمجيات"
-              />
-              <div class="category-body">
-                <div class="category-tag">صناديق وشكمجيات</div>
-                <h3>صناديق وشكمجيات</h3>
-                <p>ديكور واستخدام، بتفاصيل فنية عريقة تجعلها قطعة مميزة في أي مساحة.</p>
-              </div>
-            </article>
-
-            <article class="category-card">
-              <img
-                src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80"
-                alt="مداخل وبيوهات"
-              />
-              <div class="category-body">
-                <div class="category-tag">مداخل وبيوهات</div>
-                <h3>مداخل وبيوهات</h3>
-                <p>هوية فاخرة، بمقاسات وتصاميم مختلفة تناسب البيوت والمحال الراقية.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="about">
-        <div class="container story">
-          <div class="story-image">
-            <img
-              src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1100&q=80"
-              alt="عن الشركة"
-            />
-            <div class="story-badge">
-              <strong>أصالة</strong>
-              <span>الهوية الفاخرة</span>
-            </div>
-          </div>
-
-          <div class="story-copy">
-            <div class="eyebrow" style="margin-bottom: 16px;">من نحن</div>
-            <h2>مصدر فني أصيل يخلّق مساحة مميزة</h2>
-            <p>
-              نحن في أصالة التراث المصري نعمل على تقديم قطع فاخرة تجمع بين التراث
-              المصري العريق والذوق العصري، عبر أعمال يدوية دقيقة ومميزة تُصنع بعناية
-              لتليق بجميع البيئات الراقية.
-            </p>
-            <p>
-              من الأثاث الملكي إلى التفاصيل الصغيرة كالفازات واللوحات والحوامل،
-              نسعى إلى إبراز الفن المصري في أحلى صورته بمعنى أصيل، مستدام، ومتجدد.
-            </p>
-
-            <ul class="quality-list">
-              <li>مواد طبيعية 100% واصلة للأصل</li>
-              <li>تصميمات فاخرة تناسب المداخل والبيوت والقصور</li>
-              <li>خدمة توصيل محترفة من الكويت للعالم</li>
-              <li>تجربة شراء مميزة مع اهتمام بالتفاصيل</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="highlight-band">
-        <div class="container highlight-wrap">
-          <div>
-            <div class="eyebrow" style="margin-bottom: 16px;">why choose us</div>
-            <h3>أصالة تمتد عبر الزمن</h3>
-            <p>
-              نقدم لديك قطعًا فاخرة تحمل جوهر الفن المصري، بتوازن بين الأصالة
-              والحداثة، لتمنح كل مساحة طابعًا خاصًا لا ينسى.
-            </p>
-          </div>
-
-          <div class="stamp-grid">
-            <div class="stamp">
-              <strong>100%</strong>
-              <span>خامات طبيعية</span>
-            </div>
-            <div class="stamp">
-              <strong>24/7</strong>
-              <span>خدمة عملاء</span>
-            </div>
-            <div class="stamp">
-              <strong>عالمي</strong>
-              <span>توصيل إلى الخارج</span>
-            </div>
-            <div class="stamp">
-              <strong>فني</strong>
-              <span>شغل يدوي متقن</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section products">
-        <div class="container">
-          <div class="section-head">
-            <div class="line"></div>
-            <h2>منتجات مختارة بعناية</h2>
-            <p>مزيج فريد من الأصالة، الدقة، والديكور الفاخر في كل منتج.</p>
-          </div>
-
-          <div class="product-grid">
-            <article class="product-card">
-              <img
-                src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80"
-                alt="أثاث فخم"
-              />
-              <div class="body">
-                <div class="mini-label">أثاث فخم</div>
-                <h3>أثاث ملكي فاخر</h3>
-                <p>ديكور كلاسيكي أنيق، مصنوع يدويًا، ويمنح القاعة طابعًا أنيقًا ومهيبًا.</p>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <img
-                src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80"
-                alt="منضدة مكتبية"
-              />
-              <div class="body">
-                <div class="mini-label">مكتبي</div>
-                <h3>طاولة مكتبية فاخرة</h3>
-                <p>هوية احترافية ومكانة عالية، مناسبة للبيئات التنفيذية والديكورات الراقية.</p>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <img
-                src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80"
-                alt="بيوهة"
-              />
-              <div class="body">
-                <div class="mini-label">مداخل</div>
-                <h3>بيوة ومداخل فاخرة</h3>
-                <p>زخارف أصلية، تصميم فخم، ومظهر مهيب يبرز هوية المكان منذ الدخول.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="cta" id="contact">
-        <div class="container cta-wrap">
-          <div>
-            <h3>هل أنت مستعد لامتلاك قطعة تحمل أصالة العمر؟</h3>
-            <p>اطلب الآن قطعك المفضلة واستمتع بالهوية الفاخرة في كل زاوية من منزلك.</p>
-          </div>
-          <div class="hero-actions">
-            <a href="https://wa.me/96500000000" class="btn btn-primary">واتساب</a>
-            <a href="mailto:info@asala-altorath.com" class="btn btn-secondary">البريد الإلكتروني</a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="container footer-inner">
-        <div class="footer-brand">
-          <span class="dot"></span>
-          <span>أصالة التراث المصري</span>
-        </div>
-        <div>© 2025 جميع الحقوق محفوظة</div>
+        <a href="#" class="cta-button">تواصل الآن</a>
       </div>
-    </footer>
-  </body>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      © 2025 جميع الحقوق محفوظة • أصالة مدى الحياة
+    </div>
+  </footer>
+</body>
 </html>
