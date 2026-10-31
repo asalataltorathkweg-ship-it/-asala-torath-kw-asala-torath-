@@ -10,20 +10,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#f8f3ee;
+      --bg:#f7f1ea;
       --panel:#ffffff;
-      --panel-2:#f2e7dc;
+      --panel-2:#f2e8dc;
       --brown:#4f2c1d;
-      --brown-2:#6f3e2a;
-      --gold:#c5a66b;
-      --gold-soft:#e2ce98;
+      --gold:#c7a86d;
+      --gold-soft:#e5d3a5;
       --ink:#1d1d1d;
-      --muted:#6b625c;
+      --muted:#6d605b;
       --line:#eadbca;
       --green:#25D366;
       --danger:#d95c4a;
       --shadow:0 18px 40px rgba(70,45,30,.10);
-      --radius:24px;
+      --radius:22px;
       --font-display:'Amiri', serif;
       --font-body:'Cairo', sans-serif;
     }
@@ -66,7 +65,7 @@
       z-index:120;
       background:rgba(255,255,255,.96);
       backdrop-filter:blur(10px);
-      border-bottom:1px solid rgba(197,166,107,.15);
+      border-bottom:1px solid rgba(199,168,109,.15);
     }
 
     .header-inner{
@@ -105,15 +104,16 @@
 
     .brand-name small{
       display:block;
-      margin-top:4px;
       font-family:var(--font-body);
-      letter-spacing:2px;
       font-size:10px;
+      letter-spacing:2px;
       color:var(--gold);
+      margin-top:4px;
     }
 
     nav{
       display:flex;
+      align-items:center;
       gap:22px;
       flex-wrap:wrap;
       font-size:14px;
@@ -184,7 +184,7 @@
       width:100%;
       height:100%;
       object-fit:cover;
-      opacity:.74;
+      opacity:.72;
       filter:saturate(.9) contrast(1.08);
     }
 
@@ -249,7 +249,7 @@
     .btn-main.primary{
       background:linear-gradient(135deg, var(--gold), var(--gold-soft));
       color:#2b1d12;
-      box-shadow:0 12px 28px rgba(197,166,107,.35);
+      box-shadow:0 12px 28px rgba(199,168,109,.35);
     }
 
     .services-bar{
@@ -264,7 +264,7 @@
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
       background:#fff;
-      border:1px solid rgba(197,166,107,.18);
+      border:1px solid rgba(199,168,109,.18);
       border-radius:22px;
       overflow:hidden;
       box-shadow:var(--shadow);
@@ -274,7 +274,7 @@
       padding:28px 18px;
       background:#fff;
       text-align:center;
-      border-left:1px solid rgba(197,166,107,.18);
+      border-left:1px solid rgba(199,168,109,.18);
     }
     .service:last-child{border-left:none}
     .service .icon{display:block;font-size:30px;margin-bottom:8px}
@@ -320,7 +320,7 @@
 
     .product-card{
       background:#fff;
-      border:1px solid rgba(197,166,107,.16);
+      border:1px solid rgba(199,168,109,.16);
       border-radius:24px;
       overflow:hidden;
       box-shadow:var(--shadow);
@@ -431,7 +431,7 @@
       display:inline-block;
       margin:0 auto;
       background:#f9f3ea;
-      border:1px solid rgba(197,166,107,.18);
+      border:1px solid rgba(199,168,109,.18);
       color:var(--brown);
       border-radius:999px;
       padding:6px 12px;
@@ -465,7 +465,7 @@
 
     .cat-item{
       background:#fff;
-      border:1px solid rgba(197,166,107,.18);
+      border:1px solid rgba(199,168,109,.18);
       border-radius:18px;
       padding:16px 12px;
       text-align:center;
@@ -476,8 +476,8 @@
 
     .history{
       background:#fff;
-      border-top:1px solid rgba(197,166,107,.12);
-      border-bottom:1px solid rgba(197,166,107,.12);
+      border-top:1px solid rgba(199,168,109,.12);
+      border-bottom:1px solid rgba(199,168,109,.12);
       padding:82px 0;
     }
 
@@ -532,8 +532,8 @@
     }
 
     .custom-wrap{
-      background:linear-gradient(135deg, rgba(197,166,107,.08), rgba(255,255,255,.94));
-      border:1px solid rgba(197,166,107,.18);
+      background:linear-gradient(135deg, rgba(199,168,109,.08), rgba(255,255,255,.94));
+      border:1px solid rgba(199,168,109,.18);
       border-radius:24px;
       padding:26px 20px;
       box-shadow:var(--shadow);
@@ -564,7 +564,7 @@
 
     .feature{
       background:#fff;
-      border:1px solid rgba(197,166,107,.15);
+      border:1px solid rgba(199,168,109,.15);
       border-radius:16px;
       padding:14px 12px;
       text-align:center;
@@ -575,7 +575,7 @@
 
     .custom-cta{
       background:linear-gradient(180deg, #fff, #f3e9df);
-      border:1px solid rgba(197,166,107,.18);
+      border:1px solid rgba(199,168,109,.18);
       border-radius:20px;
       padding:18px 16px;
       text-align:center;
@@ -589,7 +589,7 @@
 
     .custom-cta .badge{
       display:inline-block;
-      background:rgba(197,166,107,.14);
+      background:rgba(199,168,109,.14);
       color:var(--brown);
       padding:8px 14px;
       border-radius:999px;
@@ -686,7 +686,7 @@
       z-index:1080;
       width:220px;
       background:#fff;
-      border:1px solid rgba(197,166,107,.18);
+      border:1px solid rgba(199,168,109,.18);
       border-radius:18px;
       box-shadow:0 18px 32px rgba(59,39,28,.15);
       overflow:hidden;
@@ -793,7 +793,7 @@
       align-items:center;
       gap:12px;
       background:#f9f5f0;
-      border:1px solid rgba(197,166,107,.16);
+      border:1px solid rgba(199,168,109,.16);
       border-radius:16px;
       padding:10px;
     }
@@ -939,7 +939,7 @@
       max-height:90vh;
       overflow:auto;
       background:#fff;
-      border:1px solid rgba(197,166,107,.18);
+      border:1px solid rgba(199,168,109,.18);
       border-radius:22px;
       box-shadow:0 22px 56px rgba(0,0,0,.24);
       padding:24px 20px 18px;
@@ -986,14 +986,14 @@
     .tab-btn.active{
       background:linear-gradient(135deg, var(--gold), var(--gold-soft));
       color:#1d120d;
-      box-shadow:0 10px 24px rgba(197,166,107,.24);
+      box-shadow:0 10px 24px rgba(199,168,109,.24);
     }
 
     .admin-tab-panel.hidden{display:none}
 
     .admin-card{
       background:#fff;
-      border:1px solid rgba(197,166,107,.18);
+      border:1px solid rgba(199,168,109,.18);
       border-radius:20px;
       padding:20px;
       box-shadow:var(--shadow);
@@ -1054,7 +1054,7 @@
 
     .mini-card{
       background:#faf7f2;
-      border:1px solid rgba(197,166,107,.16);
+      border:1px solid rgba(199,168,109,.16);
       border-radius:14px;
       padding:12px;
     }
@@ -1490,42 +1490,6 @@
     </div>
   </div>
 
-  <div id="loginModal" style="position:fixed;inset:0;background:rgba(0,0,0,.66);display:flex;align-items:center;justify-content:center;z-index:5000;padding:18px;">
-    <div style="width:min(420px,100%);background:#fff;border-radius:20px;padding:24px 20px 18px;box-shadow:0 22px 56px rgba(0,0,0,.24);">
-      <h3 style="text-align:center;margin:0 0 12px;color:#4f2c1d;font-size:32px;">تسجيل الدخول</h3>
-
-      <div id="setupBox">
-        <div style="margin-bottom:14px;">
-          <label style="display:block;margin-bottom:8px;color:#4f2c1d;font-size:13px;font-weight:800;">البريد الإلكتروني</label>
-          <input id="adminEmail" type="email" placeholder="your@email.com" style="width:100%;border:1px solid #e1d7cb;border-radius:10px;padding:12px 14px;">
-        </div>
-
-        <div style="margin-bottom:14px;">
-          <label style="display:block;margin-bottom:8px;color:#4f2c1d;font-size:13px;font-weight:800;">كلمة المرور</label>
-          <input id="adminPassword" type="password" placeholder="••••••••" style="width:100%;border:1px solid #e1d7cb;border-radius:10px;padding:12px 14px;">
-        </div>
-
-        <button id="createAdminBtn" style="width:100%;border:none;border-radius:12px;padding:13px 16px;background:#4f2c1d;color:#fff;font-weight:800;cursor:pointer;">إنشاء حساب المدير</button>
-      </div>
-
-      <div id="loginBox" style="display:none;">
-        <div style="margin-bottom:14px;">
-          <label style="display:block;margin-bottom:8px;color:#4f2c1d;font-size:13px;font-weight:800;">البريد الإلكتروني</label>
-          <input id="loginEmail" type="email" placeholder="your@email.com" style="width:100%;border:1px solid #e1d7cb;border-radius:10px;padding:12px 14px;">
-        </div>
-
-        <div style="margin-bottom:14px;">
-          <label style="display:block;margin-bottom:8px;color:#4f2c1d;font-size:13px;font-weight:800;">كلمة المرور</label>
-          <input id="loginPassword" type="password" placeholder="••••••••" style="width:100%;border:1px solid #e1d7cb;border-radius:10px;padding:12px 14px;">
-        </div>
-
-        <button id="loginBtn" style="width:100%;border:none;border-radius:12px;padding:13px 16px;background:#4f2c1d;color:#fff;font-weight:800;cursor:pointer;">تسجيل الدخول</button>
-      </div>
-
-      <div id="authMessage" style="display:none;margin-top:12px;text-align:center;font-size:14px;font-weight:800;"></div>
-    </div>
-  </div>
-
   <div id="productDetailModal" class="product-modal hidden">
     <div style="width:min(920px,100%);background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.24);">
       <div style="display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid var(--line);">
@@ -1562,6 +1526,42 @@
           <button id="detailAddBtn" style="border:none;background:var(--brown);color:#fff;border-radius:12px;padding:14px 18px;font-weight:800;cursor:pointer;width:100%;">أضف للسلة</button>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div id="loginModal" style="position:fixed;inset:0;background:rgba(0,0,0,.66);display:flex;align-items:center;justify-content:center;z-index:5000;padding:18px;">
+    <div style="width:min(420px,100%);background:#fff;border-radius:20px;padding:24px 20px 18px;box-shadow:0 22px 56px rgba(0,0,0,.24);">
+      <h3 style="text-align:center;margin:0 0 12px;color:#4f2c1d;font-size:32px;">تسجيل الدخول</h3>
+
+      <div id="setupBox">
+        <div style="margin-bottom:14px;">
+          <label style="display:block;margin-bottom:8px;color:#4f2c1d;font-size:13px;font-weight:800;">البريد الإلكتروني</label>
+          <input id="adminEmail" type="email" placeholder="your@email.com" style="width:100%;border:1px solid #e1d7cb;border-radius:10px;padding:12px 14px;">
+        </div>
+
+        <div style="margin-bottom:14px;">
+          <label style="display:block;margin-bottom:8px;color:#4f2c1d;font-size:13px;font-weight:800;">كلمة المرور</label>
+          <input id="adminPassword" type="password" placeholder="••••••••" style="width:100%;border:1px solid #e1d7cb;border-radius:10px;padding:12px 14px;">
+        </div>
+
+        <button id="createAdminBtn" style="width:100%;border:none;border-radius:12px;padding:13px 16px;background:#4f2c1d;color:#fff;font-weight:800;cursor:pointer;">إنشاء حساب المدير</button>
+      </div>
+
+      <div id="loginBox" style="display:none;">
+        <div style="margin-bottom:14px;">
+          <label style="display:block;margin-bottom:8px;color:#4f2c1d;font-size:13px;font-weight:800;">البريد الإلكتروني</label>
+          <input id="loginEmail" type="email" placeholder="your@email.com" style="width:100%;border:1px solid #e1d7cb;border-radius:10px;padding:12px 14px;">
+        </div>
+
+        <div style="margin-bottom:14px;">
+          <label style="display:block;margin-bottom:8px;color:#4f2c1d;font-size:13px;font-weight:800;">كلمة المرور</label>
+          <input id="loginPassword" type="password" placeholder="••••••••" style="width:100%;border:1px solid #e1d7cb;border-radius:10px;padding:12px 14px;">
+        </div>
+
+        <button id="loginBtn" style="width:100%;border:none;border-radius:12px;padding:13px 16px;background:#4f2c1d;color:#fff;font-weight:800;cursor:pointer;">تسجيل الدخول</button>
+      </div>
+
+      <div id="authMessage" style="display:none;margin-top:12px;text-align:center;font-size:14px;font-weight:800;"></div>
     </div>
   </div>
 
@@ -1721,6 +1721,21 @@
       localStorage.setItem(CART_KEY, JSON.stringify(cart));
     }
 
+    function getAdmin() {
+      try {
+        return JSON.parse(localStorage.getItem(ADMIN_KEY) || "null");
+      } catch {
+        return null;
+      }
+    }
+
+    function saveAdmin(email, password) {
+      localStorage.setItem(ADMIN_KEY, JSON.stringify({
+        email: String(email).trim(),
+        password: String(password).trim()
+      }));
+    }
+
     function formatKwd(value) {
       const n = Number(value) || 0;
       return n.toLocaleString("ar-KW", { minimumFractionDigits: 3, maximumFractionDigits: 3 }) + " د.ك";
@@ -1793,7 +1808,7 @@
       el.innerHTML = products.map(buildProductCard).join("");
 
       el.querySelectorAll(".product-media, .product-card").forEach(elem => {
-        elem.addEventListener("click", (e) => {
+        elem.addEventListener("click", () => {
           const id = Number(elem.dataset.productId);
           const product = getProductById(id);
           if (!product) return;
@@ -2049,7 +2064,6 @@
       products.forEach(product => {
         const item = document.createElement("div");
         item.className = "mini-card";
-
         item.innerHTML = `
           <div class="mini-thumb">
             <img src="${product.image || ''}" alt="${product.name}">
@@ -2061,7 +2075,6 @@
             <button class="delete-item" data-delete-id="${product.id}" type="button">حذف</button>
           </div>
         `;
-
         list.appendChild(item);
       });
 
@@ -2089,6 +2102,7 @@
 
     function openProductModal(productId = null) {
       const product = productId ? (state.products || []).find(p => Number(p.id) === Number(productId)) : null;
+
       document.getElementById("productId").value = product ? product.id : "";
       document.getElementById("productName").value = product ? product.name : "";
       document.getElementById("productEdition").value = product ? product.edition : "";
@@ -2159,6 +2173,7 @@
         password: document.getElementById("panelAdminPassword").value.trim() || "asala2026"
       };
 
+      saveAdmin(state.admin.email, state.admin.password);
       saveState();
       fillPublicState();
       alert("تم حفظ الإعدادات العامة");
@@ -2216,4 +2231,237 @@
       document.documentElement.style.setProperty("--ink", d.text || "#1d1d1d");
       document.documentElement.style.setProperty("--radius", (d.radius || 22) + "px");
       document.documentElement.style.setProperty("--shadow", `0 18px 40px rgba(70,45,30,${d.shadow || 0.10})`);
-      document.documentElement.style.setProperty("--font
+      document.documentElement.style.setProperty("--font-display", d.fontDisplay || "'Amiri', serif");
+      document.documentElement.style.setProperty("--font-body", d.fontBody || "'Cairo', sans-serif");
+      document.body.style.fontSize = (d.textSize || 16) + "px";
+      document.querySelectorAll("h1,h2,h3,h4,h5").forEach(el => {
+        el.style.fontFamily = d.fontDisplay || "'Amiri', serif";
+      });
+    }
+
+    function fillShippingList() {
+      const el = document.getElementById("shippingList");
+      if (!el) return;
+      const list = state.shippingOptions || defaultState.shippingOptions;
+      el.value = list.map(item => `${item.title} | ${item.price} | ${item.note || ""}`).join("\n");
+    }
+
+    function saveShippingSettings() {
+      const input = document.getElementById("shippingList").value;
+      const parsed = input.split("\n").map(line => line.trim()).filter(Boolean).map(line => {
+        const parts = line.split("|").map(x => x.trim());
+        if (!parts[0]) return null;
+        return { title: parts[0], price: Number(parts[1] || 0), note: parts[2] || "" };
+      }).filter(Boolean);
+
+      if (parsed.length) {
+        state.shippingOptions = parsed;
+        saveState();
+      }
+      alert("تم حفظ خيارات الشحن");
+    }
+
+    function exportJson() {
+      const blob = new Blob([JSON.stringify(state, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "asala_backup.json";
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function importJson(file) {
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          const data = JSON.parse(reader.result);
+          state = {
+            ...JSON.parse(JSON.stringify(defaultState)),
+            ...data,
+            admin: { ...(JSON.parse(JSON.stringify(defaultState.admin || {}))), ...(data.admin || {}) }
+          };
+          saveState();
+          fillPublicState();
+          renderProducts();
+          fillAdminForm();
+          applyDesignSettings();
+          alert("تم استيراد النسخة الاحتياطية");
+        } catch {
+          alert("ملف JSON غير صالح");
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    function restoreDefaultData() {
+      if (!confirm("هل تريد استعادة الإعدادات الافتراضية؟")) return;
+      state = JSON.parse(JSON.stringify(defaultState));
+      saveAdmin("admin@asala.com", "asala2026");
+      saveState();
+      fillPublicState();
+      renderProducts();
+      fillAdminForm();
+      applyDesignSettings();
+      alert("تمت الاستعادة إلى الافتراضي");
+    }
+
+    function fillBackupInfo() {
+      const info = document.getElementById("backupInfo");
+      if (!info) return;
+
+      const productCount = (state.products || []).length;
+      const imageCount = (state.products || []).filter(p => !!p.image).length;
+      const videoCount = (state.products || []).filter(p => !!p.video).length;
+      const size = (JSON.stringify(state).length / 1024).toFixed(1);
+
+      info.innerHTML = `
+        <div class="two-col">
+          <div class="field"><label>عدد المنتجات</label><input value="${productCount}" readonly></div>
+          <div class="field"><label>الصور</label><input value="${imageCount}" readonly></div>
+          <div class="field"><label>الفيديوهات</label><input value="${videoCount}" readonly></div>
+          <div class="field"><label>حجم البيانات</label><input value="${size} KB" readonly></div>
+        </div>
+      `;
+    }
+
+    function showAuthMessage(msg, isError = true) {
+      const box = document.getElementById("authMessage");
+      box.textContent = msg;
+      box.style.display = "block";
+      box.style.color = isError ? "#cf3e35" : "#1a8a56";
+    }
+
+    function showLoginState() {
+      const admin = getAdmin();
+      const setupBox = document.getElementById("setupBox");
+      const loginBox = document.getElementById("loginBox");
+
+      if (!admin) {
+        setupBox.style.display = "block";
+        loginBox.style.display = "none";
+      } else {
+        setupBox.style.display = "none";
+        loginBox.style.display = "block";
+      }
+    }
+
+    function createAdminAccount() {
+      const email = document.getElementById("adminEmail").value.trim();
+      const password = document.getElementById("adminPassword").value.trim();
+
+      if (!email || !password) {
+        showAuthMessage("يرجى إدخال البريد الإلكتروني وكلمة المرور");
+        return;
+      }
+
+      saveAdmin(email, password);
+
+      state.admin = { email, password };
+      saveState();
+
+      showAuthMessage("تم إنشاء حساب المدير بنجاح", false);
+      showLoginState();
+
+      document.getElementById("adminEmail").value = "";
+      document.getElementById("adminPassword").value = "";
+    }
+
+    function loginToAdmin() {
+      const email = document.getElementById("loginEmail").value.trim().toLowerCase();
+      const password = document.getElementById("loginPassword").value.trim();
+      const admin = getAdmin() || state.admin;
+
+      if (!admin) {
+        showAuthMessage("لا يوجد حساب مدير بعد، قم بإنشاء حساب أولاً");
+        return;
+      }
+
+      const validEmail = String(admin.email || "").trim().toLowerCase();
+      const validPassword = String(admin.password || "");
+
+      if (email === validEmail && password === validPassword) {
+        document.getElementById("loginModal").style.display = "none";
+        document.getElementById("adminPanel").classList.add("open");
+        return;
+      }
+
+      showAuthMessage("البريد الإلكتروني أو كلمة المرور غير صحيحة");
+    }
+
+    function openAdminPanel() {
+      if (document.getElementById("adminPanel").classList.contains("open")) {
+        document.getElementById("adminPanel").classList.remove("open");
+        return;
+      }
+
+      const admin = getAdmin();
+      if (!admin) {
+        document.getElementById("loginModal").style.display = "flex";
+        showLoginState();
+      } else {
+        document.getElementById("loginModal").style.display = "flex";
+        showLoginState();
+      }
+    }
+
+    function isAdminQuery() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get("admin") === "1";
+    }
+
+    function setupEvents() {
+      document.getElementById("cartBtn").addEventListener("click", openCart);
+      document.getElementById("closeCartBtn").addEventListener("click", closeCart);
+      document.getElementById("cartOverlay").addEventListener("click", closeCart);
+      document.getElementById("checkoutForm").addEventListener("submit", handleCheckout);
+
+      document.getElementById("tinyAdmin").addEventListener("click", openAdminPanel);
+
+      document.getElementById("loginBtn").addEventListener("click", loginToAdmin);
+      document.getElementById("createAdminBtn").addEventListener("click", createAdminAccount);
+
+      document.getElementById("logoutBtn").addEventListener("click", () => {
+        document.getElementById("adminPanel").classList.remove("open");
+        document.getElementById("loginModal").style.display = "flex";
+      });
+
+      document.getElementById("saveGeneralBtn").addEventListener("click", saveGeneralSettings);
+      document.getElementById("saveDesignBtn").addEventListener("click", saveDesignSettings);
+      document.getElementById("resetDesignBtn").addEventListener("click", resetDesignSettings);
+      document.getElementById("saveMediaBtn").addEventListener("click", saveMediaSettings);
+      document.getElementById("saveShippingBtn").addEventListener("click", saveShippingSettings);
+      document.getElementById("exportBtn").addEventListener("click", exportJson);
+      document.getElementById("importFile").addEventListener("change", (e) => importJson(e.target.files[0]));
+      document.getElementById("restoreDefaultBtn").addEventListener("click", restoreDefaultData);
+      document.getElementById("addProductBtn").addEventListener("click", () => openProductModal());
+
+      document.getElementById("saveProductBtn").addEventListener("click", saveProductFromModal);
+      document.getElementById("cancelProductBtn").addEventListener("click", closeProductModal);
+
+      document.getElementById("closeDetailBtn").addEventListener("click", closeProductDetail);
+
+      document.querySelectorAll(".tab-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const target = btn.dataset.tab;
+          document.querySelectorAll(".tab-btn").forEach(b => b.classList.toggle("active", b === btn));
+          document.querySelectorAll(".admin-tab-panel").forEach(panel => panel.classList.toggle("hidden", panel.id !== target));
+        });
+      });
+    }
+
+    function init() {
+      state = loadState();
+      cart = loadCart();
+
+      renderTrustBar();
+      renderCategories();
+      renderProducts();
+      fillPublicState();
+      drawCart();
+      fillAdminForm();
+      createCategoryOptions();
+      applyDesignSettings();
+
+      const adminSaved = getAdmin();
