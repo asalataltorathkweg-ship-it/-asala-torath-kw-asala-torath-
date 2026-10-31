@@ -6,11 +6,11 @@
     <title>أصالة التراث المصري | متحف أنتيكات عالمي</title>
     <meta
       name="description"
-      content="أصالة التراث المصري — متحف أنتيكات عالمي من مصر، صدف مصري طبيعي، أثاث أنتيك يدوي، قطع فاخرة، تصاميم مخصصة، شغل يدوي 100%."
+      content="متحف أنتيكات عالمي من مصر — صدف مصري طبيعي، قطع أثاث أنتيك، شغل يدوي 100%، تصاميم فاخرة، توصيل من الكويت للعالم."
     />
     <meta
       name="keywords"
-      content="أصالة التراث المصري, صدف مصري طبيعي, أثاث أنتيك, متحف أنتيك, صنع في مصر, شغل يدوي, الكويت, الخليج, عالمي"
+      content="أصالة التراث المصري, متحف أنتيك, صدف مصري طبيعي, أثاث أنتيك, شغل يدوي, صنع في مصر, الكويت, الخليج"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,46 +31,23 @@
         --muted: #6d6259;
         --green: #25d366;
         --red: #c0392b;
-        --line: rgba(17, 17, 17, 0.08);
+        --line: rgba(17,17,17,0.08);
         --shadow: 0 20px 50px rgba(0,0,0,.12);
         --radius: 18px;
       }
 
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
       body {
         background: var(--beige);
         color: var(--text);
         font-family: "Cairo", sans-serif;
         line-height: 1.8;
       }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      img {
-        display: block;
-        width: 100%;
-        max-width: 100%;
-      }
-
-      button, input, select, textarea {
-        font: inherit;
-      }
-
-      h1, h2, h3, h4 {
-        font-family: "Amiri", serif;
-      }
+      a { color: inherit; text-decoration: none; }
+      img { display: block; width: 100%; max-width: 100%; }
+      button, input, select, textarea { font: inherit; }
+      h1, h2, h3, h4 { font-family: "Amiri", serif; }
 
       .container {
         max-width: 1280px;
@@ -93,7 +70,7 @@
         position: sticky;
         top: 42px;
         z-index: 900;
-        background: rgba(248,244,238,0.8);
+        background: rgba(248,244,238,0.82);
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
         border-bottom: 1px solid rgba(17,17,17,0.05);
@@ -126,6 +103,7 @@
           linear-gradient(135deg, #100c0a 0%, #3a1c1b 100%);
         border: 2px solid rgba(198,168,106,0.9);
         box-shadow: inset 0 0 22px rgba(255,255,255,0.08), 0 10px 24px rgba(0,0,0,0.15);
+        overflow: hidden;
       }
 
       .brand-mark::before {
@@ -141,7 +119,7 @@
       }
 
       .brand-mark::after {
-        content: "👑";
+        content: "🐚";
         position: absolute;
         inset: 0;
         display: grid;
@@ -175,10 +153,7 @@
         font-weight: 700;
       }
 
-      .nav a {
-        position: relative;
-      }
-
+      .nav a { position: relative; }
       .nav a::after {
         content: "";
         position: absolute;
@@ -189,10 +164,7 @@
         background: var(--gold);
         transition: width 0.25s ease;
       }
-
-      .nav a:hover::after {
-        width: 100%;
-      }
+      .nav a:hover::after { width: 100%; }
 
       .header-actions {
         display: flex;
@@ -262,9 +234,7 @@
         margin-bottom: 18px;
       }
 
-      .hero h1 span {
-        color: var(--gold);
-      }
+      .hero h1 span { color: var(--gold); }
 
       .hero p {
         max-width: 640px;
@@ -293,10 +263,7 @@
         transition: transform 0.25s ease, box-shadow 0.25s ease;
       }
 
-      .btn:hover {
-        transform: translateY(-2px);
-      }
-
+      .btn:hover { transform: translateY(-2px); }
       .btn-primary {
         background: linear-gradient(135deg, var(--gold), #e7d6a7);
         color: var(--black);
@@ -365,7 +332,7 @@
         margin: 28px auto 0;
         padding: 0 18px;
         display: grid;
-        grid-template-columns: repeat(4, minmax(220px, 1fr));
+        grid-template-columns: repeat(4, minmax(220px,1fr));
         gap: 18px;
       }
 
@@ -378,48 +345,25 @@
         box-shadow: 0 14px 28px rgba(0,0,0,0.04);
       }
 
-      .service-item .icon {
-        font-size: 2rem;
-        margin-bottom: 8px;
-      }
+      .service-item .icon { font-size: 2rem; margin-bottom: 8px; }
+      .service-item strong { display: block; color: var(--black); margin-bottom: 4px; }
+      .service-item span { color: var(--muted); font-size: 0.8rem; }
 
-      .service-item strong {
-        display: block;
-        color: var(--black);
-        margin-bottom: 4px;
-      }
-
-      .service-item span {
-        color: var(--muted);
-        font-size: 0.8rem;
-      }
-
-      .section {
-        padding: 72px 0;
-      }
-
+      .section { padding: 72px 0; }
       .section-head {
         max-width: 760px;
         margin: 0 auto 28px;
         text-align: center;
       }
-
       .section-head h2 {
         color: var(--black);
-        font-size: clamp(2.2rem, 4vw, 3rem);
+        font-size: clamp(2.2rem,4vw,3rem);
         margin-bottom: 8px;
       }
-
-      .section-head p {
-        color: var(--muted);
-      }
+      .section-head p { color: var(--muted); }
 
       .filter-bar {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        margin-bottom: 24px;
+        display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 24px;
       }
 
       .filter-btn {
@@ -441,7 +385,7 @@
 
       .product-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
         gap: 24px;
       }
 
@@ -485,9 +429,7 @@
         transition: opacity 0.2s ease;
       }
 
-      .product-card:hover .product-media::after {
-        opacity: 1;
-      }
+      .product-card:hover .product-media::after { opacity: 1; }
 
       .product-badge {
         position: absolute;
@@ -528,9 +470,7 @@
       }
 
       .product-footer {
-        display: flex;
-        gap: 8px;
-        margin-top: 18px;
+        display: flex; gap: 8px; margin-top: 18px;
       }
 
       .product-footer .btn {
@@ -558,10 +498,7 @@
         box-shadow: var(--shadow);
       }
 
-      .story-card img {
-        height: 500px;
-        object-fit: cover;
-      }
+      .story-card img { height: 500px; object-fit: cover; }
 
       .story-content {
         background: rgba(255,255,255,0.76);
@@ -572,7 +509,7 @@
       }
 
       .story-content h2 {
-        font-size: clamp(2rem, 4vw, 2.8rem);
+        font-size: clamp(2rem,4vw,2.8rem);
         color: var(--black);
         margin-bottom: 12px;
       }
@@ -604,11 +541,7 @@
         padding: 38px 22px;
       }
 
-      .custom-box h2 {
-        font-size: clamp(2rem, 4vw, 3rem);
-        color: var(--black);
-      }
-
+      .custom-box h2 { font-size: clamp(2rem,4vw,3rem); color: var(--black); }
       .custom-box p {
         max-width: 760px;
         margin: 12px auto 24px;
@@ -650,27 +583,16 @@
         box-shadow: 0 12px 28px rgba(0,0,0,0.04);
       }
 
-      .why-item .icon {
-        font-size: 2.2rem;
-        margin-bottom: 8px;
-      }
-
-      .why-item h4 {
-        color: var(--black);
-        margin-bottom: 4px;
-      }
-
-      .why-item p {
-        font-size: 0.8rem;
-        color: var(--muted);
-      }
+      .why-item .icon { font-size: 2.2rem; margin-bottom: 8px; }
+      .why-item h4 { color: var(--black); margin-bottom: 4px; }
+      .why-item p { font-size: 0.8rem; color: var(--muted); }
 
       .review-grid {
         max-width: 1280px;
         margin: 0 auto;
         padding: 0 18px;
         display: grid;
-        grid-template-columns: repeat(3, minmax(240px, 1fr));
+        grid-template-columns: repeat(3, minmax(240px,1fr));
         gap: 20px;
       }
 
@@ -688,15 +610,8 @@
         margin-bottom: 8px;
       }
 
-      .review-card p {
-        color: var(--muted);
-        margin-bottom: 12px;
-      }
-
-      .review-meta {
-        color: var(--black);
-        font-weight: 800;
-      }
+      .review-card p { color: var(--muted); margin-bottom: 12px; }
+      .review-meta { color: var(--black); font-weight: 800; }
 
       .faq-list {
         max-width: 1100px;
@@ -808,9 +723,7 @@
         cursor: pointer;
       }
 
-      .float-admin span {
-        font-size: 1.2rem;
-      }
+      .float-admin span { font-size: 1.2rem; }
 
       .overlay {
         position: fixed;
@@ -820,9 +733,7 @@
         display: none;
       }
 
-      .overlay.open {
-        display: block;
-      }
+      .overlay.open { display: block; }
 
       .drawer {
         position: absolute;
@@ -871,10 +782,7 @@
         padding: 40px 20px;
       }
 
-      .empty-cart .big {
-        font-size: 3rem;
-        margin-bottom: 8px;
-      }
+      .empty-cart .big { font-size: 3rem; margin-bottom: 8px; }
 
       .cart-item {
         display: flex;
@@ -897,10 +805,7 @@
         font-size: 2rem;
       }
 
-      .cart-info {
-        flex: 1;
-      }
-
+      .cart-info { flex: 1; }
       .cart-info h4 {
         font-family: "Cairo", sans-serif;
         color: var(--black);
@@ -924,24 +829,13 @@
       }
 
       .qty-box button {
-        width: 24px;
-        height: 24px;
-        border: none;
-        border-radius: 6px;
-        background: var(--black);
-        color: white;
-        cursor: pointer;
-        font-weight: 800;
+        width: 24px; height: 24px; border: none; border-radius: 6px;
+        background: var(--black); color: white; cursor: pointer; font-weight: 800;
       }
 
       .remove-btn {
-        width: 30px;
-        height: 30px;
-        border: none;
-        background: var(--red);
-        color: white;
-        border-radius: 8px;
-        cursor: pointer;
+        width: 30px; height: 30px; border: none; background: var(--red);
+        color: white; border-radius: 8px; cursor: pointer;
       }
 
       .drawer-footer {
@@ -977,9 +871,7 @@
         margin-top: 18px;
       }
 
-      .form-box.open {
-        display: block;
-      }
+      .form-box.open { display: block; }
 
       .field {
         margin-bottom: 12px;
@@ -1050,18 +942,8 @@
         box-shadow: 0 30px 80px rgba(0,0,0,0.28);
       }
 
-      .login-box h3 {
-        color: var(--black);
-        text-align: center;
-        margin-bottom: 10px;
-      }
-
-      .login-box p {
-        color: var(--muted);
-        text-align: center;
-        font-size: 0.8rem;
-        margin-bottom: 18px;
-      }
+      .login-box h3 { color: var(--black); text-align: center; margin-bottom: 10px; }
+      .login-box p { color: var(--muted); text-align: center; font-size: 0.8rem; margin-bottom: 18px; }
 
       .login-box button {
         width: 100%;
@@ -1083,9 +965,7 @@
         overflow: auto;
       }
 
-      .admin-panel.open {
-        display: block;
-      }
+      .admin-panel.open { display: block; }
 
       .admin-box {
         max-width: 1100px;
@@ -1144,17 +1024,10 @@
         color: white;
       }
 
-      .admin-body {
-        padding: 18px;
-      }
+      .admin-body { padding: 18px; }
 
-      .admin-pane {
-        display: none;
-      }
-
-      .admin-pane.active {
-        display: block;
-      }
+      .admin-pane { display: none; }
+      .admin-pane.active { display: block; }
 
       .admin-grid {
         display: grid;
@@ -1190,20 +1063,9 @@
         font-weight: 800;
       }
 
-      .btn-brown {
-        background: var(--black);
-        color: white;
-      }
-
-      .btn-gold {
-        background: linear-gradient(135deg, var(--gold), #ebd399);
-        color: var(--black);
-      }
-
-      .btn-red {
-        background: var(--red);
-        color: white;
-      }
+      .btn-brown { background: var(--black); color: white; }
+      .btn-gold { background: linear-gradient(135deg, var(--gold), #ebd399); color: var(--black); }
+      .btn-red { background: var(--red); color: white; }
 
       .product-list {
         display: grid;
@@ -1229,19 +1091,9 @@
         object-fit: cover;
       }
 
-      .mini-body {
-        padding: 12px;
-      }
-
-      .mini-body h4 {
-        color: var(--black);
-        font-size: 1.1rem;
-      }
-
-      .mini-body p {
-        color: var(--muted);
-        font-size: 0.75rem;
-      }
+      .mini-body { padding: 12px; }
+      .mini-body h4 { color: var(--black); font-size: 1.1rem; }
+      .mini-body p { color: var(--muted); font-size: 0.75rem; }
 
       .mini-actions {
         display: flex;
@@ -1269,12 +1121,10 @@
         padding: 22px;
       }
 
-      .gallery-modal.open {
-        display: flex;
-      }
+      .gallery-modal.open { display: flex; }
 
       .modal-box {
-        width: min(1100px, 100%);
+        width: min(1100px,100%);
         background: #fffdf9;
         border-radius: 18px;
         overflow: hidden;
@@ -1290,12 +1140,7 @@
         justify-content: space-between;
       }
 
-      .modal-header h3 {
-        color: white;
-        font-family: "Cairo", sans-serif;
-        font-size: 1.2rem;
-      }
-
+      .modal-header h3 { color: white; font-family: "Cairo", sans-serif; font-size: 1.2rem; }
       .modal-body {
         display: grid;
         grid-template-columns: 1.2fr 1fr;
@@ -1308,8 +1153,7 @@
         position: relative;
       }
 
-      .modal-media img,
-      .modal-media video {
+      .modal-media img, .modal-media video {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -1330,7 +1174,7 @@
 
       .modal-content h2 {
         color: var(--black);
-        font-size: clamp(2rem, 3vw, 2.6rem);
+        font-size: clamp(2rem,3vw,2.6rem);
         margin: 10px 0 8px;
       }
 
@@ -1352,47 +1196,19 @@
       }
 
       @media (max-width: 980px) {
-        .nav {
-          display: none;
-        }
-
-        .services {
-          grid-template-columns: repeat(2, minmax(180px,1fr));
-        }
-
-        .why-grid {
-          grid-template-columns: repeat(2, minmax(180px,1fr));
-        }
-
-        .review-grid,
-        .story,
-        .modal-body,
-        .footer-grid {
-          grid-template-columns: 1fr;
-        }
+        .nav { display: none; }
+        .services { grid-template-columns: repeat(2, minmax(180px,1fr)); }
+        .why-grid { grid-template-columns: repeat(2, minmax(180px,1fr)); }
+        .review-grid, .story, .modal-body, .footer-grid { grid-template-columns: 1fr; }
+        .admin-grid { grid-template-columns: 1fr; }
       }
 
       @media (max-width: 640px) {
-        .hero-actions {
-          flex-direction: column;
-          align-items: stretch;
-        }
-
-        .btn {
-          width: 100%;
-        }
-
-        .services {
-          grid-template-columns: 1fr;
-        }
-
-        .why-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .badge-row {
-          justify-content: center;
-        }
+        .hero-actions { flex-direction: column; align-items: stretch; }
+        .btn { width: 100%; }
+        .services { grid-template-columns: 1fr; }
+        .why-grid { grid-template-columns: 1fr; }
+        .badge-row { justify-content: center; }
       }
     </style>
   </head>
@@ -1403,7 +1219,7 @@
     <header class="header">
       <div class="header-inner">
         <div class="brand">
-          <div class="brand-mark" aria-label="شعار أصالة التراث المصري"></div>
+          <div class="brand-mark" id="headerLogo"></div>
           <div class="brand-text">
             <b id="siteName">أصالة التراث المصري</b>
             <small>ASALA HERITAGE</small>
@@ -1426,15 +1242,14 @@
       </div>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="heroSection">
       <div class="hero-inner">
         <div class="hero-content">
           <span class="eyebrow">متحف أنتيكات عالمي</span>
-          <h1>المصنع الوحيد في مصر <span>لصناعة الصدف المصري الطبيعي</span> يدوياً 100%</h1>
-          <p>
+          <h1 id="heroHeading">المصنع الوحيد في مصر <span>لصناعة الصدف المصري الطبيعي</span> يدوياً 100%</h1>
+          <p id="heroText">
             من بريق الصدف المصري الطبيعي ودفء خشب الزان، نصنع قطعاً تحمل روح التراث المصري.
-            كل قطعة تحفة فنية، صنعت في مصر، ومصممة بحرفية أصيلة من خان الخليلي إلى الكويت،
-            ثم تنطلق إلى الخليج والعالم.
+            كل قطعة تحفة فنية، صنعت في مصر، ومصممة بحرفية أصيلة من خان الخليلي إلى الكويت.
           </p>
 
           <div class="hero-actions">
@@ -1442,20 +1257,18 @@
             <a href="https://wa.me/96551118069?text=السلام%20عليكم%20🌹%20أرغب%20في%20تفصيل%20قطعة%20حسب%20الطلب%20—%20صنع%20في%20مصر" target="_blank" class="btn btn-secondary">تفصيل خاص</a>
           </div>
 
-          <div class="badge-row">
-            <span class="badge">ضمان مدى الحياة</span>
-            <span class="badge">قسم إصلاحات خاص</span>
-            <span class="badge">70% يصدر للخليج</span>
-            <span class="badge">من خان الخليلي للكويت</span>
+          <div class="badge-row" id="heroBadges">
+            <span class="badge">أصالة مدى الحياة</span>
+            <span class="badge">حرفية خالدة</span>
             <span class="badge">صدف مصري طبيعي</span>
-            <span class="badge">شغل يدوي 100%</span>
+            <span class="badge">من خان الخليلي للكويت</span>
           </div>
         </div>
       </div>
     </section>
 
     <div class="marquee-wrap">
-      <div class="marquee">
+      <div class="marquee" id="topMarquee">
         <span>✨ صنع في مصر • المصنع الوحيد في مصر والشرق الأوسط لصناعة الصدف الطبيعي يدوياً 100% • صدف مصري طبيعي • شغل يدوي • من خان الخليلي إلى الكويت • توصيل للخليج والعالم •</span>
       </div>
     </div>
@@ -1482,41 +1295,41 @@
           <h2>مجموعة فاخرة من التحف والقطع الأثرية</h2>
         </div>
 
-        <div class="why-grid">
-          <div class="why-item"><div class="icon">👑</div><h4>أثاث ملكي</h4><p>ديكور فاخر وكلاسيكي</p></div>
-          <div class="why-item"><div class="icon">💼</div><h4>أثاث مكتبي</h4><p>هوية مميزة للبيئة</p></div>
-          <div class="why-item"><div class="icon">🚪</div><h4>بيوهات ومداخل</h4><p>نقوش فاخرة ومهيبة</p></div>
-          <div class="why-item"><div class="icon">🪑</div><h4>ترابيزات</h4><p>سفرة وقاعة ضيافة</p></div>
-          <div class="why-item"><div class="icon">🔥</div><h4>مباخر</h4><p>هدوء وعبق ومكانة</p></div>
-          <div class="why-item"><div class="icon">🍽️</div><h4>صواني وكسترات</h4><p>ضيافة فخمة</p></div>
-          <div class="why-item"><div class="icon">♟️</div><h4>طاولات زهر</h4><p>أسلوب فني مميز</p></div>
-          <div class="why-item"><div class="icon">🧥</div><h4>عكاز صدف</h4><p>ملمس أنيق</p></div>
-          <div class="why-item"><div class="icon">🏺</div><h4>فازات</h4><p>ديكور مستدام</p></div>
-          <div class="why-item"><div class="icon">📖</div><h4>لوحات قرآنية</h4><p>زخارف فاخرة</p></div>
-          <div class="why-item"><div class="icon">💎</div><h4>لولو صدف</h4><p>ألوان ودرجات لؤلؤية</p></div>
-          <div class="why-item"><div class="icon">🛋️</div><h4>حلايا مجالس</h4><p>راحة بفخامة</p></div>
-          <div class="why-item"><div class="icon">🪟</div><h4>شيشة وزجاج</h4><p>أسلوب أنيق</p></div>
-          <div class="why-item"><div class="icon">📦</div><h4>صناديق وشكمجيات</h4><p>ديكور واستخدام</p></div>
-          <div class="why-item"><div class="icon">🧰</div><h4>مداخل وبيوهات</h4><p>هوية فاخرة</p></div>
+        <div class="why-grid" id="categoryGrid">
+          <div class="why-item"><div class="icon">🐚</div><h4>أثاث ملكي</h4><p>ديكور فاخر وكلاسيكي</p></div>
+          <div class="why-item"><div class="icon">🐚</div><h4>أثاث مكتبي</h4><p>هوية مميزة للبيئة</p></div>
+          <div class="why-item"><div class="icon">🐚</div><h4>بيوهات ومداخل</h4><p>نقوش فاخرة ومهيبة</p></div>
+          <div class="why-item"><div class="icon">🐚</div><h4>ترابيزات</h4><p>سفرة وقاعة ضيافة</p></div>
+          <div class="why-item"><div class="icon">🐚</div><h4>مباخر</h4><p>هدوء وعبق ومكانة</p></div>
+          <div class="why-item"><div class="icon">🐚</div><h4>صواني وكسترات</h4><p>ضيافة فخمة</p></div>
+          <div class="why-item"><div class="icon">🐚</div><h4>طاولات زهر</h4><p>أسلوب فني مميز</p></div>
+          <div class="why-item"><div class="icon">🐚</div><h4>عكاز صدف</h4><p>ملمس أنيق</p></div>
+          <div class="why-item"><div class="icon">🐚</div><h4>فازات</h4><p>ديكور مستدام</p></div>
+          <div class="why-item"><div class="icon">🐚</div><h4>لوحات قرآنية</h4><p>زخارف فاخرة</p></div>
+          <div class="why-item"><div class="icon">🐚</div><h4>لولو صدف</h4><p>ألوان ودرجات لؤلؤية</p></div>
+          <div class="why-item"><div class="icon">🐚</div><h4>حلايا مجالس</h4><p>راحة بفخامة</p></div>
+          <div class="why-item"><div class="icon">🐚</div><h4>شيشة وزجاج</h4><p>أسلوب أنيق</p></div>
+          <div class="why-item"><div class="icon">🐚</div><h4>صناديق وشكمجيات</h4><p>ديكور واستخدام</p></div>
+          <div class="why-item"><div class="icon">🐚</div><h4>مداخل وبيوهات</h4><p>هوية فاخرة</p></div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="story">
+    <section class="section" id="craft">
       <div class="story">
         <div class="story-card">
-          <img src="https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&w=1400&q=80" alt="حرفية صدف مصرية" />
+          <img id="aboutImage" src="https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&w=1400&q=80" alt="حرفية صدف مصرية" />
         </div>
 
         <div class="story-content">
           <span class="eyebrow">من نحن</span>
-          <h2>إتقان يدوي في تفصيل كل قطعة</h2>
-          <p>
+          <h2 id="storyTitle">إتقان يدوي في تفصيل كل قطعة</h2>
+          <p id="storyText1">
             نحن ندرك أن القطعة هي مركز ثقل الديكور. لذلك نفتح باب الإبداع عبر خدمة التفصيل
             التي تراعي مساحتكم وذوقكم. في أصالة التراث، نحول أفكاركم إلى واقع ملموس باختيارنا لأجود أنواع الخشب
             المطعم وتصميم قواعد بخطوط عصرية تتحمل الاستخدام اليومي بجودة صناعة مصرية أصيلة.
           </p>
-          <p>
+          <p id="storyText2">
             نحرص على قياس المساحة بدقة لتصميم قطعة تناسب اتساع المكان ولا تعيق الحركة.
             نتيح لكم اختيار شكل القطعة (دائري، مستطيل، بيضاوي) بما يتناسب مع عدد الأفراد.
             نركز على متانة التشطيب لضمان مقاومة الخدوش والبري لسنوات طويلة.
@@ -1537,10 +1350,10 @@
         </p>
 
         <div class="feature-list">
-          <div class="feature-pill">📏 مقاسات خاصة</div>
-          <div class="feature-pill">💎 نقش خاص</div>
-          <div class="feature-pill">🪵 خشب زان طبيعي</div>
-          <div class="feature-pill">🛡️ ضمان مدى الحياة</div>
+          <div class="feature-pill">🐚 مقاسات خاصة</div>
+          <div class="feature-pill">🐚 نقش خاص</div>
+          <div class="feature-pill">🐚 خشب زان طبيعي</div>
+          <div class="feature-pill">🐚 أصالة مدى الحياة</div>
         </div>
 
         <a href="https://wa.me/96551118069?text=السلام%20عليكم%20🌹%20أرغب%20في%20تصميم%20خاص%20—%20صنع%20في%20مصر" target="_blank" class="btn btn-primary">لنتحدث عن قطعتك</a>
@@ -1549,16 +1362,16 @@
 
     <div class="section">
       <div class="section-head">
-        <span class="eyebrow">لماذا أصالة التراث؟</span>
-        <h2>كل منتجاتنا تحمل ضمان مدى الحياة</h2>
+        <span class="eyebrow">أصالة مدى الحياة</span>
+        <h2>كل منتجاتنا تحمل أصالة مدى الحياة</h2>
       </div>
 
       <div class="why-grid">
-        <div class="why-item"><div class="icon">💎</div><h4>صدف مصري طبيعي 100%</h4><p>أصلية وطبيعية</p></div>
-        <div class="why-item"><div class="icon">🪵</div><h4>خشب زان طبيعي</h4><p>متانة واستقرار</p></div>
-        <div class="why-item"><div class="icon">✋</div><h4>شغل يدوي بالكامل</h4><p>كل قطعة حسب اليد</p></div>
-        <div class="why-item"><div class="icon">🚚</div><h4>توصيل من الكويت للعالم</h4><p>توصيل محترف</p></div>
-        <div class="why-item"><div class="icon">🛡️</div><h4>ضمان مدى الحياة</h4><p>جودة وثبات</p></div>
+        <div class="why-item"><div class="icon">🐚</div><h4>صدف مصري طبيعي 100%</h4><p>أصلية وطبيعية</p></div>
+        <div class="why-item"><div class="icon">🐚</div><h4>خشب زان طبيعي</h4><p>متانة واستقرار</p></div>
+        <div class="why-item"><div class="icon">🐚</div><h4>شغل يدوي بالكامل</h4><p>كل قطعة حسب اليد</p></div>
+        <div class="why-item"><div class="icon">🐚</div><h4>توصيل من الكويت للعالم</h4><p>توصيل محترف</p></div>
+        <div class="why-item"><div class="icon">🐚</div><h4>أصالة مدى الحياة</h4><p>هوية فاخرة</p></div>
       </div>
     </div>
 
@@ -1652,9 +1465,9 @@
       <div class="footer-grid">
         <div>
           <div class="footer-brand">
-            <div class="brand-mark"></div>
+            <div class="brand-mark" id="footerLogo"></div>
             <div>
-              <strong>أصالة التراث المصري</strong>
+              <strong id="footerSiteName">أصالة التراث المصري</strong>
               <small>ASALA HERITAGE</small>
             </div>
           </div>
@@ -1667,10 +1480,11 @@
 
         <div>
           <h4>تواصل معنا</h4>
-          <a href="https://wa.me/96551118069" target="_blank">واتساب: 96551118069</a>
-          <a href="mailto:asalat.al.torath.Kw.Eg@GMAIL.COM">البريد: asalat.al.torath.Kw.Eg@GMAIL.COM</a>
-          <a href="https://www.instagram.com/asalat.al.torath.kw.eg" target="_blank">إنستغرام</a>
-          <a href="https://www.facebook.com/profile.php?id=61595434109686" target="_blank">فيسبوك</a>
+          <a id="footerWhatsapp" href="https://wa.me/96551118069" target="_blank">واتساب: 96551118069</a>
+          <a id="footerEmail" href="mailto:asalat.al.torath.Kw.Eg@GMAIL.COM">البريد: asalat.al.torath.Kw.Eg@GMAIL.COM</a>
+          <a id="footerInstagram" href="https://www.instagram.com/asalat.al.torath.kw.eg" target="_blank">إنستغرام</a>
+          <a id="footerFacebook" href="https://www.facebook.com/profile.php?id=61595434109686" target="_blank">فيسبوك</a>
+          <a id="footerTiktok" href="https://www.tiktok.com/@asalat.al.torath5?_r=1&_t=ZS-9B18mF5JlpP" target="_blank">تيك توك</a>
         </div>
 
         <div>
@@ -1678,7 +1492,7 @@
           <span>صنع في مصر</span>
           <span>صدف مصري طبيعي</span>
           <span>شغل يدوي بالكامل</span>
-          <span>ضمان مدى الحياة</span>
+          <span>أصالة مدى الحياة</span>
         </div>
       </div>
 
@@ -1776,6 +1590,7 @@
         <div class="admin-tabs">
           <button class="admin-tab active" data-tab="general">🏠 عام</button>
           <button class="admin-tab" data-tab="design">🎨 تصميم</button>
+          <button class="admin-tab" data-tab="media">🖼️ وسائط</button>
           <button class="admin-tab" data-tab="products">📦 منتجات</button>
           <button class="admin-tab" data-tab="shipping">🚚 شحن</button>
           <button class="admin-tab" data-tab="backup">💾 نسخ احتياطي</button>
@@ -1784,6 +1599,24 @@
         <div class="admin-body">
           <div class="admin-pane active" data-pane="general">
             <div class="admin-grid">
+              <div class="admin-card">
+                <h3>بيانات الدخول</h3>
+
+                <div class="field">
+                  <label>البريد الإلكتروني للـ Admin</label>
+                  <input id="adminEmailInput" type="email" />
+                </div>
+
+                <div class="field">
+                  <label>كلمة المرور الحالية</label>
+                  <input id="adminPasswordInput" type="text" />
+                </div>
+
+                <div class="action-row">
+                  <button class="btn-small btn-brown" id="saveAdminCredentialsBtn">حفظ بيانات الدخول</button>
+                </div>
+              </div>
+
               <div class="admin-card">
                 <h3>معلومات المتجر</h3>
 
@@ -1808,11 +1641,6 @@
                 </div>
 
                 <div class="field">
-                  <label>البريد الإلكتروني</label>
-                  <input id="adminEmail" type="text" />
-                </div>
-
-                <div class="field">
                   <label>رابط إنستغرام</label>
                   <input id="adminInstagram" type="text" />
                 </div>
@@ -1822,21 +1650,13 @@
                   <input id="adminFacebook" type="text" />
                 </div>
 
+                <div class="field">
+                  <label>رابط تيك توك</label>
+                  <input id="adminTiktok" type="text" />
+                </div>
+
                 <div class="action-row">
                   <button class="btn-small btn-brown" id="saveGeneralBtn">حفظ</button>
-                </div>
-              </div>
-
-              <div class="admin-card">
-                <h3>شريط الخدمات</h3>
-
-                <div class="field">
-                  <label>كل سطر خدمة في سطر جديد</label>
-                  <textarea id="adminTopbar"></textarea>
-                </div>
-
-                <div class="action-row">
-                  <button class="btn-small btn-gold" id="saveTopbarBtn">حفظ شريط الخدمات</button>
                 </div>
               </div>
             </div>
@@ -1892,6 +1712,52 @@
                 <div class="action-row">
                   <button class="btn-small btn-gold" id="saveDesignBtn">حفظ التصميم</button>
                   <button class="btn-small btn-red" id="resetDesignBtn">استعادة الافتراضي</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="admin-pane" data-pane="media">
+            <div class="admin-grid">
+              <div class="admin-card">
+                <h3>اللوجو</h3>
+
+                <div class="field">
+                  <label>لوجو أعلى الصفحة</label>
+                  <input id="logoUploadHeader" type="file" accept="image/*" />
+                  <img id="logoPreviewHeader" style="margin-top:10px; max-height:120px; object-fit:contain; border:1px solid #eee; border-radius:10px; padding:10px; background:#fff;" />
+                </div>
+
+                <div class="field">
+                  <label>لوجو أسفل الصفحة</label>
+                  <input id="logoUploadFooter" type="file" accept="image/*" />
+                  <img id="logoPreviewFooter" style="margin-top:10px; max-height:120px; object-fit:contain; border:1px solid #eee; border-radius:10px; padding:10px; background:#fff;" />
+                </div>
+              </div>
+
+              <div class="admin-card">
+                <h3>الغلاف</h3>
+
+                <div class="field">
+                  <label>صورة الغلاف</label>
+                  <input id="heroImageUpload" type="file" accept="image/*" />
+                  <img id="heroImagePreview" style="margin-top:10px; max-height:150px; object-fit:cover; border:1px solid #eee; border-radius:10px; background:#fff;" />
+                </div>
+
+                <div class="field">
+                  <label>فيديو الغلاف</label>
+                  <input id="heroVideoUpload" type="file" accept="video/*" />
+                  <video id="heroVideoPreview" controls style="margin-top:10px; max-height:180px; width:100%; border:1px solid #eee; border-radius:10px; background:#000;"></video>
+                </div>
+              </div>
+
+              <div class="admin-card">
+                <h3>صورة من نحن</h3>
+
+                <div class="field">
+                  <label>تحميل صورة من نحن</label>
+                  <input id="aboutImageUpload" type="file" accept="image/*" />
+                  <img id="aboutImagePreview" style="margin-top:10px; max-height:180px; object-fit:cover; border:1px solid #eee; border-radius:10px; background:#fff;" />
                 </div>
               </div>
             </div>
@@ -1976,7 +1842,12 @@
 
     <script>
       const STORAGE_KEY = "asala_heritage_store_v1";
+
       const defaultState = {
+        admin: {
+          email: "admin@asala-heritage.com",
+          password: "Asala@2025"
+        },
         general: {
           siteName: "أصالة التراث المصري",
           slogan: "عاشق ومعشوق — فن يدوي تم تصنيعه بحب من القلب",
@@ -1985,7 +1856,16 @@
           email: "asalat.al.torath.Kw.Eg@GMAIL.COM",
           instagram: "https://www.instagram.com/asalat.al.torath.kw.eg",
           facebook: "https://www.facebook.com/profile.php?id=61595434109686",
-          topbar: "✨ صنع في مصر • المصنع الوحيد في مصر والشرق الأوسط لصناعة الصدف الطبيعي يدوياً 100% • صدف مصري طبيعي • شغل يدوي • من خان الخليلي إلى الكويت • توصيل للخليج والعالم •"
+          tiktok: "https://www.tiktok.com/@asalat.al.torath5?_r=1&_t=ZS-9B18mF5JlpP",
+          topbar: "✨ صنع في مصر • المصنع الوحيد في مصر والشرق الأوسط لصناعة الصدف الطبيعي يدوياً 100% • صدف مصري طبيعي • شغل يدوي • من خان الخليلي إلى الكويت • توصيل للخليج والعالم •",
+          logoHeader: "",
+          logoFooter: "",
+          heroImage: "https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&w=1800&q=80",
+          heroVideo: "",
+          aboutImage: "https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&w=1400&q=80",
+          storyTitle: "إتقان يدوي في تفصيل كل قطعة",
+          storyText1: "نحن ندرك أن القطعة هي مركز ثقل الديكور. لذلك نفتح باب الإبداع عبر خدمة التفصيل التي تراعي مساحتكم وذوقكم.",
+          storyText2: "نحرص على قياس المساحة بدقة لتصميم قطعة تناسب اتساع المكان ولا تعيق الحركة."
         },
         design: {
           black: "#0b0908",
@@ -2009,15 +1889,22 @@
             { label: "استلام من الفرع", price: 0, note: "مجاني" }
           ]
         },
+        services: [
+          { icon: "🐚", title: "أسرع خدمة شحن", text: "نصل أي مكان بالعالم" },
+          { icon: "🐚", title: "أفضل خدمة ما بعد البيع", text: "أوقات العمل: 8 ص - 11 م" },
+          { icon: "🐚", title: "أقيم منتج بأفضل سعر", text: "صناعة مميزة بعناية فائقة" },
+          { icon: "🐚", title: "صنع في مصر", text: "شغل يدوي كامل" }
+        ],
         products: [
           {
             id: 1,
             name: "طقم صواني الملكة نفرتيتي",
             royal: "👑 إصدار فرعوني",
             category: "صواني تقديم و كسترات",
-            desc: "للضيافة سحر.. وحين يلتقي عبق الأصالة بفن الصدف المصري الطبيعي، يولد طقم صواني يروي حكايةً من الفخامة والجمال.",
+            desc: "للضيافة سحر.. حين يلتقي عبق الأصالة بفن الصدف المصري الطبيعي، يولد طقم صواني يروي حكايةً من الفخامة والجمال.",
             story: "تصميم مستوحى من القصور المصرية القديمة، مع تفاصيل صدفيّة يدوية تُصنع يدويًا في مصر.",
             status: "متوفر",
+            price: 0,
             image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
             video: ""
           },
@@ -2029,6 +1916,7 @@
             desc: "للتفاصيل سحر.. وحين يلتقي عبق الأصالة بفن الصدف المصري الطبيعي، يولد طقم صواني يروي حكايةً من الفخامة والجمال.",
             story: "تخطيط عثماني فخم مع لمسة تراثية عربية، مع لمسات صدفية يدوية وألوان متدرجة.",
             status: "متوفر",
+            price: 0,
             image: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80",
             video: ""
           },
@@ -2040,6 +1928,7 @@
             desc: "حين يجتمع فن الصدف المصري بالخشب الزان، تولد تحفة فنية تروي حكايةً من الفخامة والجمال.",
             story: "طقم فخم يختزل الفن المصري القديم في شكل عصري متوازن، مع تفاصيل دقيقة ومظهر رئاسي.",
             status: "متوفر",
+            price: 0,
             image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
             video: ""
           },
@@ -2051,6 +1940,7 @@
             desc: "للتميز عنوان.. وحين يلتقي عبق الأصالة بفن الصدف المصري الطبيعي، تولد ترابيزة تروي حكايةً من الفخامة والجمال.",
             story: "مناسبة للمجالس الكبيرة والديكور الفاخر للمنزل، وتخلط بين العمق التاريخي واللمسة الحديثة.",
             status: "متوفر",
+            price: 0,
             image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=80",
             video: ""
           },
@@ -2062,6 +1952,7 @@
             desc: "للضيافة أصول.. وحين يلتقي عبق الأصالة بفن الصدف المصري الطبيعي، تولد ترابيزة تروي حكايةً من الفخامة والجمال.",
             story: "مستوحاة من القصور الملكية، وتلائم الضيافة الرسمية والديكور الرئاسي.",
             status: "متوفر",
+            price: 0,
             image: "https://images.unsplash.com/photo-1484101403633-562f891dc89a?auto=format&fit=crop&w=900&q=80",
             video: ""
           },
@@ -2073,6 +1964,7 @@
             desc: "للنجوم حضور.. وحين يلتقي عبق الأصالة بفن الصدف المصري الطبيعي، تولد ترابيزة تروي حكايةً من الفخامة والجمال.",
             story: "مصممة بنقوش نجمة فرعونية متقنة، مناسبة للديكور الأثرية والأنيقة في آن واحد.",
             status: "متوفر",
+            price: 0,
             image: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80",
             video: ""
           },
@@ -2084,6 +1976,7 @@
             desc: "للمكتب هيبة.. وحين يلتقي عبق الأصالة بفن الصدف المصري الطبيعي، يولد طقم مكتب يروي حكايةً من الفخامة والجمال.",
             story: "مناسب للمكاتب الفاخرة ومنازل الأثرياء، مع هوية متحفية وظلال دنيوية أنيقة.",
             status: "متوفر",
+            price: 0,
             image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80",
             video: ""
           },
@@ -2095,6 +1988,7 @@
             desc: "حين يلتقي عبق الأصالة بفن الصدف المصري الطبيعي، يولد مبخرٌ يروي حكايةً من الفخامة والجمال.",
             story: "مبخر صغير تراثي، مصنوع يدويًا من خشب الزان والصدف الطبيعي ويعطي إحساسًا فاخراً للديكور.",
             status: "متوفر",
+            price: 0,
             image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
             video: ""
           },
@@ -2106,6 +2000,7 @@
             desc: "حين يلتقي عبق الأصالة بفن الصدف المصري الطبيعي، يولد كرسيٌ يروي حكايةً من الفخامة والجمال.",
             story: "خيط الخشب والزخرفة الذهبية والصدف الطبيعي يضفيان طابعًا ملكيًا حقيقيًا.",
             status: "متوفر",
+            price: 0,
             image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
             video: ""
           },
@@ -2117,6 +2012,7 @@
             desc: "حين يلتقي عبق الأصالة بفن الصدف المصري الطبيعي، يولد طقمٌ يروي حكايةً من الفخامة والجمال.",
             story: "أكبر قطعنا وأكثرها أناقة، يليق بأروع القاعات والمجالس الراقية.",
             status: "متوفر",
+            price: 0,
             image: "https://images.unsplash.com/photo-1484101403633-562f891dc89a?auto=format&fit=crop&w=900&q=80",
             video: ""
           }
@@ -2149,7 +2045,7 @@
           const saved = localStorage.getItem(STORAGE_KEY);
           if (saved) return JSON.parse(saved);
         } catch (e) {
-          console.warn("لا يوجد تخزين محلي");
+          console.warn("No local storage available");
         }
         return JSON.parse(JSON.stringify(defaultState));
       }
@@ -2166,22 +2062,122 @@
         showToast.timer = setTimeout(() => toast.classList.remove("show"), 1800);
       }
 
+      function applyDesign() {
+        const root = document.documentElement;
+        root.style.setProperty("--black", state.design.black || "#0b0908");
+        root.style.setProperty("--gold", state.design.gold || "#c6a86a");
+        root.style.setProperty("--gold-deep", state.design.goldDark || "#a8833c");
+        root.style.setProperty("--beige", state.design.beige || "#f8f4ee");
+        root.style.setProperty("--text", state.design.text || "#171512");
+        root.style.setProperty("--radius", `${Number(state.design.radius || 18)}px`);
+
+        document.body.style.fontFamily = state.design.fontBody || "'Cairo', sans-serif";
+        document.body.style.fontSize = `${Number(state.design.bodySize || 16)}px`;
+
+        document.querySelectorAll("h1, h2, h3, h4").forEach((el) => {
+          el.style.fontFamily = state.design.fontDisplay || "'Amiri', serif";
+        });
+      }
+
+      function renderLogo() {
+        const headerLogo = document.getElementById("headerLogo");
+        const footerLogo = document.getElementById("footerLogo");
+        const logoHeaderValue = state.general.logoHeader || "";
+        const logoFooterValue = state.general.logoFooter || "";
+        if (headerLogo) {
+          headerLogo.innerHTML = logoHeaderValue ? `<img src="${logoHeaderValue}" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" />` : "";
+        }
+        if (footerLogo) {
+          footerLogo.innerHTML = logoFooterValue ? `<img src="${logoFooterValue}" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" />` : "";
+        }
+      }
+
+      function renderMedia() {
+        const hero = document.getElementById("heroSection");
+        const heroVideo = state.general.heroVideo || "";
+        if (heroVideo) {
+          hero.style.background = `url('${state.general.heroImage || "https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&w=1800&q=80"}') center/cover no-repeat`;
+          hero.innerHTML = `
+            <div class="hero-inner">
+              <div class="hero-content">
+                <span class="eyebrow">متحف أنتيكات عالمي</span>
+                <h1 id="heroHeading">المصنع الوحيد في مصر <span>لصناعة الصدف المصري الطبيعي</span> يدوياً 100%</h1>
+                <p id="heroText">من بريق الصدف المصري الطبيعي ودفء خشب الزان، نصنع قطعاً تحمل روح التراث المصري.</p>
+                <div class="hero-actions">
+                  <a href="#products" class="btn btn-primary">تسوّق المجموعة</a>
+                  <a href="https://wa.me/96551118069?text=السلام%20عليكم%20🌹%20أرغب%20في%20تفصيل%20قطعة%20حسب%20الطلب%20—%20صنع%20في%20مصر" target="_blank" class="btn btn-secondary">تفصيل خاص</a>
+                </div>
+                <div class="badge-row">
+                  <span class="badge">أصالة مدى الحياة</span>
+                  <span class="badge">حرفية خالدة</span>
+                  <span class="badge">صدف مصري طبيعي</span>
+                  <span class="badge">من خان الخليلي للكويت</span>
+                </div>
+              </div>
+            </div>
+            <video autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;opacity:0.25;">
+              <source src="${heroVideo}" />
+            </video>
+          `;
+        } else {
+          hero.style.background =
+            `linear-gradient(180deg, rgba(10,10,10,0.15), rgba(10,10,10,0.72)), url('${state.general.heroImage || "https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&w=1800&q=80"}') center/cover no-repeat`;
+          hero.innerHTML = `
+            <div class="hero-inner">
+              <div class="hero-content">
+                <span class="eyebrow">متحف أنتيكات عالمي</span>
+                <h1 id="heroHeading">المصنع الوحيد في مصر <span>لصناعة الصدف المصري الطبيعي</span> يدوياً 100%</h1>
+                <p id="heroText">من بريق الصدف المصري الطبيعي ودفء خشب الزان، نصنع قطعاً تحمل روح التراث المصري.</p>
+                <div class="hero-actions">
+                  <a href="#products" class="btn btn-primary">تسوّق المجموعة</a>
+                  <a href="https://wa.me/96551118069?text=السلام%20عليكم%20🌹%20أرغب%20في%20تفصيل%20قطعة%20حسب%20الطلب%20—%20صنع%20في%20مصر" target="_blank" class="btn btn-secondary">تفصيل خاص</a>
+                </div>
+                <div class="badge-row">
+                  <span class="badge">أصالة مدى الحياة</span>
+                  <span class="badge">حرفية خالدة</span>
+                  <span class="badge">صدف مصري طبيعي</span>
+                  <span class="badge">من خان الخليلي للكويت</span>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+      }
+
+      function renderGeneral() {
+        document.getElementById("siteName").textContent = state.general.siteName || defaultState.general.siteName;
+        document.getElementById("footerSiteName").textContent = state.general.siteName || defaultState.general.siteName;
+
+        const wa = state.general.whatsapp || defaultState.general.whatsapp;
+        document.getElementById("footerWhatsapp").href = "https://wa.me/" + wa;
+        document.getElementById("footerWhatsapp").textContent = "واتساب: " + wa;
+
+        document.getElementById("footerEmail").href = "mailto:" + (state.general.email || defaultState.general.email);
+        document.getElementById("footerEmail").textContent = "البريد: " + (state.general.email || defaultState.general.email);
+
+        document.getElementById("footerInstagram").href = state.general.instagram || defaultState.general.instagram;
+        document.getElementById("footerFacebook").href = state.general.facebook || defaultState.general.facebook;
+        document.getElementById("footerTiktok").href = state.general.tiktok || defaultState.general.tiktok;
+
+        document.getElementById("topMarquee").innerHTML = `<span>${state.general.topbar || defaultState.general.topbar}</span>`;
+
+        document.getElementById("storyTitle").textContent = state.general.storyTitle || "إتقان يدوي في تفصيل كل قطعة";
+        document.getElementById("storyText1").textContent = state.general.storyText1 || defaultState.general.storyText1;
+        document.getElementById("storyText2").textContent = state.general.storyText2 || defaultState.general.storyText2;
+
+        document.getElementById("aboutImage").src = state.general.aboutImage || defaultState.general.aboutImage;
+      }
+
       function renderServices() {
         const box = document.getElementById("servicesBox");
         if (!box) return;
+        const data = state.services && state.services.length ? state.services : defaultState.services;
 
-        const items = [
-          { icon: "🚚", title: "أسرع خدمة شحن", text: "نصل أي مكان بالعالم" },
-          { icon: "🎧", title: "أفضل خدمة ما بعد البيع", text: "أوقات العمل: 8 ص - 11 م" },
-          { icon: "💰", title: "أقيم منتج بأفضل سعر", text: "صناعة مميزة بعناية فائقة" },
-          { icon: "✨", title: "صنع في مصر", text: "شغل يدوي كامل" }
-        ];
-
-        box.innerHTML = items.map((i) => `
+        box.innerHTML = data.map((item) => `
           <div class="service-item">
-            <div class="icon">${i.icon}</div>
-            <strong>${i.title}</strong>
-            <span>${i.text}</span>
+            <div class="icon">${item.icon || "🐚"}</div>
+            <strong>${item.title}</strong>
+            <span>${item.text}</span>
           </div>
         `).join("");
       }
@@ -2210,7 +2206,6 @@
         if (!grid) return;
 
         const list = filter === "الكل" ? state.products : state.products.filter((p) => p.category === filter);
-
         if (!list.length) {
           grid.innerHTML = `<div style="grid-column:1/-1; text-align:center; color:var(--muted); padding:22px;">لا توجد منتجات في هذا القسم.</div>`;
           return;
@@ -2246,57 +2241,13 @@
         });
       }
 
-      function openGalleryModal(productId) {
+      function addToCart(productId) {
         const product = state.products.find((p) => p.id === productId);
         if (!product) return;
 
-        const modal = document.getElementById("galleryModal");
-        const media = document.getElementById("modalMedia");
-        const title = document.getElementById("modalTitle");
-        const name = document.getElementById("modalName");
-        const text = document.getElementById("modalText");
-        const story = document.getElementById("modalStory");
-        const meta = document.getElementById("modalMeta");
-
-        title.textContent = product.name;
-        name.textContent = product.name;
-        text.textContent = product.desc;
-        story.textContent = product.story || "قطعة من الحرفية المصرية الأصيلة، مصنوعة يدوياً في مصر.";
-        meta.textContent = `${product.category} • ${product.royal || "إصدار أصيل"} • صنع في مصر`;
-
-        const image = product.image || "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80";
-        media.innerHTML = `<img src="${image}" alt="${product.name}" style="width:100%;height:100%;object-fit:cover;" />`;
-
-        const waLink = "https://wa.me/" + state.general.whatsapp + "?text=" + encodeURIComponent(`السلام عليكم 🌹\nأرغب في طلب: ${product.name}\nصنع في مصر — صدف مصري طبيعي`);
-        document.getElementById("modalWhatsApp").setAttribute("href", waLink);
-
-        document.getElementById("addFromModal").onclick = () => {
-          addToCart(product.id);
-          modal.classList.remove("open");
-        };
-
-        modal.classList.add("open");
-      }
-
-      function closeGalleryModal() {
-        document.getElementById("galleryModal").classList.remove("open");
-      }
-
-      document.getElementById("closeModalBtn").addEventListener("click", closeGalleryModal);
-      document.getElementById("galleryModal").addEventListener("click", (e) => {
-        if (e.target.id === "galleryModal") closeGalleryModal();
-      });
-
-      function addToCart(productId) {
-        const item = state.products.find((p) => p.id === productId);
-        if (!item) return;
-
         const existing = cart.find((x) => x.id === productId);
-        if (existing) {
-          existing.qty += 1;
-        } else {
-          cart.push({ ...item, qty: 1 });
-        }
+        if (existing) existing.qty += 1;
+        else cart.push({ ...product, qty: 1 });
 
         renderCart();
         showToast("تمت الإضافة إلى السلة");
@@ -2305,13 +2256,12 @@
       function changeQty(productId, delta) {
         const item = cart.find((x) => x.id === productId);
         if (!item) return;
-        item.qty += delta;
 
+        item.qty += delta;
         if (item.qty <= 0) {
           removeFromCart(productId);
           return;
         }
-
         renderCart();
       }
 
@@ -2384,12 +2334,121 @@
           const notes = document.getElementById("buyerNotes").value.trim();
 
           const summary = cart.map((item) => `${item.name} × ${item.qty}`).join(" | ");
-
           const text = `السلام عليكم 🌹\nأرغب في إتمام الطلب التالي:\n${summary}\n\nالاسم: ${name || "غير محدد"}\nالهاتف: ${phone || "غير محدد"}\nوجهة التوصيل: ${shipping}\nالعنوان: ${address || "غير محدد"}\nملاحظات: ${notes || "لا توجد"}\n\nراجع الرسالة وأرسلها.`;
 
           window.open(`https://wa.me/${state.general.whatsapp}?text=${encodeURIComponent(text)}`, "_blank");
         }
       });
+
+      function openGalleryModal(productId) {
+        const product = state.products.find((p) => p.id === productId);
+        if (!product) return;
+
+        const modal = document.getElementById("galleryModal");
+        const media = document.getElementById("modalMedia");
+        const title = document.getElementById("modalTitle");
+        const name = document.getElementById("modalName");
+        const text = document.getElementById("modalText");
+        const story = document.getElementById("modalStory");
+        const meta = document.getElementById("modalMeta");
+
+        title.textContent = product.name;
+        name.textContent = product.name;
+        text.textContent = product.desc;
+        story.textContent = product.story || "قطعة من الحرفية المصرية الأصيلة، مصنوعة يدوياً في مصر.";
+        meta.textContent = `${product.category} • ${product.royal || "إصدار أصيل"} • صنع في مصر`;
+
+        const image = product.image || "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80";
+        const hasVideo = product.video && product.video.trim();
+
+        if (hasVideo) {
+          media.innerHTML = `
+            <video controls autoplay muted loop style="width:100%;height:100%;object-fit:cover;background:#000;">
+              <source src="${product.video}" />
+            </video>
+          `;
+        } else {
+          media.innerHTML = `<img src="${image}" alt="${product.name}" style="width:100%;height:100%;object-fit:cover;" />`;
+        }
+
+        const waLink = "https://wa.me/" + state.general.whatsapp + "?text=" + encodeURIComponent(`السلام عليكم 🌹\nأرغب في طلب: ${product.name}\nصنع في مصر — صدف مصري طبيعي`);
+        document.getElementById("modalWhatsApp").setAttribute("href", waLink);
+
+        document.getElementById("addFromModal").onclick = () => {
+          addToCart(product.id);
+          modal.classList.remove("open");
+        };
+
+        modal.classList.add("open");
+      }
+
+      function closeGalleryModal() {
+        document.getElementById("galleryModal").classList.remove("open");
+      }
+
+      document.getElementById("closeModalBtn").addEventListener("click", closeGalleryModal);
+      document.getElementById("galleryModal").addEventListener("click", (e) => {
+        if (e.target.id === "galleryModal") closeGalleryModal();
+      });
+
+      function populateAdminFields() {
+        document.getElementById("adminEmailInput").value = state.admin.email || "";
+        document.getElementById("adminPasswordInput").value = state.admin.password || "";
+
+        document.getElementById("adminStoreName").value = state.general.siteName || "";
+        document.getElementById("adminSlogan").value = state.general.slogan || "";
+        document.getElementById("adminDescription").value = state.general.description || "";
+        document.getElementById("adminWhatsapp").value = state.general.whatsapp || "";
+        document.getElementById("adminInstagram").value = state.general.instagram || "";
+        document.getElementById("adminFacebook").value = state.general.facebook || "";
+        document.getElementById("adminTiktok").value = state.general.tiktok || "";
+
+        document.getElementById("cBlack").value = state.design.black || "#0b0908";
+        document.getElementById("cGold").value = state.design.gold || "#c6a86a";
+        document.getElementById("cGoldDark").value = state.design.goldDark || "#a8833c";
+        document.getElementById("cBeige").value = state.design.beige || "#f8f4ee";
+        document.getElementById("cBg").value = state.design.bg || "#faf7f0";
+        document.getElementById("cText").value = state.design.text || "#171512";
+        document.getElementById("fontDisplay").value = state.design.fontDisplay || "'Amiri', serif";
+        document.getElementById("fontBody").value = state.design.fontBody || "'Cairo', sans-serif";
+        document.getElementById("bodySize").value = state.design.bodySize || 16;
+        document.getElementById("titleSize").value = state.design.titleSize || 48;
+        document.getElementById("radiusSize").value = state.design.radius || 18;
+
+        document.getElementById("adminTopbar").value = state.general.topbar || "";
+        document.getElementById("shippingOptions").value = state.shipping.options.map((o) => `${o.label}|${o.price}|${o.note}`).join("\n");
+        document.getElementById("shippingNote").value = state.shipping.note || "";
+
+        if (state.general.logoHeader) {
+          document.getElementById("logoPreviewHeader").src = state.general.logoHeader;
+        } else {
+          document.getElementById("logoPreviewHeader").src = "";
+        }
+
+        if (state.general.logoFooter) {
+          document.getElementById("logoPreviewFooter").src = state.general.logoFooter;
+        } else {
+          document.getElementById("logoPreviewFooter").src = "";
+        }
+
+        if (state.general.heroImage) {
+          document.getElementById("heroImagePreview").src = state.general.heroImage;
+        } else {
+          document.getElementById("heroImagePreview").src = "";
+        }
+
+        if (state.general.heroVideo) {
+          document.getElementById("heroVideoPreview").src = state.general.heroVideo;
+        } else {
+          document.getElementById("heroVideoPreview").src = "";
+        }
+
+        if (state.general.aboutImage) {
+          document.getElementById("aboutImagePreview").src = state.general.aboutImage;
+        } else {
+          document.getElementById("aboutImagePreview").src = "";
+        }
+      }
 
       function renderAdminProducts() {
         const list = document.getElementById("adminProductList");
@@ -2474,6 +2533,21 @@
                   </select>
                 </div>
 
+                <div class="field">
+                  <label>السعر (مخفي من الواجهة)</label>
+                  <input id="mPrice" type="number" value="${product && product.price !== undefined ? product.price : 0}" />
+                </div>
+
+                <div class="field">
+                  <label>رابط الصورة</label>
+                  <input id="mImage" value="${product ? product.image : ""}" />
+                </div>
+
+                <div class="field" style="grid-column:1 / -1;">
+                  <label>تحميل صورة المنتج من الموبايل / الكمبيوتر</label>
+                  <input id="mImageUpload" type="file" accept="image/*" />
+                </div>
+
                 <div class="field" style="grid-column:1 / -1;">
                   <label>الوصف</label>
                   <textarea id="mDesc">${product ? product.desc : ""}</textarea>
@@ -2482,11 +2556,6 @@
                 <div class="field" style="grid-column:1 / -1;">
                   <label>حكاية الصنعة</label>
                   <textarea id="mStory">${product ? product.story : ""}</textarea>
-                </div>
-
-                <div class="field" style="grid-column:1 / -1;">
-                  <label>رابط الصورة</label>
-                  <input id="mImage" value="${product ? product.image : ""}" />
                 </div>
               </div>
 
@@ -2503,6 +2572,18 @@
         wrap.querySelector("[data-close-modal]").addEventListener("click", () => wrap.remove());
         wrap.querySelector("#cancelModalProduct").addEventListener("click", () => wrap.remove());
 
+        const fileInput = document.getElementById("mImageUpload");
+        fileInput.addEventListener("change", async (e) => {
+          const file = e.target.files[0];
+          if (!file) return;
+          try {
+            const dataUrl = await fileToDataUrl(file);
+            document.getElementById("mImage").value = dataUrl;
+          } catch (err) {
+            alert("حدث خطأ في تحميل الصورة");
+          }
+        });
+
         wrap.querySelector("#saveModalProduct").addEventListener("click", () => {
           const item = {
             id: productId || Date.now(),
@@ -2512,6 +2593,7 @@
             desc: document.getElementById("mDesc").value.trim(),
             story: document.getElementById("mStory").value.trim(),
             status: document.getElementById("mStatus").value,
+            price: Number(document.getElementById("mPrice").value || 0),
             image: document.getElementById("mImage").value.trim(),
             video: ""
           };
@@ -2533,30 +2615,20 @@
         });
       }
 
-      function populateAdminFields() {
-        document.getElementById("adminStoreName").value = state.general.siteName || "";
-        document.getElementById("adminSlogan").value = state.general.slogan || "";
-        document.getElementById("adminDescription").value = state.general.description || "";
-        document.getElementById("adminWhatsapp").value = state.general.whatsapp || "";
-        document.getElementById("adminEmail").value = state.general.email || "";
-        document.getElementById("adminInstagram").value = state.general.instagram || "";
-        document.getElementById("adminFacebook").value = state.general.facebook || "";
-        document.getElementById("adminTopbar").value = state.general.topbar || "";
+      function saveAdminCredentials() {
+        const email = document.getElementById("adminEmailInput").value.trim();
+        const pass = document.getElementById("adminPasswordInput").value.trim();
 
-        document.getElementById("cBlack").value = state.design.black || "#0b0908";
-        document.getElementById("cGold").value = state.design.gold || "#c6a86a";
-        document.getElementById("cGoldDark").value = state.design.goldDark || "#a8833c";
-        document.getElementById("cBeige").value = state.design.beige || "#f8f4ee";
-        document.getElementById("cBg").value = state.design.bg || "#faf7f0";
-        document.getElementById("cText").value = state.design.text || "#171512";
-        document.getElementById("fontDisplay").value = state.design.fontDisplay || "'Amiri', serif";
-        document.getElementById("fontBody").value = state.design.fontBody || "'Cairo', sans-serif";
-        document.getElementById("bodySize").value = state.design.bodySize || 16;
-        document.getElementById("titleSize").value = state.design.titleSize || 48;
-        document.getElementById("radiusSize").value = state.design.radius || 18;
+        if (!email || !pass) {
+          alert("يجب إدخال البريد وكلمة المرور");
+          return;
+        }
 
-        document.getElementById("shippingOptions").value = state.shipping.options.map((o) => `${o.label}|${o.price}|${o.note}`).join("\n");
-        document.getElementById("shippingNote").value = state.shipping.note || "";
+        state.admin.email = email;
+        state.admin.password = pass;
+
+        saveState();
+        showToast("تم تحديث بيانات الدخول");
       }
 
       function saveGeneralSettings() {
@@ -2567,14 +2639,8 @@
         state.general.email = document.getElementById("adminEmail").value.trim() || defaultState.general.email;
         state.general.instagram = document.getElementById("adminInstagram").value.trim() || defaultState.general.instagram;
         state.general.facebook = document.getElementById("adminFacebook").value.trim() || defaultState.general.facebook;
-        state.general.topbar = document.getElementById("adminTopbar").value.trim() || defaultState.general.topbar;
+        state.general.tiktok = document.getElementById("adminTiktok").value.trim() || defaultState.general.tiktok;
 
-        saveState();
-        renderAll();
-      }
-
-      function saveTopbarSettings() {
-        state.general.topbar = document.getElementById("adminTopbar").value.trim() || defaultState.general.topbar;
         saveState();
         renderAll();
       }
@@ -2608,11 +2674,7 @@
 
         state.shipping.options = lines.map((line) => {
           const [label, price, note] = line.split("|");
-          return {
-            label: label || "خدمة",
-            price: Number(price || 0),
-            note: note || ""
-          };
+          return { label: label || "خدمة", price: Number(price || 0), note: note || "" };
         });
 
         state.shipping.note = document.getElementById("shippingNote").value.trim() || defaultState.shipping.note;
@@ -2640,7 +2702,7 @@
             populateAdminFields();
             alert("تم استيراد البيانات بنجاح");
           } catch (err) {
-            alert("ملف JSON غير صالح");
+            alert("ملف JSON غير صالح.");
           }
         };
         reader.readAsText(file);
@@ -2654,13 +2716,84 @@
         populateAdminFields();
       }
 
+      function fileToDataUrl(file) {
+        return new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result);
+          reader.onerror = reject;
+          reader.readAsDataURL(file);
+        });
+      }
+
+      async function handleAdminImageUpload(inputId, targetKey) {
+        const input = document.getElementById(inputId);
+        const file = input.files[0];
+        if (!file) return;
+
+        try {
+          const dataUrl = await fileToDataUrl(file);
+          state.general[targetKey] = dataUrl;
+          saveState();
+          renderAll();
+          showToast("تم تحديث الصورة بنجاح");
+        } catch (err) {
+          alert("تعذر تحميل الملف.");
+        }
+      }
+
+      async function handleHeroImageUpload() {
+        const file = document.getElementById("heroImageUpload").files[0];
+        if (!file) return;
+        try {
+          const dataUrl = await fileToDataUrl(file);
+          state.general.heroImage = dataUrl;
+          saveState();
+          renderAll();
+          showToast("تم تحديث صورة الغلاف");
+        } catch (err) {
+          alert("تعذر تحميل صورة الغلاف.");
+        }
+      }
+
+      async function handleHeroVideoUpload() {
+        const file = document.getElementById("heroVideoUpload").files[0];
+        if (!file) return;
+
+        try {
+          const dataUrl = await fileToDataUrl(file);
+          state.general.heroVideo = dataUrl;
+          saveState();
+          renderAll();
+          showToast("تم تحديث فيديو الغلاف");
+        } catch (err) {
+          alert("تعذر تحميل الفيديو.");
+        }
+      }
+
+      async function handleAboutImageUpload() {
+        const file = document.getElementById("aboutImageUpload").files[0];
+        if (!file) return;
+
+        try {
+          const dataUrl = await fileToDataUrl(file);
+          state.general.aboutImage = dataUrl;
+          saveState();
+          renderAll();
+          showToast("تم تحديث صورة من نحن");
+        } catch (err) {
+          alert("تعذر تحميل صورة من نحن.");
+        }
+      }
+
       function renderAll() {
-        document.getElementById("siteName").textContent = state.general.siteName || defaultState.general.siteName;
+        renderLogo();
+        renderGeneral();
         renderServices();
         renderFilters();
         renderProducts();
         renderAdminProducts();
         populateAdminFields();
+        renderMedia();
         applyDesign();
       }
 
@@ -2672,7 +2805,7 @@
         const email = document.getElementById("loginEmail").value.trim();
         const pass = document.getElementById("loginPassword").value.trim();
 
-        if (email === "admin@asala-heritage.com" && pass === "Asala@2025") {
+        if (email === state.admin.email && pass === state.admin.password) {
           document.getElementById("loginModal").classList.remove("open");
           document.getElementById("adminPanel").classList.add("open");
         } else {
@@ -2684,8 +2817,8 @@
         document.getElementById("adminPanel").classList.remove("open");
       });
 
+      document.getElementById("saveAdminCredentialsBtn").addEventListener("click", saveAdminCredentials);
       document.getElementById("saveGeneralBtn").addEventListener("click", saveGeneralSettings);
-      document.getElementById("saveTopbarBtn").addEventListener("click", saveTopbarSettings);
       document.getElementById("saveDesignBtn").addEventListener("click", saveDesignSettings);
       document.getElementById("resetDesignBtn").addEventListener("click", resetDesign);
       document.getElementById("saveShippingBtn").addEventListener("click", saveShippingSettings);
@@ -2706,6 +2839,18 @@
         const file = e.target.files[0];
         if (file) importJSON(file);
       });
+
+      document.getElementById("logoUploadHeader").addEventListener("change", async () => {
+        await handleAdminImageUpload("logoUploadHeader", "logoHeader");
+      });
+
+      document.getElementById("logoUploadFooter").addEventListener("change", async () => {
+        await handleAdminImageUpload("logoUploadFooter", "logoFooter");
+      });
+
+      document.getElementById("heroImageUpload").addEventListener("change", handleHeroImageUpload);
+      document.getElementById("heroVideoUpload").addEventListener("change", handleHeroVideoUpload);
+      document.getElementById("aboutImageUpload").addEventListener("change", handleAboutImageUpload);
 
       renderAll();
       renderCart();
