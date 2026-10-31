@@ -4,25 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>أصالة التراث المصري</title>
-  <meta name="description" content="أصالة التراث المصري — منتجات صدف طبيعي ومصري يدويًا" />
+  <meta name="description" content="أصالة التراث المصري — فخامة التراث والصدف الطبيعي والخشب الفاخر تصنع يدويًا في مصر" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-
   <style>
     :root{
-      --gold:#C9A961;
-      --gold-light:#DDBA72;
-      --brown:#6E4B2A;
-      --brown-dark:#472D1A;
-      --bg:#F8F5F0;
-      --card:#FFFFFF;
-      --text:#2A2A2A;
-      --muted:#787878;
-      --white:#fff;
+      --bg:#f7f3ee;
+      --panel:#ffffff;
+      --panel-2:#f1e9df;
+      --brown:#5d3821;
+      --brown-2:#7b4d2a;
+      --gold:#c7a66a;
+      --gold-soft:#e0c892;
+      --ink:#1b1b1b;
+      --muted:#6c625f;
+      --line:#e6d9c9;
       --green:#25D366;
-      --shadow:0 12px 30px rgba(94, 67, 41, 0.12);
-      --radius:18px;
+      --shadow:0 18px 40px rgba(69,45,30,.10);
+      --radius:20px;
       --font-display:'Amiri', serif;
       --font-body:'Cairo', sans-serif;
     }
@@ -32,39 +32,35 @@
     body{
       margin:0;
       background:var(--bg);
-      color:var(--text);
+      color:var(--ink);
       font-family:var(--font-body);
       line-height:1.8;
     }
     a{text-decoration:none;color:inherit}
     img,video{display:block;max-width:100%}
     button,input,textarea,select{font:inherit}
-    h1,h2,h3,h4,h5{
-      margin:0;
-      font-family:var(--font-display);
-      line-height:1.2;
-    }
-
-    .container{max-width:1200px;margin:0 auto;padding:0 18px}
+    h1,h2,h3,h4,h5{margin:0;font-family:var(--font-display);font-weight:700;line-height:1.18}
+    p{margin:0}
 
     .topbar{
       background:var(--brown);
       color:#fff;
       text-align:center;
+      font-size:12px;
       padding:10px 16px;
-      font-size:13px;
-      font-weight:700;
       letter-spacing:.5px;
+      font-weight:700;
     }
-    .topbar strong{color:var(--gold-light)}
+    .topbar strong{color:var(--gold-soft)}
 
     header{
       position:sticky;
       top:0;
       z-index:100;
-      background:rgba(255,255,255,.95);
-      border-bottom:1px solid rgba(201,169,97,.18);
-      backdrop-filter:blur(8px);
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid rgba(199,166,106,.15);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
     }
 
     .header-inner{
@@ -82,16 +78,17 @@
       display:flex;
       align-items:center;
       gap:12px;
+      min-width:0;
     }
 
     .brand img{
       width:58px;
       height:58px;
-      border-radius:50%;
       object-fit:cover;
-      background:#fff;
+      border-radius:50%;
       border:2px solid var(--gold);
       padding:2px;
+      background:#fff;
     }
 
     .brand-name{
@@ -103,11 +100,11 @@
 
     .brand-name small{
       display:block;
+      margin-top:4px;
+      font-family:var(--font-body);
       font-size:10px;
       letter-spacing:2px;
       color:var(--gold);
-      margin-top:4px;
-      font-family:var(--font-body);
     }
 
     nav{
@@ -115,39 +112,39 @@
       gap:22px;
       flex-wrap:wrap;
       font-weight:700;
-      color:var(--brown);
       font-size:14px;
+      color:var(--brown);
     }
     nav a:hover{color:var(--gold)}
 
     .header-actions{
       display:flex;
       align-items:center;
-      gap:10px;
       flex-wrap:wrap;
+      gap:10px;
     }
 
     .wa-btn{
       border:none;
       background:var(--green);
       color:#fff;
-      border-radius:30px;
-      padding:11px 20px;
+      border-radius:999px;
+      padding:11px 22px;
       font-weight:800;
       cursor:pointer;
-      box-shadow:0 10px 20px rgba(37,211,102,.25);
+      box-shadow:0 10px 25px rgba(37,211,102,.25);
       transition:.2s ease;
     }
     .wa-btn:hover{transform:translateY(-2px)}
 
     .hero{
       position:relative;
-      min-height:78vh;
+      min-height:80vh;
+      background:#140d0a;
+      overflow:hidden;
       display:flex;
       align-items:center;
       justify-content:center;
-      overflow:hidden;
-      background:#1b1b1b;
     }
 
     .hero-bg{
@@ -157,34 +154,33 @@
       height:100%;
       object-fit:cover;
       opacity:.72;
-      filter:saturate(.85) contrast(1.05);
+      filter:saturate(.9) contrast(1.08);
     }
 
     .hero::before{
       content:"";
       position:absolute;
       inset:0;
-      background:linear-gradient(90deg, rgba(0,0,0,.78), rgba(0,0,0,.2));
+      background:linear-gradient(90deg, rgba(15,9,7,.78), rgba(15,9,7,.34));
     }
 
     .hero-content{
       position:relative;
       z-index:1;
-      max-width:920px;
+      max-width:980px;
       text-align:center;
-      padding:30px 18px;
+      padding:32px 18px;
       color:#fff;
     }
 
     .hero-content h1{
-      font-size:clamp(36px,5vw,68px);
+      font-size:clamp(36px, 5vw, 68px);
       color:#fff;
       margin-bottom:18px;
     }
-
-    .hero-content h1 span{color:var(--gold-light)}
+    .hero-content h1 span{color:var(--gold-soft)}
     .hero-content p{
-      max-width:700px;
+      max-width:720px;
       margin:0 auto 28px;
       font-size:clamp(17px,2vw,22px);
       color:rgba(255,255,255,.95);
@@ -192,34 +188,34 @@
 
     .hero-actions{
       display:flex;
-      justify-content:center;
       gap:12px;
+      justify-content:center;
       flex-wrap:wrap;
     }
 
     .btn-main{
       border:none;
-      border-radius:40px;
-      padding:16px 30px;
+      border-radius:999px;
+      padding:16px 32px;
       font-weight:900;
       cursor:pointer;
       transition:.2s ease;
     }
-
     .btn-main:hover{transform:translateY(-2px)}
     .btn-main.primary{
-      background:linear-gradient(135deg, var(--gold), var(--gold-light));
-      color:#2d1d10;
-      box-shadow:0 12px 28px rgba(201,169,97,.35);
+      background:linear-gradient(135deg, var(--gold), var(--gold-soft));
+      color:#2a1c10;
+      box-shadow:0 12px 30px rgba(199,166,106,.36);
     }
     .btn-main.secondary{
       background:#fff;
-      color:#1b1b1b;
+      color:#111;
+      box-shadow:0 12px 30px rgba(255,255,255,.15);
     }
 
     .services-bar{
       max-width:1200px;
-      margin:-42px auto 0;
+      margin:-48px auto 0;
       padding:0 18px;
       position:relative;
       z-index:3;
@@ -229,8 +225,8 @@
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
       background:#fff;
-      border:1px solid rgba(201,169,97,.18);
-      border-radius:18px;
+      border:1px solid rgba(199,166,106,.18);
+      border-radius:22px;
       overflow:hidden;
       box-shadow:var(--shadow);
     }
@@ -238,14 +234,13 @@
     .service{
       padding:26px 18px;
       text-align:center;
-      border-left:1px solid rgba(201,169,97,.16);
+      border-left:1px solid rgba(199,166,106,.15);
       background:#fff;
     }
-
     .service:last-child{border-left:none}
     .service .icon{
-      font-size:30px;
       display:block;
+      font-size:30px;
       margin-bottom:8px;
     }
     .service h3{
@@ -254,30 +249,30 @@
       margin-bottom:8px;
     }
     .service p{
-      font-size:13px;
-      color:var(--muted);
       margin:0;
+      color:var(--muted);
+      font-size:13px;
       line-height:1.7;
     }
 
-    .section-head{
+    .sectionhead{
       text-align:center;
-      margin:70px auto 30px;
+      margin:72px auto 30px;
       padding:0 18px;
     }
 
-    .section-head span{
+    .sectionhead span{
       display:block;
+      margin-bottom:8px;
       font-size:12px;
       letter-spacing:4px;
       font-weight:900;
-      color:var(--gold);
       text-transform:uppercase;
-      margin-bottom:6px;
+      color:var(--gold);
     }
 
-    .section-head h2{
-      font-size:clamp(30px,4vw,42px);
+    .sectionhead h2{
+      font-size:clamp(30px, 4vw, 42px);
       color:var(--brown);
     }
 
@@ -292,8 +287,8 @@
 
     .product-card{
       background:#fff;
-      border:1px solid rgba(201,169,97,.18);
-      border-radius:18px;
+      border:1px solid rgba(199,166,106,.16);
+      border-radius:22px;
       overflow:hidden;
       box-shadow:var(--shadow);
       transition:.25s ease;
@@ -301,17 +296,17 @@
 
     .product-card:hover{
       transform:translateY(-6px);
-      box-shadow:0 18px 36px rgba(94,67,41,.15);
+      box-shadow:0 18px 34px rgba(93,56,33,.14);
     }
 
     .product-media{
       position:relative;
-      height:300px;
+      height:310px;
       overflow:hidden;
-      background:#f3efe7;
+      background:#f3eee7;
     }
 
-    .product-media img, .product-media video{
+    .product-media img,.product-media video{
       width:100%;
       height:100%;
       object-fit:cover;
@@ -322,7 +317,7 @@
       position:absolute;
       top:14px;
       right:14px;
-      background:rgba(0,0,0,.76);
+      background:rgba(0,0,0,.72);
       color:#fff;
       padding:6px 12px;
       border-radius:999px;
@@ -341,19 +336,19 @@
     .product-royal{
       color:var(--gold);
       font-size:11px;
-      font-weight:900;
       letter-spacing:1px;
+      font-weight:900;
     }
 
     .product-name{
       font-size:24px;
       color:var(--brown);
-      line-height:1.25;
+      line-height:1.2;
     }
 
     .product-category{
-      font-size:12px;
       color:var(--gold);
+      font-size:12px;
       font-weight:800;
       letter-spacing:1px;
     }
@@ -369,10 +364,10 @@
       display:inline-block;
       margin:0 auto;
       background:#f9f3ea;
-      border:1px solid rgba(201,169,97,.18);
       color:var(--brown);
-      padding:6px 12px;
+      border:1px solid rgba(199,166,106,.18);
       border-radius:999px;
+      padding:6px 12px;
       font-size:12px;
       font-weight:800;
     }
@@ -380,60 +375,60 @@
     .btn-order{
       width:100%;
       border:none;
-      border-radius:12px;
       background:var(--brown);
       color:#fff;
+      border-radius:12px;
       padding:14px 18px;
       font-weight:800;
       cursor:pointer;
       margin-top:6px;
     }
 
-    .about{
+    .history{
       background:#fff;
-      border-top:1px solid rgba(201,169,97,.12);
-      border-bottom:1px solid rgba(201,169,97,.12);
-      padding:80px 0;
+      border-top:1px solid rgba(199,166,106,.12);
+      border-bottom:1px solid rgba(199,166,106,.12);
+      padding:82px 0;
     }
 
-    .about-wrap{
+    .history-wrap{
       max-width:1100px;
       margin:0 auto;
-      padding:0 18px;
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:50px;
+      gap:48px;
       align-items:center;
+      padding:0 18px;
     }
 
-    .about-image{
-      border-radius:18px;
+    .history-image{
+      border-radius:20px;
       overflow:hidden;
-      border:6px solid #f5efe6;
+      border:6px solid #f5efe7;
       box-shadow:var(--shadow);
     }
 
-    .about-image img{
+    .history-image img{
       width:100%;
       height:100%;
       object-fit:cover;
       display:block;
     }
 
-    .about-text h2{
-      font-size:clamp(28px,3vw,42px);
+    .history-text h2{
       color:var(--brown);
+      font-size:clamp(28px,3vw,42px);
       margin-bottom:12px;
     }
 
-    .about-text p{
+    .history-text p{
       color:var(--muted);
       font-size:16px;
       line-height:1.9;
       margin:0 0 18px;
     }
 
-    .about-quote{
+    .history-quote{
       border-right:4px solid var(--gold);
       padding-right:14px;
       color:var(--gold);
@@ -441,6 +436,29 @@
       font-size:22px;
       font-style:italic;
       margin-top:20px;
+    }
+
+    .categories{
+      max-width:1200px;
+      margin:0 auto 80px;
+      padding:0 18px;
+    }
+
+    .cat-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+      gap:14px;
+    }
+
+    .cat-item{
+      background:#fff;
+      border:1px solid rgba(199,166,106,.18);
+      border-radius:18px;
+      padding:18px 16px;
+      text-align:center;
+      box-shadow:var(--shadow);
+      color:var(--brown);
+      font-weight:800;
     }
 
     footer{
@@ -456,14 +474,14 @@
     }
 
     footer h3{
-      color:var(--gold-light);
+      color:var(--gold-soft);
       font-size:30px;
       margin-bottom:10px;
     }
 
     footer p{
-      color:rgba(255,255,255,.8);
       margin:0 0 18px;
+      color:rgba(255,255,255,.82);
     }
 
     .social-links{
@@ -486,63 +504,86 @@
       font-size:22px;
       transition:.2s ease;
     }
-
     .social-links a:hover{
       background:var(--gold);
-      color:var(--brown-dark);
+      color:var(--brown);
       transform:translateY(-2px);
     }
 
     .copyright{
-      border-top:1px solid rgba(255,255,255,.12);
+      border-top:1px solid rgba(255,255,255,.10);
       padding-top:18px;
       font-size:12px;
       color:rgba(255,255,255,.72);
     }
 
-    .admin-login-box{
+    .admin-toggle{
+      position:fixed;
+      left:14px;
+      bottom:14px;
+      width:34px;
+      height:34px;
+      border:none;
+      border-radius:50%;
+      background:rgba(17,17,17,.75);
+      color:#fff;
+      cursor:pointer;
+      font-size:15px;
+      opacity:.38;
+      transition:.2s ease;
+      z-index:2000;
+      box-shadow:0 8px 18px rgba(0,0,0,.16);
+    }
+    .admin-toggle:hover{
+      opacity:1;
+      transform:scale(1.06);
+    }
+
+    .admin-modal{
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,.62);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      z-index:3000;
+      padding:18px;
+    }
+
+    .admin-modal.open{
+      display:flex;
+    }
+
+    .admin-box{
+      width:min(420px,100%);
       background:#fff;
-      border:1px solid rgba(201,169,97,.18);
-      border-radius:18px;
-      box-shadow:var(--shadow);
-      padding:20px;
-      margin:30px auto 0;
-      max-width:1100px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:16px;
-      flex-wrap:wrap;
+      border-radius:20px;
+      padding:24px 20px 18px;
+      box-shadow:0 22px 50px rgba(0,0,0,.28);
     }
 
-    .admin-login-box > div{
-      flex:1;
-      min-width:220px;
-    }
-
-    .admin-login-box h3{
+    .admin-box h3{
+      text-align:center;
+      font-size:32px;
       color:var(--brown);
-      font-size:24px;
+      margin-bottom:12px;
+    }
+
+    .admin-box .field{
+      margin-bottom:14px;
+    }
+
+    .admin-box label{
+      display:block;
       margin-bottom:8px;
+      font-size:13px;
+      font-weight:800;
+      color:var(--brown);
     }
 
-    .admin-login-box p{
-      color:var(--muted);
-      margin:0;
-      font-size:14px;
-    }
-
-    .admin-form{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-      align-items:center;
-    }
-
-    .admin-form input{
-      width:220px;
-      border:1px solid #e1dbd1;
+    .admin-box input{
+      width:100%;
+      border:1px solid #e2d8cb;
       border-radius:10px;
       padding:12px 14px;
       font-size:14px;
@@ -550,41 +591,76 @@
       color:#222;
     }
 
-    .admin-form button{
+    .admin-box button{
+      width:100%;
       border:none;
+      border-radius:12px;
+      padding:13px 16px;
       background:var(--brown);
       color:#fff;
-      border-radius:10px;
-      padding:12px 16px;
       font-weight:800;
       cursor:pointer;
     }
 
-    .admin-panel{
+    .admin-error{
       display:none;
-      max-width:1100px;
-      margin:30px auto 60px;
-      background:#fff;
-      border:1px solid rgba(201,169,97,.18);
-      border-radius:18px;
-      box-shadow:var(--shadow);
-      padding:22px;
+      margin-top:12px;
+      text-align:center;
+      color:#cf3e35;
+      font-size:14px;
+      font-weight:800;
     }
-
-    .admin-panel.active{
+    .admin-error.show{
       display:block;
     }
 
-    .admin-panel h2{
-      color:var(--brown);
-      font-size:32px;
+    .admin-panel{
+      display:none;
+      position:fixed;
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+      width:min(1100px,92vw);
+      max-height:90vh;
+      overflow:auto;
+      background:#fff;
+      border:1px solid rgba(199,166,106,.18);
+      border-radius:22px;
+      box-shadow:0 22px 50px rgba(0,0,0,.22);
+      padding:24px 20px 18px;
+      z-index:3100;
+    }
+
+    .admin-panel.open{
+      display:block;
+    }
+
+    .admin-head{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
       margin-bottom:18px;
+    }
+    .admin-head h2{
+      color:var(--brown);
+      font-size:30px;
+    }
+    .admin-head button{
+      border:none;
+      background:#d95d4c;
+      color:#fff;
+      border-radius:12px;
+      padding:10px 18px;
+      font-weight:800;
+      cursor:pointer;
     }
 
     .admin-grid{
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:16px;
+      gap:14px;
     }
 
     .field{
@@ -594,21 +670,20 @@
     .field label{
       display:block;
       margin-bottom:7px;
-      font-weight:800;
       color:var(--brown);
       font-size:13px;
+      font-weight:800;
     }
 
-    .field input, .field textarea{
+    .field input,.field textarea{
       width:100%;
-      border:1px solid #e2ddd1;
+      border:1px solid #e2d8cb;
       border-radius:10px;
       padding:12px 14px;
       font-size:14px;
       background:#fff;
       color:#222;
     }
-
     .field textarea{
       min-height:90px;
       resize:vertical;
@@ -618,133 +693,97 @@
       display:flex;
       gap:10px;
       flex-wrap:wrap;
-      justify-content:flex-start;
-      margin-top:12px;
+      margin-top:8px;
     }
 
     .admin-actions button{
       border:none;
-      border-radius:10px;
-      padding:12px 20px;
+      border-radius:12px;
+      padding:12px 18px;
       font-weight:800;
-      cursor:pointer;
       color:#fff;
+      cursor:pointer;
     }
-
     .save-btn{background:var(--brown)}
     .add-btn{background:#1ea069}
-    .logout-btn{background:#d95c4a}
+    .logout-btn{background:#d95d4c}
 
-    .prod-list{
+    .product-list{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
       gap:14px;
       margin-top:18px;
     }
 
-    .prod-item{
+    .mini-card{
       background:#faf7f2;
-      border:1px solid rgba(201,169,97,.18);
+      border:1px solid rgba(199,166,106,.16);
       border-radius:14px;
       padding:12px;
     }
 
-    .prod-thumb{
+    .mini-thumb{
       height:130px;
       border-radius:12px;
       overflow:hidden;
       margin-bottom:10px;
       background:#eee;
     }
-
-    .prod-thumb img{
+    .mini-thumb img{
       width:100%;
       height:100%;
       object-fit:cover;
     }
 
-    .prod-item h4{
+    .mini-card h4{
       color:var(--brown);
       font-size:18px;
-      margin:0 0 8px;
+      margin:0 0 6px;
     }
-
-    .prod-item .tiny{
+    .mini-card .mini-cat{
       color:var(--gold);
       font-size:11px;
       font-weight:800;
       letter-spacing:1px;
-      margin-bottom:10px;
+      margin-bottom:12px;
     }
 
-    .prod-item .item-actions{
+    .mini-actions{
       display:flex;
       gap:8px;
     }
-
-    .prod-item .item-actions button{
+    .mini-actions button{
       flex:1;
       border:none;
       border-radius:10px;
       padding:9px 10px;
-      color:#fff;
       font-weight:800;
+      color:#fff;
       cursor:pointer;
     }
-
-    .edit-item{background:#f39c12}
+    .edit-item{background:#f29d22}
     .delete-item{background:#d93f37}
 
-    .admin-error{
-      display:none;
-      color:#d93f37;
-      font-weight:800;
-      margin-top:10px;
-      font-size:14px;
-    }
-    .admin-error.show{display:block}
-
-    .floating-lock{
-      position:fixed;
-      left:18px;
-      bottom:18px;
-      z-index:120;
-      width:58px;
-      height:58px;
-      border:none;
-      border-radius:50%;
-      background:#111;
-      color:#fff;
-      font-size:26px;
-      box-shadow:0 12px 26px rgba(0,0,0,.18);
-      cursor:pointer;
-    }
-
     @media (max-width:900px){
-      .admin-grid{
+      .history-wrap,.admin-grid{
         grid-template-columns:1fr;
-      }
-      .admin-login-box{
-        flex-direction:column;
-        align-items:stretch;
-      }
-      .admin-form{
-        justify-content:stretch;
-      }
-      .admin-form input{
-        width:100%;
       }
     }
 
     @media (max-width:560px){
-      .hero-content{padding:24px 18px}
-      .hero-content h1{font-size:40px}
-      .hero-actions{flex-direction:column}
-      .btn-main{width:100%}
-      .admin-form{
+      .header-inner{
+        justify-content:center;
+      }
+      .hero-content{
+        padding:24px 18px;
+      }
+      .hero-content h1{
+        font-size:40px;
+      }
+      .hero-actions{
         flex-direction:column;
       }
-      .admin-form input, .admin-form button{
+      .btn-main{
         width:100%;
       }
     }
@@ -759,9 +798,9 @@
   <header>
     <div class="header-inner">
       <div class="brand">
-        <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?q=80&w=300&auto=format&fit=crop" alt="شعار المتجر" />
+        <img id="siteLogo" src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?q=80&w=300&auto=format&fit=crop" alt="شعار المتجر">
         <div class="brand-name">
-          أصالة التراث المصري
+          <span id="siteName">أصالة التراث المصري</span>
           <small>ASALA HERITAGE</small>
         </div>
       </div>
@@ -769,6 +808,7 @@
       <nav>
         <a href="#products">المجموعة</a>
         <a href="#about">حكايتنا</a>
+        <a href="#categories">الفئات</a>
         <a href="#contact">تواصل معنا</a>
       </nav>
 
@@ -779,10 +819,10 @@
   </header>
 
   <section class="hero">
-    <img class="hero-bg" src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1600&auto=format&fit=crop" alt="خلفية الصفحة الرئيسية">
+    <img class="hero-bg" id="heroImage" src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1600&auto=format&fit=crop" alt="خلفية المتجر">
     <div class="hero-content">
-      <h1>المصنع الوحيد في مصر<br>لصناعة <span>الصدف الطبيعي</span><br>يدوياً 100%</h1>
-      <p>من بريق الصدف الطبيعي ودفء خشب الزان، نصنع قطعاً تحمل روح التراث المصري. كل قطعة تحفة فنية.</p>
+      <h1 id="heroTitle">المصنع الوحيد في مصر<br>لصناعة <span>الصدف الطبيعي</span><br>يدوياً 100%</h1>
+      <p id="heroDesc">من بريق الصدف الطبيعي ودفء خشب الزان، نصنع قطعاً تحمل روح التراث المصري. كل قطعة تحفة فنية.</p>
       <div class="hero-actions">
         <button class="btn-main primary" onclick="scrollToProducts()">تسوق المجموعة ←</button>
         <button class="btn-main secondary" onclick="openWhatsApp('السلام عليكم 🌹 أرغب في طلب تفصيل خاص.')">تفصيل خاص</button>
@@ -810,24 +850,42 @@
     </div>
   </section>
 
-  <div class="section-head" id="products">
+  <div class="sectionhead" id="products">
     <span>منتجات مختارة</span>
     <h2>تحف فنية بلمسة مصرية</h2>
   </div>
 
   <section class="products" id="productsGrid"></section>
 
-  <section class="about" id="about">
-    <div class="about-wrap">
-      <div class="about-image">
-        <img src="https://images.unsplash.com/photo-1596489168829-7a2c5f0e4c0d?q=80&w=900&auto=format&fit=crop" alt="حكاية المتجر" />
+  <section class="categories" id="categories">
+    <div class="sectionhead">
+      <span>الفئات</span>
+      <h2>مجموعة متكاملة</h2>
+    </div>
+
+    <div class="cat-grid">
+      <div class="cat-item">أثاث ملكي</div>
+      <div class="cat-item">أثاث مكتبي</div>
+      <div class="cat-item">ترابيزات</div>
+      <div class="cat-item">صواني تقديم</div>
+      <div class="cat-item">مباخر</div>
+      <div class="cat-item">طاولات زهر</div>
+      <div class="cat-item">مداخل وبيهات</div>
+      <div class="cat-item">لوحات قرآنية</div>
+    </div>
+  </section>
+
+  <section class="history" id="about">
+    <div class="history-wrap">
+      <div class="history-image">
+        <img src="https://images.unsplash.com/photo-1596489168829-7a2c5f0e4c0d?q=80&w=900&auto=format&fit=crop" alt="عن المتجر">
       </div>
 
-      <div class="about-text">
+      <div class="history-text">
         <h2>براعة وفخامة التصميمات</h2>
         <p>في كل قطعة نصنعها، هناك قصة. قصة الصدف الطبيعي الذي يلتقي بخشب الزان، ليتحول إلى تحفة فنية تروي حكاية من الفخامة والأصالة المصرية.</p>
         <p>نحن لا نصنع مجرد أثاث، بل نصنع ذكريات تدوم. كل منتج يخرج من ورشتنا يحمل بين طياته صبر الحرفيين وإتقانهم.</p>
-        <div class="about-quote">"عاشق ومعشوق — فن يدوي تم تصنيعه بحب من القلب"</div>
+        <div class="history-quote">"عاشق ومعشوق — فن يدوي تم تصنيعه بحب من القلب"</div>
       </div>
     </div>
   </section>
@@ -851,107 +909,106 @@
     </div>
   </footer>
 
-  <div class="admin-login-box">
-    <div>
-      <h3>لوحة التحكم</h3>
-      <p>تسجيل الدخول لإدارة الموقع وتحديث المنتجات والعناوين</p>
-    </div>
+  <!-- Tiny hidden admin toggle -->
+  <button class="admin-toggle" id="adminToggle" title="لوحة التحكم" aria-label="لوحة التحكم">🔐</button>
 
-    <div class="admin-form">
-      <input id="adminEmailInput" type="email" placeholder="البريد الإلكتروني" />
-      <input id="adminPassInput" type="password" placeholder="كلمة المرور" />
-      <button id="loginBtn" type="button">دخول</button>
+  <!-- login modal -->
+  <div class="admin-modal" id="adminModal">
+    <div class="admin-box">
+      <h3>تسجيل الدخول</h3>
+
+      <div class="field">
+        <label>البريد الإلكتروني</label>
+        <input id="loginEmail" type="email" placeholder="admin@site.com">
+      </div>
+      <div class="field">
+        <label>كلمة المرور</label>
+        <input id="loginPassword" type="password" placeholder="••••••••">
+      </div>
+
+      <button id="loginBtn">دخول لوحة التحكم</button>
+      <div class="admin-error" id="loginError">البريد الإلكتروني أو كلمة المرور غير صحيحة</div>
     </div>
   </div>
 
-  <div class="admin-error" id="adminError">البريد الإلكتروني أو كلمة المرور غير صحيحة</div>
-
+  <!-- admin panel -->
   <div class="admin-panel" id="adminPanel">
-    <h2>لوحة الإدارة</h2>
+    <div class="admin-head">
+      <h2>لوحة الإدارة</h2>
+      <button id="logoutBtn">تسجيل الخروج</button>
+    </div>
 
     <div class="admin-grid">
       <div class="field">
         <label>اسم المتجر</label>
-        <input id="siteNameField" type="text" />
+        <input id="panelSiteName" type="text">
       </div>
       <div class="field">
         <label>السلوغان</label>
-        <input id="sloganField" type="text" />
+        <input id="panelSlogan" type="text">
       </div>
 
       <div class="field">
         <label>عنوان الهيدر</label>
-        <input id="heroTitleField" type="text" />
+        <input id="panelHeroTitle" type="text">
       </div>
-
       <div class="field">
         <label>وصف الهيدر</label>
-        <input id="heroDescField" type="text" />
+        <input id="panelHeroDesc" type="text">
       </div>
 
       <div class="field">
         <label>رابط انستغرام</label>
-        <input id="instaField" type="text" />
+        <input id="panelInsta" type="text">
       </div>
-
       <div class="field">
         <label>رابط فيسبوك</label>
-        <input id="fbField" type="text" />
+        <input id="panelFacebook" type="text">
       </div>
 
       <div class="field">
         <label>رابط تيك توك</label>
-        <input id="tiktokField" type="text" />
+        <input id="panelTiktok" type="text">
       </div>
-
       <div class="field">
         <label>البريد الإلكتروني</label>
-        <input id="emailField" type="email" />
+        <input id="panelEmail" type="email">
       </div>
 
       <div class="field">
         <label>البريد الإلكتروني للدخول</label>
-        <input id="adminEmailEditField" type="email" />
+        <input id="panelAdminEmail" type="email">
+      </div>
+      <div class="field">
+        <label>كلمة المرور للدخول</label>
+        <input id="panelAdminPassword" type="text">
       </div>
 
       <div class="field">
-        <label>كلمة المرور للدخول</label>
-        <input id="adminPassEditField" type="text" />
+        <label>رابط صورة اللوجو</label>
+        <input id="panelLogoUrl" type="text">
+      </div>
+      <div class="field">
+        <label>رابط صورة Hero</label>
+        <input id="panelHeroImageUrl" type="text">
+      </div>
+
+      <div class="field">
+        <label>رابط فيديو Hero (اختياري)</label>
+        <input id="panelHeroVideoUrl" type="text">
       </div>
     </div>
 
     <div class="admin-actions">
-      <button class="save-btn" id="saveSettingsBtn" type="button">حفظ التغييرات</button>
-      <button class="add-btn" id="newProductBtn" type="button">إضافة منتج جديد</button>
-      <button class="logout-btn" id="logoutBtn" type="button">تسجيل الخروج</button>
+      <button class="save-btn" id="saveAllBtn">حفظ جميع التغييرات</button>
+      <button class="add-btn" id="addProductBtn">إضافة منتج جديد</button>
     </div>
 
-    <div class="field" style="margin-top:16px;">
-      <label>رابط صورة اللوجو</label>
-      <input id="logoUrlField" type="text" />
-    </div>
-
-    <div class="field">
-      <label>رابط صورة Hero</label>
-      <input id="heroImageUrlField" type="text" />
-    </div>
-
-    <div class="field">
-      <label>رابط فيديو Hero (اختياري)</label>
-      <input id="heroVideoUrlField" type="text" />
-    </div>
-
-    <div class="prod-list" id="adminProductList"></div>
+    <div class="product-list" id="adminProductList"></div>
   </div>
 
-  <button class="floating-lock" id="floatingLockBtn" title="لوحة التحكم">🔐</button>
-
   <script>
-    const STORAGE_KEY = "asala_store_state_v1";
-    const DEFAULT_ADMIN = {
-      email: "admin@asala.com",
-      password: "Asala123!"
-    };
+    const STORAGE_KEY = "asala_heritage_store_v2";
 
     const defaultState = {
       siteName: "أصالة التراث المصري",
@@ -966,8 +1023,8 @@
       heroImageUrl: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1600&auto=format&fit=crop",
       heroVideoUrl: "",
       admin: {
-        email: DEFAULT_ADMIN.email,
-        password: DEFAULT_ADMIN.password
+        email: "admin@asala.com",
+        password: "Asala123!"
       },
       products: [
         {
@@ -1020,7 +1077,7 @@
           name: "ترابيزة نجمة الملكة كليوباترا",
           royal: "👑 إصدار فرعوني",
           category: "ترابيزات",
-          desc: "للنجوم حضور.. وحين يلتقي عبق الأصالة بفن الصدف البحري، تولد ترابيزة تروي حكايةً من الفخامة والجمال. بتفاصيلها المنحوتة، وبريق الصدف الطبيعي، تتجاوز هذه الترابيزة كونها قطعةً للضيافة لتصبح تحفةً فنية.",
+          desc: "للنجوم حضور.. وحين يلتقي عبق الأصالة بفن الصدف البحري، يولد طقم صواني يروي حكايةً من الفخامة والجمال. بتفاصيله المنحوتة، وبريق الصدف الطبيعي، تتجاوز هذه الترابيزة كونها قطعةً للضيافة لتصبح تحفةً فنية.",
           image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=600&auto=format&fit=crop",
           madeIn: "مصر"
         },
@@ -1038,7 +1095,7 @@
           name: "مبخر الملكة حتشبسوت",
           royal: "👑 إصدار فرعوني ملكي",
           category: "مباخر",
-          desc: "حين يلتقي عبق الأصالة بفنّ الصدف البحري، يولد مبخرٌ يروي حكايةً من الفخامة والجمال. مستوحى من صدف شواطئ الكويت اللي تحاكي هدوء البحر و رُقيّ المجالس. شايف لمعة الصدف؟ هذا مو صبغ.. هذا صدف بحر طبيعي ينشغل يدوياً 40 يوم!",
+          desc: "حين يلتقي عبق الأصالة بفنّ الصدف البحري، يولد مبخرٌ يروي حكايةً من الفخامة والجمال. مستوحى من صدف شواطئ الكويت وهدوء البحر و رُقيّ المجالس. هذا صدف بحر طبيعي ينشغل يدوياً 40 يوم!",
           image: "https://images.unsplash.com/photo-1602928294270-9f1c2e8f1e1e?q=80&w=600&auto=format&fit=crop",
           madeIn: "مصر"
         }
@@ -1056,8 +1113,8 @@
             ...defaultState,
             ...parsed,
             admin: {
-              email: parsed?.admin?.email || DEFAULT_ADMIN.email,
-              password: parsed?.admin?.password || DEFAULT_ADMIN.password
+              email: parsed?.admin?.email || defaultState.admin.email,
+              password: parsed?.admin?.password || defaultState.admin.password
             }
           };
         }
@@ -1091,20 +1148,36 @@
       `).join("");
     }
 
-    function fillAdminFields() {
-      document.getElementById("siteNameField").value = state.siteName || "";
-      document.getElementById("sloganField").value = state.slogan || "";
-      document.getElementById("heroTitleField").value = state.heroTitle || "";
-      document.getElementById("heroDescField").value = state.heroDesc || "";
-      document.getElementById("instaField").value = state.instagram || "";
-      document.getElementById("fbField").value = state.facebook || "";
-      document.getElementById("tiktokField").value = state.tiktok || "";
-      document.getElementById("emailField").value = state.email || "";
-      document.getElementById("logoUrlField").value = state.logoUrl || "";
-      document.getElementById("heroImageUrlField").value = state.heroImageUrl || "";
-      document.getElementById("heroVideoUrlField").value = state.heroVideoUrl || "";
-      document.getElementById("adminEmailEditField").value = state.admin.email || DEFAULT_ADMIN.email;
-      document.getElementById("adminPassEditField").value = state.admin.password || DEFAULT_ADMIN.password;
+    function applyPublicState() {
+      document.getElementById("siteName").textContent = state.siteName || "أصالة التراث المصري";
+      document.getElementById("siteLogo").src = state.logoUrl || defaultState.logoUrl;
+      document.getElementById("heroImage").src = state.heroVideoUrl || state.heroImageUrl || defaultState.heroImageUrl;
+      document.getElementById("heroTitle").innerHTML = state.heroTitle || defaultState.heroTitle;
+      document.getElementById("heroDesc").textContent = state.heroDesc || defaultState.heroDesc;
+
+      document.querySelectorAll(".social-links a")[0].href = state.instagram || "#";
+      document.querySelectorAll(".social-links a")[1].href = state.facebook || "#";
+      document.querySelectorAll(".social-links a")[2].href = `https://wa.me/96551118069?text=${encodeURIComponent("السلام عليكم 🌹 أرغب في الاستفسار عن منتجاتكم.")}`;
+      document.querySelectorAll(".social-links a")[3].href = state.email ? `mailto:${state.email}` : "#";
+      document.querySelectorAll(".social-links a")[4].href = state.tiktok || "#";
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+    }
+
+    function fillAdminForm() {
+      document.getElementById("panelSiteName").value = state.siteName || "";
+      document.getElementById("panelSlogan").value = state.slogan || "";
+      document.getElementById("panelHeroTitle").value = state.heroTitle || "";
+      document.getElementById("panelHeroDesc").value = state.heroDesc || "";
+      document.getElementById("panelInsta").value = state.instagram || "";
+      document.getElementById("panelFacebook").value = state.facebook || "";
+      document.getElementById("panelTiktok").value = state.tiktok || "";
+      document.getElementById("panelEmail").value = state.email || "";
+      document.getElementById("panelAdminEmail").value = state.admin.email || defaultState.admin.email;
+      document.getElementById("panelAdminPassword").value = state.admin.password || defaultState.admin.password;
+      document.getElementById("panelLogoUrl").value = state.logoUrl || "";
+      document.getElementById("panelHeroImageUrl").value = state.heroImageUrl || "";
+      document.getElementById("panelHeroVideoUrl").value = state.heroVideoUrl || "";
 
       renderAdminProducts();
     }
@@ -1117,15 +1190,15 @@
 
       state.products.forEach(product => {
         const item = document.createElement("div");
-        item.className = "prod-item";
+        item.className = "mini-card";
 
         item.innerHTML = `
-          <div class="prod-thumb">
+          <div class="mini-thumb">
             <img src="${product.image}" alt="${product.name}">
           </div>
           <h4>${product.name}</h4>
-          <div class="tiny">${product.category || "منتج مصري"}</div>
-          <div class="item-actions">
+          <div class="mini-cat">${product.category || "منتج مصري"}</div>
+          <div class="mini-actions">
             <button class="edit-item" data-product-id="${product.id}">تعديل</button>
             <button class="delete-item" data-delete-id="${product.id}">حذف</button>
           </div>
@@ -1155,31 +1228,30 @@
     }
 
     function editProduct(product) {
-      const name = prompt("اسم المنتج", product.name || "");
-      if (name === null) return;
+      const newName = prompt("اسم المنتج:", product.name || "");
+      if (newName === null) return;
 
-      const royal = prompt("نص الإصدار", product.royal || "");
-      const category = prompt("الفئة", product.category || "");
-      const desc = prompt("الوصف", product.desc || "");
-      const image = prompt("رابط الصورة", product.image || "");
-      const madeIn = prompt("صنع في", product.madeIn || "مصر");
+      const newRoyal = prompt("نص الإصدار:", product.royal || "");
+      const newCategory = prompt("الفئة:", product.category || "");
+      const newDesc = prompt("الوصف:", product.desc || "");
+      const newImage = prompt("رابط الصورة:", product.image || "");
+      const newMadeIn = prompt("صنع في:", product.madeIn || "مصر");
 
-      product.name = name;
-      product.royal = royal;
-      product.category = category;
-      product.desc = desc;
-      product.image = image;
-      product.madeIn = madeIn;
+      product.name = newName;
+      product.royal = newRoyal;
+      product.category = newCategory;
+      product.desc = newDesc;
+      product.image = newImage;
+      product.madeIn = newMadeIn;
 
       saveState();
       renderProducts();
       renderAdminProducts();
     }
 
-    function addProduct() {
-      const id = Date.now();
+    function addNewProduct() {
       state.products.unshift({
-        id,
+        id: Date.now(),
         name: "منتج جديد",
         royal: "👑 إصدار جديد",
         category: "منتجات جديدة",
@@ -1193,51 +1265,29 @@
       renderAdminProducts();
     }
 
-    function updatePublicUI() {
-      document.querySelector(".brand-name").innerHTML = `
-        ${state.siteName || "أصالة التراث المصري"}
-        <small>ASALA HERITAGE</small>
-      `;
-
-      document.getElementById("heroTitle").innerHTML = state.heroTitle || "المصنع الوحيد في مصر<br>لصناعة <span>الصدف الطبيعي</span><br>يدوياً 100%";
-      document.getElementById("heroDesc").textContent = state.heroDesc || "من بريق الصدف الطبيعي ودفء خشب الزان، نصنع قطعاً تحمل روح التراث المصري. كل قطعة تحفة فنية.";
-
-      document.querySelector(".brand img").src = state.logoUrl || "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?q=80&w=300&auto=format&fit=crop";
-      document.querySelector(".hero-bg").src = state.heroVideoUrl || state.heroImageUrl || "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1600&auto=format&fit=crop";
-
-      document.querySelectorAll(".social-links a")[0].href = state.instagram || "#";
-      document.querySelectorAll(".social-links a")[1].href = state.facebook || "#";
-      document.querySelectorAll(".social-links a")[2].href = `https://wa.me/${state.whatsapp || "96551118069"}?text=${encodeURIComponent("السلام عليكم 🌹 أرغب في الاستفسار عن منتجاتكم.")}`;
-      document.querySelectorAll(".social-links a")[3].href = state.email ? `mailto:${state.email}` : "#";
-      document.querySelectorAll(".social-links a")[4].href = state.tiktok || "#";
-
-      document.getElementById("year").textContent = new Date().getFullYear();
-    }
-
-    function saveSettings() {
-      state.siteName = document.getElementById("siteNameField").value.trim() || defaultState.siteName;
-      state.slogan = document.getElementById("sloganField").value.trim() || defaultState.slogan;
-      state.heroTitle = document.getElementById("heroTitleField").value.trim() || defaultState.heroTitle;
-      state.heroDesc = document.getElementById("heroDescField").value.trim() || defaultState.heroDesc;
-      state.instagram = document.getElementById("instaField").value.trim() || defaultState.instagram;
-      state.facebook = document.getElementById("fbField").value.trim() || defaultState.facebook;
-      state.tiktok = document.getElementById("tiktokField").value.trim() || defaultState.tiktok;
-      state.email = document.getElementById("emailField").value.trim() || defaultState.email;
-      state.logoUrl = document.getElementById("logoUrlField").value.trim() || defaultState.logoUrl;
-      state.heroImageUrl = document.getElementById("heroImageUrlField").value.trim() || defaultState.heroImageUrl;
-      state.heroVideoUrl = document.getElementById("heroVideoUrlField").value.trim() || defaultState.heroVideoUrl;
-
-      state.admin.email = document.getElementById("adminEmailEditField").value.trim() || DEFAULT_ADMIN.email;
-      state.admin.password = document.getElementById("adminPassEditField").value.trim() || DEFAULT_ADMIN.password;
+    function saveAllSettings() {
+      state.siteName = document.getElementById("panelSiteName").value.trim() || defaultState.siteName;
+      state.slogan = document.getElementById("panelSlogan").value.trim() || defaultState.slogan;
+      state.heroTitle = document.getElementById("panelHeroTitle").value.trim() || defaultState.heroTitle;
+      state.heroDesc = document.getElementById("panelHeroDesc").value.trim() || defaultState.heroDesc;
+      state.instagram = document.getElementById("panelInsta").value.trim() || defaultState.instagram;
+      state.facebook = document.getElementById("panelFacebook").value.trim() || defaultState.facebook;
+      state.tiktok = document.getElementById("panelTiktok").value.trim() || defaultState.tiktok;
+      state.email = document.getElementById("panelEmail").value.trim() || defaultState.email;
+      state.logoUrl = document.getElementById("panelLogoUrl").value.trim() || defaultState.logoUrl;
+      state.heroImageUrl = document.getElementById("panelHeroImageUrl").value.trim() || defaultState.heroImageUrl;
+      state.heroVideoUrl = document.getElementById("panelHeroVideoUrl").value.trim() || defaultState.heroVideoUrl;
+      state.admin.email = document.getElementById("panelAdminEmail").value.trim() || defaultState.admin.email;
+      state.admin.password = document.getElementById("panelAdminPassword").value.trim() || defaultState.admin.password;
 
       saveState();
-      updatePublicUI();
+      applyPublicState();
       renderProducts();
-      alert("تم حفظ التغييرات");
+      alert("تم حفظ جميع التغييرات بنجاح");
     }
 
-    function openWhatsApp(msg) {
-      const text = encodeURIComponent(msg);
+    function openWhatsApp(message) {
+      const text = encodeURIComponent(message);
       window.open(`https://wa.me/96551118069?text=${text}`, "_blank");
     }
 
@@ -1245,47 +1295,56 @@
       document.getElementById("products").scrollIntoView({ behavior: "smooth" });
     }
 
-    function login() {
-      const email = document.getElementById("adminEmailInput").value.trim().toLowerCase();
-      const pass = document.getElementById("adminPassInput").value.trim();
-      const errorBox = document.getElementById("adminError");
+    function showAdminModal() {
+      document.getElementById("adminModal").classList.add("open");
+    }
 
-      const realEmail = (state.admin.email || DEFAULT_ADMIN.email).toLowerCase();
-      const realPass = state.admin.password || DEFAULT_ADMIN.password;
+    function hideAdminModal() {
+      document.getElementById("adminModal").classList.remove("open");
+    }
 
-      if (email === realEmail && pass === realPass) {
-        document.getElementById("adminPanel").classList.add("active");
-        errorBox.classList.remove("show");
-        fillAdminFields();
+    function showAdminPanel() {
+      document.getElementById("adminPanel").classList.add("open");
+    }
+
+    function hideAdminPanel() {
+      document.getElementById("adminPanel").classList.remove("open");
+    }
+
+    function loginAttempt() {
+      const email = document.getElementById("loginEmail").value.trim().toLowerCase();
+      const pass = document.getElementById("loginPassword").value.trim();
+      const error = document.getElementById("loginError");
+
+      if (email === (state.admin.email || defaultState.admin.email).toLowerCase() && pass === (state.admin.password || defaultState.admin.password)) {
+        hideAdminModal();
+        showAdminPanel();
+        fillAdminForm();
       } else {
-        errorBox.classList.add("show");
+        error.classList.add("show");
       }
     }
 
-    function logout() {
-      document.getElementById("adminPanel").classList.remove("active");
-      document.getElementById("adminError").classList.remove("show");
-      document.getElementById("adminEmailInput").value = "";
-      document.getElementById("adminPassInput").value = "";
+    function logoutAdmin() {
+      hideAdminPanel();
+      document.getElementById("loginEmail").value = "";
+      document.getElementById("loginPassword").value = "";
+      document.getElementById("loginError").classList.remove("show");
     }
 
-    document.getElementById("loginBtn").addEventListener("click", login);
-    document.getElementById("saveSettingsBtn").addEventListener("click", saveSettings);
-    document.getElementById("newProductBtn").addEventListener("click", addProduct);
-    document.getElementById("logoutBtn").addEventListener("click", logout);
-    document.getElementById("floatingLockBtn").addEventListener("click", () => {
-      const panel = document.getElementById("adminPanel");
-      if (panel.classList.contains("active")) {
-        logout();
-      } else {
-        document.getElementById("adminEmailInput").focus();
-      }
+    document.getElementById("loginBtn").addEventListener("click", loginAttempt);
+    document.getElementById("adminToggle").addEventListener("click", showAdminModal);
+    document.getElementById("logoutBtn").addEventListener("click", logoutAdmin);
+    document.getElementById("saveAllBtn").addEventListener("click", saveAllSettings);
+    document.getElementById("addProductBtn").addEventListener("click", addNewProduct);
+
+    document.getElementById("adminModal").addEventListener("click", (e) => {
+      if (e.target.id === "adminModal") hideAdminModal();
     });
 
-    document.getElementById("year").textContent = new Date().getFullYear();
     renderProducts();
-    updatePublicUI();
-    fillAdminFields();
+    applyPublicState();
+    fillAdminForm();
   </script>
 </body>
 </html>
