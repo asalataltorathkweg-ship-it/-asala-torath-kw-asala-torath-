@@ -3,714 +3,726 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>أصالة المدى | مجوهرات صدف وديكور فاخر</title>
+    <title>أصالة المدى | فن الصدف المصري الطبيعي</title>
     <meta
       name="description"
-      content="أصالة المدى • صدف مصري طبيعي • ديكور فاخر • قطع يدويّة • تصميمات ملكية • توصيل عالمي"
+      content="أصالة المدى • صدف مصري طبيعي • صنع في مصر • شغل يدوي • ديكور فاخر • توصيل من الكويت للعالم"
+    />
+    <meta
+      name="keywords"
+      content="أصالة المدى, صدف مصري طبيعي, صنع في مصر, ديكور فاخر, شغل يدوي, أثاث أنتيك, متحف أنتيك, توصيل عالمي"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700;900&family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
     />
     <style>
       :root {
-        --bg: #f8f1e8;
-        --bg-2: #efe1cf;
+        --bg: #f7f1e6;
+        --bg-2: #efe0c8;
         --card: #fffdf9;
-        --card-2: #f5e8d3;
-        --ink: #2d1d14;
-        --muted: #6b503e;
-        --gold: #b98b48;
-        --gold-2: #d9b06c;
-        --shell: #d89a6a;
-        --shell-dark: #9d5c3b;
-        --line: rgba(118, 89, 61, 0.18);
-        --shadow: 0 14px 38px rgba(77, 52, 34, 0.12);
-        --success: #2e8b57;
-        --danger: #c94d38;
-        --white: #ffffff;
+        --card-2: #f7efd9;
+        --ink: #271a14;
+        --gold: #c4a06c;
+        --gold-deep: #a36f31;
+        --brown: #6d2230;
+        --brown-soft: #7f2d39;
+        --shell: #d99c67;
+        --shell-dark: #94593a;
+        --green: #1fbf74;
+        --text: #2d1d14;
+        --muted: #675446;
+        --line: rgba(53, 38, 25, 0.12);
+        --shadow: 0 18px 42px rgba(58, 40, 27, 0.12);
+        --danger: #d14a38;
+        --radius: 18px;
       }
 
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
       body {
-        margin: 0;
-        font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-        background:
-          radial-gradient(circle at top, rgba(255, 255, 255, 0.7), transparent 35%),
-          linear-gradient(180deg, var(--bg) 0%, #f3e7d2 100%);
-        color: var(--ink);
+        font-family: "Cairo", sans-serif;
+        direction: rtl;
+        background: linear-gradient(180deg, var(--bg) 0%, #f4e9d7 100%);
+        color: var(--text);
       }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      img {
-        display: block;
-        max-width: 100%;
-      }
-
-      button,
-      input,
-      textarea,
-      select {
-        font: inherit;
-      }
-
-      .container {
-        width: min(1200px, calc(100% - 32px));
-        margin: 0 auto;
-      }
+      a { text-decoration: none; color: inherit; }
+      img { display: block; max-width: 100%; }
+      button, input, select, textarea { font: inherit; }
+      h1, h2, h3, h4, h5, h6 { font-family: "Amiri", serif; }
+      .container { width: min(1230px, calc(100% - 28px)); margin: 0 auto; }
 
       .topbar {
-        background: rgba(255, 255, 255, 0.6);
-        border-bottom: 1px solid var(--line);
-        backdrop-filter: blur(8px);
         position: sticky;
         top: 0;
         z-index: 50;
+        background: rgba(255,255,255,0.65);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line);
       }
 
       .topbar-inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 18px 0;
-        gap: 20px;
+        gap: 14px;
+        min-height: 82px;
       }
 
       .brand {
         display: flex;
         align-items: center;
         gap: 12px;
-        font-weight: 800;
-        letter-spacing: 0.3px;
       }
 
-      .logo {
-        width: 52px;
-        height: 52px;
+      .brand-mark {
+        width: 58px;
+        height: 58px;
         border-radius: 50%;
         background: linear-gradient(135deg, var(--gold), var(--shell));
         display: grid;
         place-items: center;
-        box-shadow: 0 8px 18px rgba(174, 120, 65, 0.28);
-        font-size: 26px;
+        color: white;
+        font-size: 1.8rem;
+        box-shadow: 0 12px 26px rgba(158, 117, 70, 0.26);
       }
 
-      .brand small {
-        display: block;
-        font-size: 11px;
-        font-weight: 700;
-        color: var(--muted);
-        letter-spacing: 1px;
+      .brand-text {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .brand-text strong {
+        font-size: 1.6rem;
+        color: var(--ink);
+        line-height: 1.1;
+      }
+
+      .brand-text small {
+        color: var(--gold-deep);
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        font-size: 0.58rem;
       }
 
       .nav {
         display: flex;
-        align-items: center;
-        gap: 18px;
         flex-wrap: wrap;
+        gap: 18px;
         justify-content: center;
-      }
-
-      .nav a {
-        color: var(--muted);
         font-weight: 700;
-        font-size: 14px;
-        transition: 0.2s ease;
+        color: var(--muted);
+        font-size: 0.92rem;
       }
 
-      .nav a:hover {
-        color: var(--ink);
-      }
+      .nav a { transition: color 0.2s ease; }
+      .nav a:hover { color: var(--ink); }
 
-      .cta,
-      .btn,
-      .admin-btn {
-        display: inline-flex;
+      .header-actions {
+        display: flex;
         align-items: center;
-        justify-content: center;
-        border-radius: 999px;
+        gap: 10px;
+      }
+
+      .mini-btn {
         border: none;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: white;
+        box-shadow: 0 10px 20px rgba(54, 39, 27, 0.08);
         cursor: pointer;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        font-size: 1.3rem;
       }
 
-      .cta {
+      .cta-btn {
+        border: none;
+        border-radius: 999px;
         background: linear-gradient(135deg, var(--gold), var(--shell));
-        color: #fff;
-        padding: 12px 22px;
+        color: white;
         font-weight: 800;
-        box-shadow: 0 12px 24px rgba(152, 100, 58, 0.25);
-      }
-
-      .cta:hover,
-      .btn:hover,
-      .admin-btn:hover {
-        transform: translateY(-2px);
+        padding: 12px 22px;
+        cursor: pointer;
+        box-shadow: 0 12px 24px rgba(168, 112, 60, 0.26);
       }
 
       .hero {
-        padding: 48px 0 28px;
-      }
-
-      .hero-box {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 28px;
-        align-items: center;
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(245, 232, 211, 0.85));
-        border: 1px solid var(--line);
-        border-radius: 32px;
-        box-shadow: var(--shadow);
+        position: relative;
+        min-height: 78vh;
+        background:
+          linear-gradient(180deg, rgba(15, 10, 7, 0.18), rgba(15, 10, 7, 0.7)),
+          url("https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat;
         overflow: hidden;
       }
 
-      .hero-copy {
-        padding: 46px 36px 36px 20px;
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(circle at 20% 15%, rgba(196,160,108,0.25), transparent 18%),
+          radial-gradient(circle at 75% 70%, rgba(196,160,108,0.22), transparent 20%);
+      }
+
+      .hero-inner {
+        position: relative;
+        z-index: 1;
+        min-height: 78vh;
+        display: flex;
+        align-items: center;
+      }
+
+      .hero-content {
+        max-width: 760px;
+        color: white;
+        padding: 56px 0;
       }
 
       .eyebrow {
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        background: #fff;
-        border: 1px solid var(--line);
+        background: rgba(255,255,255,0.08);
+        border: 1px solid rgba(255,255,255,0.2);
         border-radius: 999px;
-        padding: 8px 14px;
-        font-size: 13px;
-        color: var(--muted);
+        padding: 9px 16px;
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
         font-weight: 800;
-        box-shadow: 0 8px 18px rgba(94, 72, 54, 0.06);
+        color: #f4d79c;
       }
 
-      .eyebrow .icon {
-        font-size: 16px;
+      .hero h1 {
+        font-size: clamp(2.7rem, 5vw, 5.5rem);
+        line-height: 1.08;
+        color: white;
+        margin: 18px 0 18px;
       }
 
-      h1 {
-        font-size: clamp(2rem, 4vw, 4rem);
-        line-height: 1.1;
-        margin: 18px 0 16px;
-        color: var(--ink);
+      .hero h1 .gold {
+        color: #f7d583;
       }
 
-      .lead {
-        color: var(--muted);
+      .hero p {
+        max-width: 620px;
+        color: rgba(255,255,255,0.9);
         font-size: 1.07rem;
         line-height: 1.9;
-        margin: 0 0 24px;
-        max-width: 60ch;
+        margin-bottom: 30px;
       }
 
       .hero-actions {
         display: flex;
         flex-wrap: wrap;
         gap: 14px;
-        margin-bottom: 26px;
       }
 
       .btn {
-        padding: 15px 26px;
-        font-weight: 800;
-        border: 1px solid transparent;
-      }
-
-      .btn.primary {
-        background: linear-gradient(135deg, var(--gold), var(--shell));
-        color: #fff;
-        box-shadow: 0 12px 24px rgba(152, 100, 58, 0.25);
-      }
-
-      .btn.secondary {
-        background: #fff;
-        border-color: var(--line);
-        color: var(--ink);
-      }
-
-      .stats {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 24px;
-        padding-top: 10px;
-      }
-
-      .stat {
-        min-width: 120px;
-      }
-
-      .stat strong {
-        display: block;
-        font-size: 1.65rem;
-        color: var(--ink);
-      }
-
-      .stat span {
-        color: var(--muted);
-        font-size: 14px;
-        font-weight: 700;
-      }
-
-      .hero-art {
-        position: relative;
-        min-height: 440px;
-        background:
-          linear-gradient(160deg, rgba(190, 130, 76, 0.18), rgba(255, 255, 255, 0.18)),
-          radial-gradient(circle at top left, rgba(255, 255, 255, 0.62), transparent 30%),
-          linear-gradient(135deg, #d7b88c, #f2ddbf 45%, #dcc1a8);
-        display: grid;
-        place-items: center;
-        padding: 18px;
-      }
-
-      .showcase {
-        position: relative;
-        width: min(100%, 420px);
-        aspect-ratio: 4 / 5;
-        border-radius: 28px;
-        background:
-          linear-gradient(160deg, rgba(90, 64, 52, 0.18), rgba(255, 255, 255, 0.10)),
-          #efe2d0;
-        box-shadow: 0 22px 32px rgba(90, 64, 52, 0.18);
-        border: 1px solid rgba(118, 89, 61, 0.25);
-        overflow: hidden;
-      }
-
-      .showcase::before {
-        content: "";
-        position: absolute;
-        inset: 20px 18px 70px 18px;
-        border-radius: 24px;
-        background:
-          linear-gradient(135deg, rgba(138, 92, 62, 0.2), rgba(255, 255, 255, 0.15)),
-          linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.08));
-        border: 1px solid rgba(118, 89, 61, 0.15);
-      }
-
-      .showcase::after {
-        content: "🐚";
-        position: absolute;
-        right: 26px;
-        top: 26px;
-        font-size: 3rem;
-        filter: drop-shadow(0 8px 12px rgba(111, 75, 53, 0.2));
-      }
-
-      .product-card-visual {
-        position: absolute;
-        inset: 95px 55px 30px 55px;
-        border-radius: 22px;
-        background:
-          linear-gradient(145deg, #7b5340, #b98864 42%, #f1d0a1),
-          repeating-linear-gradient(
-            45deg,
-            rgba(255, 255, 255, 0.04),
-            rgba(255, 255, 255, 0.04) 10px,
-            rgba(0, 0, 0, 0.01) 10px,
-            rgba(0, 0, 0, 0.01) 20px
-          );
-        box-shadow:
-          inset 0 10px 20px rgba(255, 255, 255, 0.18),
-          inset 0 -15px 30px rgba(95, 61, 42, 0.25);
-        display: grid;
-        place-items: center;
-      }
-
-      .product-card-visual .symbol {
-        font-size: 5rem;
-        transform: scale(1.08);
-        filter: drop-shadow(0 8px 12px rgba(62, 42, 31, 0.22));
-      }
-
-      .floating-tag {
-        position: absolute;
-        left: 26px;
-        bottom: 24px;
-        background: rgba(255, 255, 255, 0.82);
-        border: 1px solid rgba(118, 89, 61, 0.18);
-        border-radius: 999px;
-        padding: 10px 14px;
-        font-weight: 800;
-        color: var(--muted);
-        backdrop-filter: blur(6px);
-      }
-
-      .section {
-        padding: 64px 0 10px;
-      }
-
-      .section-head {
-        display: flex;
-        align-items: end;
-        justify-content: space-between;
-        gap: 18px;
-        margin-bottom: 26px;
-        flex-wrap: wrap;
-      }
-
-      .section-title {
-        margin: 0;
-        font-size: clamp(1.7rem, 3vw, 2.5rem);
-        line-height: 1.2;
-        color: var(--ink);
-      }
-
-      .section-note {
-        color: var(--muted);
-        font-size: 0.95rem;
-        line-height: 1.8;
-        max-width: 50ch;
-      }
-
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(220px, 1fr));
-        gap: 22px;
-      }
-
-      .product {
-        border: 1px solid var(--line);
-        border-radius: 24px;
-        background: rgba(255, 255, 255, 0.55);
-        box-shadow: 0 8px 22px rgba(74, 55, 37, 0.05);
-        overflow: hidden;
-        transition: transform 0.25s ease, box-shadow 0.25s ease;
-      }
-
-      .product:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 16px 28px rgba(74, 55, 37, 0.08);
-      }
-
-      .product-visual {
-        min-height: 200px;
-        display: grid;
-        place-items: center;
-        position: relative;
-        background: linear-gradient(135deg, rgba(226, 187, 132, 0.5), rgba(255, 255, 255, 0.7));
-        border-bottom: 1px solid var(--line);
-      }
-
-      .product-visual::before {
-        content: "";
-        position: absolute;
-        inset: 18px;
-        border-radius: 18px;
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.45), rgba(196, 157, 104, 0.15));
-        border: 1px solid rgba(118, 89, 61, 0.12);
-      }
-
-      .product-visual .emoji {
-        position: relative;
-        z-index: 1;
-        font-size: 4rem;
-        filter: drop-shadow(0 8px 14px rgba(86, 59, 42, 0.2));
-      }
-
-      .product-body {
-        padding: 18px 18px 20px;
-      }
-
-      .product-tag {
         display: inline-flex;
         align-items: center;
-        gap: 6px;
-        background: rgba(217, 176, 108, 0.16);
-        color: var(--shell-dark);
-        border: 1px solid rgba(185, 139, 72, 0.16);
-        padding: 7px 10px;
+        justify-content: center;
         border-radius: 999px;
-        font-size: 12px;
+        padding: 15px 26px;
         font-weight: 800;
-        margin-bottom: 12px;
+        cursor: pointer;
+        border: none;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .btn:hover { transform: translateY(-2px); }
+      .btn-primary {
+        background: linear-gradient(135deg, var(--gold), #e9cc8f);
+        color: var(--ink);
+        box-shadow: 0 14px 28px rgba(196,160,108,0.28);
+      }
+      .btn-secondary {
+        background: rgba(255,255,255,0.06);
+        color: white;
+        border: 1px solid rgba(255,255,255,0.35);
       }
 
-      .product h3 {
-        margin: 0 0 8px;
-        font-size: 1.2rem;
+      .hero-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 22px;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255,255,255,0.12);
+        border: 1px solid rgba(255,255,255,0.18);
+        color: white;
+        padding: 8px 12px;
+        border-radius: 999px;
+        font-size: 0.72rem;
+        font-weight: 800;
+      }
+
+      .marquee-wrap {
+        background: #120d0b;
+        color: #f2d28a;
+        border-top: 1px solid rgba(196,160,108,0.12);
+        border-bottom: 1px solid rgba(196,160,108,0.12);
+        overflow: hidden;
+      }
+
+      .marquee {
+        white-space: nowrap;
+        overflow: hidden;
+        padding: 12px 0;
+        font-size: 0.8rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+      }
+      .marquee span {
+        display: inline-block;
+        padding-left: 42px;
+        animation: scrollText 28s linear infinite;
+      }
+      @keyframes scrollText {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+
+      .section { padding: 72px 0; }
+      .section-head {
+        margin: 0 auto 28px;
+        text-align: center;
+        max-width: 820px;
+      }
+      .section-head .eyebrow {
+        background: rgba(196,160,108,0.08);
+        border-color: rgba(196,160,108,0.16);
+        color: var(--gold-deep);
+      }
+      .section-head h2 {
+        font-size: clamp(2.1rem, 4vw, 3rem);
+        color: var(--ink);
+        margin-top: 12px;
+      }
+      .section-head p {
+        color: var(--muted);
+        margin-top: 8px;
+        line-height: 1.8;
+      }
+
+      .services {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(200px,1fr));
+        gap: 18px;
+        margin-top: 20px;
+      }
+
+      .service-item {
+        background: rgba(255,255,255,0.6);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 18px 14px;
+        text-align: center;
+        box-shadow: 0 14px 28px rgba(29, 21, 16, 0.04);
+      }
+      .service-item .icon { font-size: 2rem; margin-bottom: 8px; }
+      .service-item strong { display: block; margin-bottom: 6px; color: var(--ink); }
+      .service-item span { color: var(--muted); font-size: 0.82rem; }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 24px;
+      }
+      .product-card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+      .product-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 24px 46px rgba(54, 39, 27, 0.15);
+      }
+      .product-media {
+        position: relative;
+        height: 290px;
+        background: linear-gradient(135deg, rgba(217,156,103,0.22), rgba(255,255,255,0.8));
+      }
+      .product-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .product-media::after {
+        content: "🔍";
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        font-size: 2rem;
+        background: rgba(0,0,0,0.08);
+        opacity: 0;
+        transition: opacity 0.22s ease;
+      }
+      .product-card:hover .product-media::after { opacity: 1; }
+      .product-badge {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        background: rgba(31,191,116,0.92);
+        color: white;
+        padding: 6px 12px;
+        border-radius: 999px;
+        font-size: 0.7rem;
+        font-weight: 800;
+      }
+
+      .product-content {
+        padding: 18px 18px 20px;
+      }
+      .product-version {
+        display: inline-block;
+        font-size: 0.69rem;
+        font-weight: 800;
+        color: var(--gold-deep);
+        letter-spacing: 0.08em;
+      }
+      .product-title {
+        margin: 12px 0 10px;
+        text-align: center;
+        font-size: 1.6rem;
         color: var(--ink);
       }
-
-      .product p {
-        margin: 0;
+      .product-desc {
+        min-height: 90px;
         color: var(--muted);
+        text-align: center;
         line-height: 1.8;
-        font-size: 0.96rem;
+        font-size: 0.9rem;
+      }
+      .product-actions {
+        display: flex;
+        gap: 8px;
+        margin-top: 16px;
+      }
+      .product-actions .btn {
+        flex: 1;
+        padding: 12px 10px;
+        border-radius: 12px;
+        font-size: 0.82rem;
+      }
+      .btn-gold {
+        background: linear-gradient(135deg, var(--gold), #e9d09a);
+        color: var(--ink);
+      }
+      .btn-green {
+        background: linear-gradient(135deg, var(--green), #0f9b60);
+        color: white;
       }
 
-      .features {
-        background: rgba(255, 255, 255, 0.36);
-        border-top: 1px solid var(--line);
-        border-bottom: 1px solid var(--line);
-        margin-top: 64px;
-        padding: 28px 0 34px;
+      .story-section {
+        padding: 74px 0 10px;
+      }
+      .story-wrap {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 34px;
+        align-items: center;
+      }
+      .story-card {
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 26px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+      .story-card img {
+        width: 100%;
+        height: 520px;
+        object-fit: cover;
+      }
+      .story-content {
+        background: rgba(255,255,255,0.64);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: 24px 22px;
+        box-shadow: var(--shadow);
+      }
+      .story-content h2 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin-bottom: 12px;
+        color: var(--ink);
+      }
+      .story-content p {
+        color: var(--muted);
+        line-height: 1.9;
+        margin-bottom: 14px;
       }
 
       .feature-grid {
         display: grid;
-        grid-template-columns: repeat(5, minmax(180px, 1fr));
+        grid-template-columns: repeat(5, minmax(170px,1fr));
         gap: 18px;
-        margin-top: 20px;
       }
-
-      .feature {
-        padding: 22px 18px 18px;
-        background: #fffdfc;
+      .feature-card {
+        background: rgba(255,255,255,0.62);
         border: 1px solid var(--line);
-        border-radius: 22px;
-        text-align: center;
-        box-shadow: 0 7px 16px rgba(75, 58, 41, 0.04);
-      }
-
-      .feature-icon {
-        width: 68px;
-        height: 68px;
-        margin: 0 auto 14px;
-        display: grid;
-        place-items: center;
         border-radius: 18px;
-        background: linear-gradient(135deg, rgba(185, 139, 72, 0.17), rgba(216, 154, 106, 0.18));
-        border: 1px solid rgba(185, 139, 72, 0.22);
-        font-size: 2rem;
+        text-align: center;
+        padding: 22px 14px;
+        box-shadow: 0 12px 24px rgba(54,39,27,0.04);
       }
-
-      .feature h4 {
-        margin: 0 0 6px;
-        font-size: 1.05rem;
+      .feature-card .icon { font-size: 2.3rem; margin-bottom: 8px; }
+      .feature-card h4 {
+        font-size: 1.08rem;
         color: var(--ink);
+        margin-bottom: 6px;
       }
-
-      .feature p {
-        margin: 0;
+      .feature-card p {
         color: var(--muted);
+        font-size: 0.78rem;
         line-height: 1.7;
-        font-size: 0.9rem;
       }
 
-      .about-panel {
-        padding: 60px 0 12px;
-      }
-
-      .about-box {
-        background: linear-gradient(135deg, rgba(255,255,255,0.25), rgba(240,222,196,0.9));
-        border: 1px solid var(--line);
-        border-radius: 28px;
-        overflow: hidden;
+      .reviews-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(3, minmax(240px,1fr));
+        gap: 20px;
       }
-
-      .about-image {
-        min-height: 420px;
-        background:
-          linear-gradient(120deg, rgba(123, 83, 64, 0.2), rgba(255,255,255,0.1)),
-          url("https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80") center/cover no-repeat;
+      .review-card {
+        background: rgba(255,255,255,0.64);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 22px 18px;
+        box-shadow: var(--shadow);
       }
-
-      .about-copy {
-        padding: 38px 30px;
-      }
-
-      .about-copy h2 {
-        margin: 10px 0 16px;
-        font-size: clamp(2rem, 3vw, 2.8rem);
-      }
-
-      .about-copy p {
+      .stars { color: var(--gold-deep); letter-spacing: 0.14em; margin-bottom: 10px; }
+      .review-card p {
         color: var(--muted);
         line-height: 1.9;
-        margin-bottom: 18px;
+        margin-bottom: 12px;
       }
+      .review-meta { color: var(--ink); font-weight: 800; }
 
-      .quote {
-        margin-top: 20px;
-        padding: 18px 20px;
-        border-right: 4px solid var(--gold);
-        background: rgba(255,255,255,0.35);
-        border-radius: 16px;
-        color: var(--ink);
-        font-weight: 700;
-      }
-
-      .faq {
-        padding: 60px 0 10px;
-      }
-
-      .faq-box {
+      .faq-list {
+        max-width: 980px;
+        margin: 0 auto;
         display: grid;
-        gap: 14px;
+        gap: 12px;
       }
-
       .faq-item {
         border: 1px solid var(--line);
-        border-radius: 18px;
-        background: rgba(255,255,255,0.5);
+        border-radius: 14px;
+        background: rgba(255,255,255,0.62);
         overflow: hidden;
       }
-
-      .faq-question {
+      .faq-q {
         width: 100%;
         text-align: right;
-        padding: 18px 20px;
-        background: rgba(217, 176, 108, 0.08);
+        background: rgba(196,160,108,0.08);
         border: none;
         color: var(--ink);
-        font-size: 1rem;
         font-weight: 800;
+        padding: 18px 20px;
         cursor: pointer;
       }
-
-      .faq-answer {
+      .faq-a {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.25s ease;
-        padding: 0 20px;
         color: var(--muted);
+        background: transparent;
+        transition: max-height 0.25s ease, padding 0.25s ease;
+        padding: 0 20px;
+      }
+      .faq-item.active .faq-a {
+        max-height: 220px;
+        padding: 0 20px 18px;
       }
 
-      .faq-item.active .faq-answer {
-        max-height: 200px;
-        padding: 16px 20px 18px;
+      .cta-strip {
+        padding: 60px 0 0;
       }
-
-      .cta-banner {
-        padding: 55px 0 12px;
-      }
-
-      .banner-box {
-        background: linear-gradient(135deg, rgba(154, 109, 62, 0.88), rgba(189, 146, 91, 0.92), rgba(116, 74, 47, 0.9));
-        border: 1px solid rgba(255, 255, 255, 0.22);
-        border-radius: 30px;
-        padding: 30px 34px;
+      .cta-box {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 18px;
-        color: #fff;
-        box-shadow: 0 18px 34px rgba(85, 51, 33, 0.20);
+        background: linear-gradient(135deg, #7b2131, #a06d38, #6a3b2c);
+        border: 1px solid rgba(255,255,255,0.18);
+        border-radius: 28px;
+        color: white;
+        padding: 24px 28px;
+        box-shadow: 0 18px 34px rgba(54, 39, 27, 0.18);
       }
-
-      .banner-box h3 {
-        margin: 0 0 8px;
-        font-size: clamp(1.5rem, 2.7vw, 2.5rem);
+      .cta-box h3 {
+        font-size: clamp(1.8rem, 3vw, 2.8rem);
+        margin-bottom: 6px;
       }
-
-      .banner-box p {
-        margin: 0;
-        color: rgba(255,255,255,0.84);
+      .cta-box p {
+        color: rgba(255,255,255,0.86);
         line-height: 1.8;
-        font-size: 1rem;
       }
-
-      .banner-box .shell {
-        font-size: 3rem;
-        filter: drop-shadow(0 10px 18px rgba(42, 22, 14, 0.25));
+      .cta-box .shell {
+        font-size: 3.4rem;
       }
 
       footer {
-        padding: 26px 0 48px;
-        color: var(--muted);
-        font-weight: 700;
-        text-align: center;
+        margin-top: 58px;
+        background: linear-gradient(180deg, #1d180f, #0c0d0d);
+        color: rgba(255,255,255,0.8);
+        padding: 56px 0 24px;
       }
+      .footer-inner {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 26px;
+      }
+      .footer-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+      .footer-brand .brand-mark {
+        width: 48px;
+        height: 48px;
+      }
+      .footer-brand strong { color: white; font-size: 1.45rem; }
+      .footer-brand small {
+        display: block;
+        color: #f2d28a;
+        font-size: 0.58rem;
+        letter-spacing: 0.13em;
+      }
+      .footer p {
+        color: rgba(255,255,255,0.8);
+        line-height: 1.9;
+        font-size: 0.9rem;
+      }
+      .footer h4 {
+        color: #f1d284;
+        margin-bottom: 12px;
+        font-family: "Cairo", sans-serif;
+      }
+      .footer a, .footer span {
+        display: block;
+        margin-bottom: 8px;
+        color: rgba(255,255,255,0.82);
+        font-size: 0.88rem;
+      }
+
+      .float-socials {
+        position: fixed;
+        left: 20px;
+        bottom: 90px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        z-index: 120;
+      }
+
+      .float-btn {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        font-size: 1.4rem;
+        color: white;
+        box-shadow: 0 12px 26px rgba(26, 18, 12, 0.18);
+      }
+      .wa { background: linear-gradient(135deg, var(--green), #0a945f); }
+      .ig { background: linear-gradient(135deg, #ff8a00, #d3007a, #7b35d7); }
+      .call { background: linear-gradient(135deg, var(--gold), var(--gold-deep)); }
 
       .floating-admin {
         position: fixed;
         left: 22px;
         bottom: 22px;
-        width: 56px;
-        height: 56px;
+        width: 54px;
+        height: 54px;
         border: none;
         border-radius: 50%;
-        background: linear-gradient(135deg, #1f1713, #533b2d);
-        color: #f5dba7;
-        box-shadow: 0 16px 28px rgba(0,0,0,0.18);
+        background: linear-gradient(135deg, #1a1512, #49352c);
+        color: #f3d183;
+        box-shadow: 0 14px 26px rgba(0,0,0,0.18);
         cursor: pointer;
-        z-index: 120;
-        font-size: 1.4rem;
+        z-index: 110;
+        font-size: 1.25rem;
       }
 
       .modal {
         position: fixed;
         inset: 0;
-        background: rgba(20, 14, 10, 0.68);
+        background: rgba(18, 12, 8, 0.72);
         display: none;
         z-index: 200;
       }
-
-      .modal.open {
-        display: block;
-      }
+      .modal.open { display: block; }
 
       .modal-card {
-        width: min(920px, calc(100% - 24px));
-        max-height: calc(100vh - 40px);
-        overflow: auto;
-        background: #fff;
+        width: min(980px, calc(100% - 24px));
+        max-height: calc(100vh - 36px);
+        margin: 18px auto;
+        background: white;
         border-radius: 20px;
-        margin: 50px auto;
-        box-shadow: 0 28px 80px rgba(0,0,0,0.22);
+        overflow: hidden;
+        box-shadow: 0 28px 80px rgba(0,0,0,0.25);
       }
 
       .modal-header {
+        background: linear-gradient(135deg, #1d1713, #352d28);
+        color: white;
+        padding: 18px 20px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 18px 20px;
-        background: linear-gradient(135deg, #1f1713, #3a261f);
-        color: #fff;
       }
-
       .modal-header h3 {
-        margin: 0;
+        color: white;
+        font-family: "Cairo", sans-serif;
+        font-size: 1.35rem;
       }
-
       .close-btn {
         background: transparent;
-        border: 1px solid rgba(255,255,255,0.25);
-        color: #fff;
+        color: white;
+        border: 1px solid rgba(255,255,255,0.2);
         border-radius: 10px;
         padding: 8px 12px;
         cursor: pointer;
+        font-weight: 700;
       }
 
-      .login-box {
-        padding: 28px;
+      .login-box, .admin-body {
         background: #fffaf5;
+        padding: 22px;
       }
 
       .field {
-        margin-bottom: 14px;
+        margin-bottom: 12px;
       }
 
       .field label {
         display: block;
         margin-bottom: 6px;
-        font-weight: 800;
         color: var(--ink);
+        font-weight: 800;
+        font-size: 0.82rem;
       }
 
-      .field input,
-      .field textarea,
-      .field select {
+      .field input, .field textarea, .field select {
         width: 100%;
-        border: 1px solid rgba(77,52,34,0.15);
-        border-radius: 12px;
-        padding: 12px 14px;
-        background: #fff;
+        border: 1px solid rgba(50,38,30,0.12);
+        border-radius: 10px;
+        padding: 11px 12px;
+        background: white;
       }
+      .field textarea { min-height: 96px; resize: vertical; }
 
-      .field textarea {
-        min-height: 110px;
-        resize: vertical;
-      }
-
-      .login-actions,
       .action-row {
         display: flex;
         flex-wrap: wrap;
@@ -719,257 +731,252 @@
       }
 
       .admin-btn {
-        background: linear-gradient(135deg, var(--gold), var(--gold-2));
-        color: var(--ink);
+        border: none;
+        border-radius: 10px;
         padding: 12px 18px;
         font-weight: 800;
+        cursor: pointer;
+      }
+      .admin-btn.primary {
+        background: linear-gradient(135deg, var(--gold), #e4c88d);
+        color: var(--ink);
+      }
+      .admin-btn.dark {
+        background: #1f1814;
+        color: white;
+      }
+      .admin-btn.red {
+        background: var(--danger);
+        color: white;
       }
 
-      .admin-btn.alt {
-        background: #222;
-        color: #fff;
+      .tabs {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        background: #f8efe6;
+        padding: 12px 18px;
+        border-bottom: 1px solid var(--line);
       }
 
-      .admin-btn.danger {
-        background: linear-gradient(135deg, #d14d3d, #a9392d);
-        color: #fff;
+      .tab-btn {
+        border: 1px solid transparent;
+        border-radius: 10px;
+        background: transparent;
+        padding: 9px 14px;
+        font-weight: 800;
+        cursor: pointer;
+        color: var(--ink);
+      }
+      .tab-btn.active {
+        background: var(--ink);
+        color: white;
+      }
+
+      .tab-panel {
+        display: none;
+      }
+      .tab-panel.active { display: block; }
+
+      .admin-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(260px,1fr));
+        gap: 18px;
+      }
+
+      .admin-card {
+        background: #fffaf5;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 18px;
+      }
+      .admin-card h4 {
+        color: var(--ink);
+        margin-bottom: 16px;
+        font-size: 1.4rem;
+      }
+
+      .product-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+        gap: 14px;
+        margin-top: 18px;
+      }
+
+      .mini-card {
+        background: #fffdfb;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      .mini-thumb {
+        height: 120px;
+        background: linear-gradient(135deg, rgba(196,160,108,0.2), rgba(255,255,255,0.8));
+      }
+      .mini-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .mini-body {
+        padding: 10px 12px 12px;
+      }
+      .mini-body h5 {
+        font-size: 1.05rem;
+        color: var(--ink);
+        margin-bottom: 4px;
+      }
+      .mini-body p {
+        color: var(--muted);
+        font-size: 0.76rem;
+      }
+      .mini-actions {
+        display: flex;
+        gap: 8px;
+        margin-top: 10px;
+      }
+      .mini-actions button {
+        flex: 1;
+        border: none;
+        padding: 8px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 800;
       }
 
       .side-panel {
         position: fixed;
         top: 0;
         right: 0;
-        width: min(500px, 100%);
+        width: min(480px, 100%);
         height: 100vh;
-        background: #fffaf2;
-        box-shadow: -30px 0 80px rgba(0,0,0,0.18);
+        background: #fffaf4;
+        box-shadow: -20px 0 60px rgba(0,0,0,0.14);
         transform: translateX(110%);
         transition: transform 0.25s ease;
         z-index: 160;
       }
-
-      .side-panel.open {
-        transform: translateX(0);
-      }
+      .side-panel.open { transform: translateX(0); }
 
       .side-header {
-        background: linear-gradient(135deg, #1d1713, #352d28);
+        background: linear-gradient(135deg, #1c1713, #312822);
         color: white;
         padding: 18px 20px;
         display: flex;
-        align-items: center;
         justify-content: space-between;
+        align-items: center;
       }
+      .side-header h3 { color: white; font-family: "Cairo", sans-serif; }
 
       .side-body {
-        padding: 18px;
-        height: calc(100vh - 76px);
         overflow: auto;
+        height: calc(100vh - 76px);
+        padding: 18px;
       }
+
+      .cart-empty {
+        text-align: center;
+        color: var(--muted);
+        padding: 40px 12px;
+      }
+      .cart-empty .big { font-size: 3rem; margin-bottom: 8px; }
 
       .cart-item {
-        display: flex;
-        gap: 12px;
-        align-items: center;
         background: white;
         border: 1px solid var(--line);
-        border-radius: 16px;
+        border-radius: 14px;
         padding: 12px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
         margin-bottom: 12px;
       }
-
       .cart-thumb {
         width: 60px;
         height: 60px;
-        border-radius: 14px;
-        background: linear-gradient(135deg, rgba(217,176,108,0.18), rgba(255,255,255,0.8));
+        border-radius: 12px;
+        background: linear-gradient(135deg, rgba(196,160,108,0.2), rgba(255,255,255,0.8));
         display: grid;
         place-items: center;
         font-size: 2rem;
       }
-
-      .cart-text {
-        flex: 1;
+      .cart-info { flex: 1; }
+      .cart-info h4 {
+        font-size: 0.95rem;
+        color: var(--ink);
+        margin-bottom: 4px;
       }
-
-      .cart-text h4 {
-        margin: 0 0 4px;
-        font-size: 1rem;
-      }
-
-      .cart-text small {
+      .cart-info small {
         color: var(--muted);
-        display: block;
+        font-size: 0.72rem;
       }
 
       .qty-wrap {
         display: inline-flex;
         align-items: center;
-        gap: 10px;
-        background: #f4ead7;
+        gap: 8px;
+        background: #f7efdf;
         border: 1px solid var(--line);
         border-radius: 10px;
         padding: 5px 8px;
       }
-
       .qty-wrap button {
-        width: 24px;
-        height: 24px;
+        width: 22px;
+        height: 22px;
         border: none;
-        border-radius: 8px;
-        background: #1f1713;
+        background: var(--ink);
         color: white;
+        border-radius: 6px;
+        font-size: 1rem;
         font-weight: 800;
         cursor: pointer;
       }
-
       .remove-btn {
         width: 30px;
         height: 30px;
         border: none;
-        border-radius: 10px;
+        border-radius: 8px;
         background: var(--danger);
         color: white;
         cursor: pointer;
       }
 
-      .cart-total {
-        margin-top: 18px;
+      .cart-footer {
         border-top: 1px solid var(--line);
-        padding-top: 18px;
+        padding-top: 16px;
+        margin-top: 16px;
+      }
+      .total-row {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        font-weight: 800;
-      }
-
-      .checkout-btn {
-        width: 100%;
-        padding: 14px 18px;
-        margin-top: 18px;
-        font-weight: 800;
-        border: none;
+        padding: 12px 14px;
+        background: white;
+        border: 2px solid var(--gold);
         border-radius: 12px;
-        background: linear-gradient(135deg, var(--success), #218b5d);
-        color: white;
-        cursor: pointer;
-      }
-
-      .empty-state {
-        text-align: center;
-        color: var(--muted);
-        padding: 40px 12px;
-      }
-
-      .empty-state .big {
-        font-size: 3rem;
+        font-weight: 800;
         margin-bottom: 10px;
       }
-
-      .tabs {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        background: #f8efe9;
-        border-bottom: 1px solid var(--line);
-        padding: 12px 18px;
-      }
-
-      .tab-btn {
-        border: 1px solid transparent;
-        background: transparent;
-        color: var(--ink);
-        font-weight: 800;
-        border-radius: 10px;
-        padding: 9px 12px;
-        cursor: pointer;
-      }
-
-      .tab-btn.active {
-        background: #17110e;
-        color: white;
-      }
-
-      .tab-panel {
+      .checkout-form {
         display: none;
-        padding: 18px;
-      }
-
-      .tab-panel.active {
-        display: block;
-      }
-
-      .admin-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(240px, 1fr));
-        gap: 18px;
-      }
-
-      .admin-card {
-        background: #fffaf6;
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        padding: 18px;
-      }
-
-      .admin-card h4 {
-        margin: 0 0 16px;
-        font-size: 1.4rem;
-      }
-
-      .product-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 12px;
-        margin-top: 16px;
-      }
-
-      .mini-card {
-        background: #fffefb;
-        border: 1px solid var(--line);
-        border-radius: 14px;
-        overflow: hidden;
-      }
-
-      .mini-thumb {
-        height: 120px;
-        background: linear-gradient(135deg, rgba(217,176,108,0.2), rgba(255,255,255,0.8));
-      }
-
-      .mini-thumb img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .mini-body {
-        padding: 10px 12px 12px;
-      }
-
-      .mini-body h5 {
-        margin: 0 0 6px;
-        font-size: 1rem;
-      }
-
-      .mini-body p {
-        margin: 0;
-        color: var(--muted);
-        font-size: 0.8rem;
-      }
-
-      .mini-actions {
-        display: flex;
-        gap: 8px;
         margin-top: 12px;
       }
-
-      .mini-actions button {
-        flex: 1;
+      .checkout-form.open { display: block; }
+      .checkout-btn {
+        width: 100%;
+        background: linear-gradient(135deg, var(--green), #0a9d62);
+        color: white;
         border: none;
-        border-radius: 10px;
-        padding: 8px 0;
-        cursor: pointer;
+        border-radius: 12px;
+        padding: 14px 18px;
         font-weight: 800;
+        cursor: pointer;
+      }
+      .small-note {
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.72rem;
+        margin-top: 10px;
       }
 
       .toast {
@@ -977,299 +984,331 @@
         left: 50%;
         bottom: 26px;
         transform: translateX(-50%) translateY(120px);
-        background: #1d1713;
+        background: #1d1714;
         color: white;
-        padding: 12px 20px;
+        padding: 12px 18px;
         border-radius: 999px;
         opacity: 0;
         transition: all 0.25s ease;
         z-index: 500;
       }
-
       .toast.show {
         opacity: 1;
         transform: translateX(-50%) translateY(0);
       }
 
       @media (max-width: 980px) {
-        .grid {
-          grid-template-columns: repeat(2, minmax(220px, 1fr));
-        }
-
-        .feature-grid {
-          grid-template-columns: repeat(2, minmax(180px, 1fr));
-        }
-
-        .hero-box,
-        .about-box {
-          grid-template-columns: 1fr;
-        }
-
-        .hero-copy {
-          padding: 32px 22px 10px;
-        }
-
-        .hero-art {
-          min-height: 360px;
-        }
+        .nav { display: none; }
+        .services { grid-template-columns: repeat(2, minmax(180px,1fr)); }
+        .feature-grid { grid-template-columns: repeat(2, minmax(170px,1fr)); }
+        .story-wrap, .footer-inner { grid-template-columns: 1fr; }
+        .admin-grid { grid-template-columns: 1fr; }
       }
 
       @media (max-width: 640px) {
-        .topbar-inner {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        .nav {
-          justify-content: flex-start;
-        }
-
-        .grid,
-        .feature-grid,
-        .admin-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .banner-box {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        .stats {
-          gap: 18px;
-        }
-
-        .cta {
-          width: 100%;
-        }
-
-        .hero-actions {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-        }
+        .topbar-inner { flex-direction: column; align-items: flex-start; }
+        .hero-actions { display: grid; grid-template-columns: 1fr 1fr; }
+        .btn { width: 100%; }
+        .services, .feature-grid, .reviews-grid { grid-template-columns: 1fr; }
+        .cta-box { flex-direction: column; align-items: flex-start; }
       }
     </style>
   </head>
-
   <body>
     <header class="topbar">
       <div class="container topbar-inner">
         <div class="brand">
-          <div class="logo">🐚</div>
-          <div>
-            <span>أصالة المدى</span>
-            <small>فخامة واصالة</small>
+          <div class="brand-mark">🐚</div>
+          <div class="brand-text">
+            <strong>أصالة المدى</strong>
+            <small>ASALA AL MADAR</small>
           </div>
         </div>
 
-        <nav class="nav" aria-label="التنقل">
-          <a href="#منتجاتنا">منتجاتنا</a>
-          <a href="#مميزاتنا">مميزاتنا</a>
-          <a href="#عن-الشركة">من نحن</a>
-          <a href="#تواصل">تواصل</a>
+        <nav class="nav" aria-label="القائمة الرئيسية">
+          <a href="#gallery">الرئيسية</a>
+          <a href="#about">من نحن</a>
+          <a href="#craft">الحرفية</a>
+          <a href="#faq">الأسئلة</a>
+          <a href="#contact">تواصل</a>
         </nav>
 
-        <button class="cta" onclick="openCart()">اطلب الآن</button>
+        <div class="header-actions">
+          <button class="mini-btn" title="السلة" onclick="openCart()">🛍️</button>
+        </div>
       </div>
     </header>
 
-    <main>
-      <section class="hero">
-        <div class="container">
-          <div class="hero-box">
-            <div class="hero-copy">
-              <div class="eyebrow"><span class="icon">🐚</span> مجموعة فاخرة من التحف والقطع الأثرية</div>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <span class="eyebrow">🐚 متحف أنتيكات عالمي</span>
+          <h1>تحف فاخرة من <span class="gold">الصدف المصري الطبيعي</span> <br />بأصالة من صنع في مصر</h1>
+          <p>
+            ننتج قطع ديكور وأثاث أنتيك بأسلوب فخم، مستوحى من التراث المصري، باستخدام صدف مصري طبيعي 100%
+            وشغل يدوي دقيق، مع جودة تصنيع عالية ونقوش مميزة تناسب المساحات الراقية في الكويت والخليج والعالم.
+          </p>
 
-              <h1>ديكور فاخر يحمل أصالة<br />الهوية والتميز</h1>
+          <div class="hero-actions">
+            <a href="#gallery" class="btn btn-primary">تسوّق المجموعة</a>
+            <a href="https://wa.me/96551118069?text=السلام%20عليكم%20🌹%20أرغب%20في%20تفصيل%20قطعة%20حسب%20الطلب%20—%20صنع%20في%20مصر%20—%20صدف%20مصري%20طبيعي" target="_blank" class="btn btn-secondary">تفصيل خاص</a>
+          </div>
 
-              <p class="lead">
-                كل قطعة من منتجاتنا تصنع بعناية فائقة لتمنح المساحات طابعاً أنيقاً، مميزاً،
-                ومختلفاً، مع مزيج بين التراث العربي المشرق والمهارة اليدوية الفاخرة.
-              </p>
-
-              <div class="hero-actions">
-                <a href="#منتجاتنا" class="btn primary">استكشف المنتجات</a>
-                <a href="#مميزاتنا" class="btn secondary">لماذا نحن؟</a>
-              </div>
-
-              <div class="stats">
-                <div class="stat">
-                  <strong>100%</strong>
-                  <span>صدف طبيعي</span>
-                </div>
-                <div class="stat">
-                  <strong>100%</strong>
-                  <span>شغل يدوي</span>
-                </div>
-                <div class="stat">
-                  <strong>24/7</strong>
-                  <span>خدمة العملاء</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="hero-art" aria-label="منتجات فاخرة">
-              <div class="showcase">
-                <div class="product-card-visual">
-                  <div class="symbol">🏺</div>
-                </div>
-                <div class="floating-tag">أصالة مدى الحياة</div>
-              </div>
-            </div>
+          <div class="hero-badges">
+            <span class="badge">صنع في مصر</span>
+            <span class="badge">صدف مصري طبيعي</span>
+            <span class="badge">شغل يدوي</span>
+            <span class="badge">توصيل عالمي</span>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section" id="منتجاتنا">
-        <div class="container">
-          <div class="section-head">
-            <div>
-              <p class="eyebrow"><span class="icon">🐚</span> منتجاتنا</p>
-              <h2 class="section-title">مجموعة مختارة من التحف والديكور الفاخر</h2>
-            </div>
-            <p class="section-note">
-              تصاميم صدفية أنيقة، بلمسات تراثية وفخامة عصرية، تجمع بين الجمال، الاستقرار،
-              والهوية المميزة لكل مساحة.
+    <div class="marquee-wrap">
+      <div class="marquee">
+        <span>✨ صنع في مصر • صدف مصري طبيعي • شغل يدوي • من الكويت إلى الخليج والعالم • تحف فاخرة • ديكور أنتيك • صدف طبيعي 100% • صنع في مصر • صدف مصري طبيعي • شغل يدوي •</span>
+      </div>
+    </div>
+
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">🐚 المنتجات</span>
+          <h2>تحف فنية بلمسة مصرية</h2>
+          <p>مجموعة مختارة من القطع المصنوعة يدويًا من الخشب والأصالة المصرية، مع تفاصيل صدفية أنيقة تعكس فخامة المتحف.</p>
+        </div>
+
+        <div class="services" id="servicesBox"></div>
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <section class="story-section" id="about">
+      <div class="container">
+        <div class="story-wrap">
+          <div class="story-card">
+            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80" alt="صنع يدوي في مصر" />
+          </div>
+
+          <div class="story-content">
+            <span class="eyebrow">🐚 من نحن</span>
+            <h2>إتقان يدوي في كل تفاصيل القطعة</h2>
+            <p>
+              نلتزم بتصميم قطع فخمة تجمع بين الأصالة المصرية والهوية العصرية، مع الحرص على اختيار أجود الخشب
+              والصدف الطبيعي، ثم تشكيل كل قطعة يدويًا بحرفية دقيقة.
+            </p>
+            <p>
+              نعمل على تفاصيل دقيقة قبل التنفيذ، بما يضمن توازن الشكل واللون والوزن في كل pieza، مع مراعاة
+              المقاسات والمساحات المختلفة لتتناسب مع ذوق العميل وبيئة استعماله.
+            </p>
+            <p>
+              كل قطعة من منتجاتنا تحمل قصة مصر، وتصبح إضافة فاخرة تحافظ على الطابع الكلاسيكي مع لمسة أنيقة
+              تعكس جودة صناعة محلية أصيلة.
             </p>
           </div>
-
-          <div id="productsGrid" class="grid"></div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="features" id="مميزاتنا">
-        <div class="container">
-          <div class="section-head">
+    <section class="section" id="craft">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">✨ لماذا نحن؟</span>
+          <h2>كل منتج يحمل أصالة مدى الحياة</h2>
+        </div>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="icon">🐚</div>
+            <h4>صدف مصري طبيعي 100%</h4>
+            <p>أصلية وطبيعية مع لمسة فاخرة في كل قطعة.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon">🪵</div>
+            <h4>خشب زان طبيعي</h4>
+            <p>متانة واستقرار مع مظهر أنيق ودائم.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon">🛠️</div>
+            <h4>شغل يدوي بالكامل</h4>
+            <p>صنع يدوي وفق تقنيات حرفية متقنة.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon">🚚</div>
+            <h4>توصيل من الكويت للعالم</h4>
+            <p>خدمة شحن موثوقة ودقيقة.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="icon">✨</div>
+            <h4>أصالة مدى الحياة</h4>
+            <p>هوية فاخرة تتماشى مع كل مساحة.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">⭐ آراء العملاء</span>
+          <h2>تجارب جميلة من عملائنا</h2>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>تجربتي مع أصالة المدى فاقت التوقعات. القطع تُشع فخامة واللمسات تدل على مهارة حقيقية.</p>
+            <div class="review-meta">سارة حمد — الكويت</div>
+          </div>
+
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>الصدف المصري الطبيعي يلمع بشكل يميّز القطعة، والخشب متين ويضيف لمسة فاخرة إلى الديكور.</p>
+            <div class="review-meta">أحمد القحطاني — السعودية</div>
+          </div>
+
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>القطع تم تصنيعها بدقة عالية جدًا، والنتيجة تعكس أصالة مصر وذوقًا أنيقًا لا ينسى.</p>
+            <div class="review-meta">مريم الزهراني — دبي</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">❓ الأسئلة الشائعة</span>
+          <h2>كل ما تريد أن تعرفه</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item active">
+            <button class="faq-q">هل تستخدمون صدفاً طبيعياً 100٪؟</button>
+            <div class="faq-a">
+              نعم، جميع قطعنا مصنوعة من صدف مصري طبيعي 100% مع تشطيب يدوي دقيق وخشب معالج بشكل فني.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q">هل يمكن طلب قطعة حسب المقاس؟</button>
+            <div class="faq-a">
+              نعم، نقدم خدمة التفصيل حسب المقاس واللون والنقش المطلوب لتناسب المساحة والذوق الشخصي.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q">هل التوصيل عالمي؟</button>
+            <div class="faq-a">
+              نعم، نقدم التوصيل داخل الكويت ودول الخليج وأيضاً شحن عالمي باستخدام طرق آمنة ومضمونة.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q">هل يمكن طلب قطعة دائرية أو بيضاوية؟</button>
+            <div class="faq-a">
+              بالتأكيد، يمكننا تنفيذ أي شكل تفضله بما يتناسب مع مساحة المنزل أو القاعة أو مكتبك.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q">كم تستغرق مدة التنفيذ؟</button>
+            <div class="faq-a">
+              تعتمد على نوع القطعة، لكن بشكل عام بين 15 و30 يومًا حسب الحجم والمواد والنقوش المطلوبة.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q">هل المنتج مناسب للاستخدام اليومي؟</button>
+            <div class="faq-a">
+              نعم، نصنع القطع لتكون عملية وفاخرة في آن واحد، مع حماية مناسبة للسطح لتقليل الخدوش.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q">هل يمكن أن نضيف كراسي أو قطع متكاملة؟</button>
+            <div class="faq-a">
+              نعم، يمكننا تصميم طقم كامل أو قطع متكاملة متناسقة في اللون والمواد والنقوش.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q">هل يمكن الطلب مباشرة من الواتساب؟</button>
+            <div class="faq-a">
+              نعم، يمكنك إرسال طلبك مباشرة من الزر العائم في أسفل الصفحة أو من أي منتج في المعرض.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-strip">
+      <div class="container">
+        <div class="cta-box">
+          <div>
+            <h3>هذا هو طابعنا: فخامة، أصالة، جودة</h3>
+            <p>كل قطعة تحمل قصة مصر وشغلاً يدويًا فنيًا يعكس هوية متماسكة في كل مكان.</p>
+          </div>
+          <div class="shell">🐚</div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div class="container footer-inner">
+        <div>
+          <div class="footer-brand">
+            <div class="brand-mark">🐚</div>
             <div>
-              <p class="eyebrow"><span class="icon">🐚</span> لماذا نحن؟</p>
-              <h2 class="section-title">كل منتج يحمل أصالة مدى الحياة</h2>
+              <strong>أصالة المدى</strong>
+              <small>ASALA AL MADAR</small>
             </div>
           </div>
-
-          <div class="feature-grid">
-            <div class="feature">
-              <div class="feature-icon">🐚</div>
-              <h4>صدف مصري طبيعي 100%</h4>
-              <p>أصلية وطبيعية، مع لمسة فريدة في كل قطعة.</p>
-            </div>
-
-            <div class="feature">
-              <div class="feature-icon">🪵</div>
-              <h4>خشب زان طبيعي</h4>
-              <p>متانة واستقرار مع دقة في تفاصيل التنفيذ.</p>
-            </div>
-
-            <div class="feature">
-              <div class="feature-icon">🛠️</div>
-              <h4>شغل يدوي بالكامل</h4>
-              <p>كل قطعة حسب اليد، مع لمسة فنية مميزة.</p>
-            </div>
-
-            <div class="feature">
-              <div class="feature-icon">🚚</div>
-              <h4>توصيل من الكويت للعالم</h4>
-              <p>توصيل محترف وموثوق يليق بمنتجاتنا الفاخرة.</p>
-            </div>
-
-            <div class="feature">
-              <div class="feature-icon">✨</div>
-              <h4>أصالة مدى الحياة</h4>
-              <p>هوية فاخرة تستمر معك عبر الزمن وتضيف قيمة دائمة.</p>
-            </div>
-          </div>
+          <p>
+            المصانع والورشة المصرية تخرج قطعاً فنية من الصدف الطبيعي والخشب الأصيل، كل واحدة تحمل قصة مصر
+            وتاريخها في تفاصيلها، مع لمسة فاخرة تناسب أصالة المساحات الحديثة والكلاسيكية.
+          </p>
         </div>
-      </section>
 
-      <section class="about-panel" id="عن-الشركة">
-        <div class="container">
-          <div class="about-box">
-            <div class="about-image"></div>
-            <div class="about-copy">
-              <p class="eyebrow"><span class="icon">🐚</span> من نحن</p>
-              <h2>إتقان يدوي يليق بكل مساحة</h2>
-              <p>
-                نحن نبدأ من فكرة بسيطة: مساحة راقية تحتاج إلى تفاصيل تدعمها وتجعلها تليق
-                بالهوية التي ترغب بها. لذلك نختار الخشب الطبيعي والصدف المصري بأسلوب دقيق،
-                ونصنع كل قطعة وفق رغبة العميل ومساحة المنزل.
-              </p>
-              <p>
-                كل منتج من منتجاتنا يعكس جهدًا حرفيًا، خبرةً في التصميم، واهتمامًا كبيرًا
-                بلمسة النهاية، بما يضمن مظهرًا فاخرًا ومتوازنًا وعمراً طويلاً.
-              </p>
-              <div class="quote">
-                “النقوش لا تُصنع للورق فقط، بل تُصنع للحياة والهوية.”
-              </div>
-            </div>
-          </div>
+        <div>
+          <h4>تواصل معنا</h4>
+          <a href="https://wa.me/96551118069" target="_blank">واتساب: 96551118069</a>
+          <a href="mailto:info@asala-mada.com">البريد: info@asala-mada.com</a>
+          <a href="https://www.instagram.com/" target="_blank">إنستغرام</a>
+          <a href="https://www.facebook.com/" target="_blank">فيسبوك</a>
+          <a href="https://www.tiktok.com/" target="_blank">تيك توك</a>
         </div>
-      </section>
 
-      <section class="faq">
-        <div class="container">
-          <div class="section-head">
-            <div>
-              <p class="eyebrow"><span class="icon">❓</span> الأسئلة الشائعة</p>
-              <h2 class="section-title">كل ما تريد أن تعرفه</h2>
-            </div>
-          </div>
-
-          <div class="faq-box">
-            <div class="faq-item active">
-              <button class="faq-question">هل تستخدمون صدفًا طبيعيًا 100٪؟</button>
-              <div class="faq-answer">
-                نعم، جميع منتجاتنا مصنوعة من صدف طبيعي مصري، مع تصنيع يدوي دقيق ومهارة فاخرة.
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-question">هل يمكن طلب قطعة حسب المقاس؟</button>
-              <div class="faq-answer">
-                نعم، نحن نقبل الطلبات المخصصة حسب المقاس واللون والنقش المطلوب.
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-question">هل التوصيل عالمي؟</button>
-              <div class="faq-answer">
-                نعم، نقدم خدمة الشحن داخل الكويت ودول الخليج وأيضًا شحن عالمي بشكل آمن.
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-question">كم تستغرق المدة؟</button>
-              <div class="faq-answer">
-                تعتمد على نوع القطعة، لكن غالبًا بين 15 إلى 30 يومًا حسب التعقيد.
-              </div>
-            </div>
-          </div>
+        <div>
+          <h4>المتجر</h4>
+          <span>صنع في مصر</span>
+          <span>صدف مصري طبيعي</span>
+          <span>شغل يدوي بالكامل</span>
+          <span>أصالة مدى الحياة</span>
         </div>
-      </section>
-
-      <section class="cta-banner">
-        <div class="container">
-          <div class="banner-box">
-            <div>
-              <h3>هذا هو طابعنا: فخامة، أصالة، وجودة</h3>
-              <p>كل وصف يتم صياغته بطريقة صدفية أنيقة، مع إيقاع فريد يبرز جمال المنتج في كل التفاصيل.</p>
-            </div>
-            <div class="shell">🐚</div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer id="تواصل">
-      © 2025 أصالة المدى • تصميم فخم يلائم كل مساحة
+      </div>
     </footer>
+
+    <div class="float-socials">
+      <a class="float-btn wa" href="https://wa.me/96551118069?text=السلام%20عليكم%20🌹%20أرغب%20في%20التواصل" target="_blank" title="واتساب">💬</a>
+      <a class="float-btn ig" href="https://www.instagram.com/" target="_blank" title="إنستغرام">📸</a>
+      <a class="float-btn call" href="tel:96551118069" title="اتصال">📞</a>
+    </div>
 
     <button class="floating-admin" id="adminLauncher" title="لوحة التحكم">⚙️</button>
 
-    <div id="loginModal" class="modal">
+    <div class="modal" id="loginModal">
       <div class="modal-card">
         <div class="modal-header">
           <h3>تسجيل الدخول</h3>
           <button class="close-btn" data-close="login">إغلاق</button>
         </div>
+
         <div class="login-box">
           <div class="field">
             <label>البريد الإلكتروني</label>
@@ -1281,8 +1320,8 @@
             <input id="loginPassword" type="password" value="Asala@2025" />
           </div>
 
-          <div class="login-actions">
-            <button class="admin-btn" id="loginBtn">دخول لوحة التحكم</button>
+          <div class="action-row">
+            <button class="admin-btn primary" id="loginBtn">دخول لوحة التحكم</button>
           </div>
         </div>
       </div>
@@ -1293,17 +1332,51 @@
         <h3>السلة</h3>
         <button class="close-btn" id="closeCartBtn">✕</button>
       </div>
+
       <div class="side-body">
         <div id="cartItems"></div>
-        <div class="cart-total">
-          <span>الإجمالي</span>
-          <strong id="cartTotal">0 د.ك</strong>
+
+        <div class="cart-footer">
+          <div class="total-row">
+            <span>الإجمالي</span>
+            <strong id="cartTotal">0 د.ك</strong>
+          </div>
+
+          <button class="checkout-btn" id="checkoutBtn">متابعة على واتساب</button>
+
+          <div class="checkout-form" id="checkoutForm">
+            <div class="field">
+              <label>الاسم</label>
+              <input id="buyerName" type="text" placeholder="اسمك الكامل" />
+            </div>
+
+            <div class="field">
+              <label>الهاتف</label>
+              <input id="buyerPhone" type="tel" placeholder="رقم الهاتف" />
+            </div>
+
+            <div class="field">
+              <label>وجهة التوصيل</label>
+              <select id="buyerShipping"></select>
+            </div>
+
+            <div class="field">
+              <label>العنوان</label>
+              <input id="buyerAddress" type="text" placeholder="العنوان أو المدينة" />
+            </div>
+
+            <div class="field">
+              <label>الملاحظات</label>
+              <textarea id="buyerNotes" placeholder="أي ملاحظات إضافية"></textarea>
+            </div>
+          </div>
+
+          <div class="small-note" id="shippingNote">لا توجد ملاحظات شحن</div>
         </div>
-        <button class="checkout-btn" id="checkoutBtn">متابعة إلى واتساب</button>
       </div>
     </aside>
 
-    <div id="adminModal" class="modal">
+    <div class="modal" id="adminModal">
       <div class="modal-card">
         <div class="modal-header">
           <h3>لوحة التحكم</h3>
@@ -1319,178 +1392,225 @@
           <button class="tab-btn" data-tab="backup">نسخ احتياطي</button>
         </div>
 
-        <div class="tab-panel active" data-panel="general">
-          <div class="admin-grid">
+        <div class="admin-body">
+          <div class="tab-panel active" data-panel="general">
+            <div class="admin-grid">
+              <div class="admin-card">
+                <h4>بيانات الدخول</h4>
+
+                <div class="field">
+                  <label>البريد الإلكتروني</label>
+                  <input id="adminEmailInput" type="email" />
+                </div>
+
+                <div class="field">
+                  <label>كلمة المرور</label>
+                  <input id="adminPasswordInput" type="text" />
+                </div>
+
+                <div class="action-row">
+                  <button class="admin-btn primary" id="saveAdminCredentialsBtn">حفظ</button>
+                </div>
+              </div>
+
+              <div class="admin-card">
+                <h4>معلومات المتجر</h4>
+
+                <div class="field">
+                  <label>اسم المتجر</label>
+                  <input id="storeName" type="text" />
+                </div>
+
+                <div class="field">
+                  <label>الشعار/السطر العلوي</label>
+                  <input id="topBarText" type="text" />
+                </div>
+
+                <div class="field">
+                  <label>الوصف المختصر</label>
+                  <textarea id="siteDescription"></textarea>
+                </div>
+
+                <div class="field">
+                  <label>رقم واتساب</label>
+                  <input id="whatsappNumber" type="text" />
+                </div>
+
+                <div class="field">
+                  <label>البريد الإلكتروني</label>
+                  <input id="emailField" type="email" />
+                </div>
+
+                <div class="action-row">
+                  <button class="admin-btn primary" id="saveGeneralBtn">حفظ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" data-panel="design">
+            <div class="admin-grid">
+              <div class="admin-card">
+                <h4>الألوان</h4>
+
+                <div class="field">
+                  <label>الأسود</label>
+                  <input id="colorBlack" type="color" />
+                </div>
+
+                <div class="field">
+                  <label>الذهبي</label>
+                  <input id="colorGold" type="color" />
+                </div>
+
+                <div class="field">
+                  <label>الذهبي الغامق</label>
+                  <input id="colorGoldDark" type="color" />
+                </div>
+
+                <div class="field">
+                  <label>البيج</label>
+                  <input id="colorBeige" type="color" />
+                </div>
+              </div>
+
+              <div class="admin-card">
+                <h4>الخطوط والحجم</h4>
+
+                <div class="field">
+                  <label>خط العناوين</label>
+                  <select id="fontTitle">
+                    <option value="'Amiri', serif">Amiri</option>
+                    <option value="'Cairo', sans-serif">Cairo</option>
+                    <option value="'Tahoma', sans-serif">Tahoma</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label>حجم النص</label>
+                  <input id="bodySize" type="number" min="12" max="24" />
+                </div>
+
+                <div class="field">
+                  <label>حجم العناوين</label>
+                  <input id="titleSize" type="number" min="18" max="48" />
+                </div>
+
+                <div class="field">
+                  <label>استدارة الحواف</label>
+                  <input id="radiusSize" type="number" min="0" max="30" />
+                </div>
+
+                <div class="action-row">
+                  <button class="admin-btn primary" id="saveDesignBtn">حفظ التصميم</button>
+                  <button class="admin-btn red" id="resetDesignBtn">استعادة الافتراضي</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" data-panel="media">
+            <div class="admin-grid">
+              <div class="admin-card">
+                <h4>اللوجو</h4>
+                <div class="field">
+                  <label>تحميل لوجو</label>
+                  <input id="logoUpload" type="file" accept="image/*" />
+                </div>
+              </div>
+
+              <div class="admin-card">
+                <h4>صورة الغلاف</h4>
+                <div class="field">
+                  <label>تحميل صورة الغلاف</label>
+                  <input id="heroUpload" type="file" accept="image/*" />
+                </div>
+              </div>
+
+              <div class="admin-card">
+                <h4>صورة من نحن</h4>
+                <div class="field">
+                  <label>تحميل صورة من نحن</label>
+                  <input id="aboutUpload" type="file" accept="image/*" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" data-panel="products">
             <div class="admin-card">
-              <h4>بيانات الدخول</h4>
-              <div class="field">
-                <label>البريد الإلكتروني</label>
-                <input id="adminEmailInput" type="email" />
-              </div>
-              <div class="field">
-                <label>كلمة المرور</label>
-                <input id="adminPasswordInput" type="text" />
-              </div>
+              <h4>إدارة المنتجات</h4>
+
               <div class="action-row">
-                <button class="admin-btn alt" id="saveAdminCredentialsBtn">حفظ</button>
+                <button class="admin-btn primary" id="addProductBtn">إضافة منتج جديد</button>
               </div>
-            </div>
 
+              <div id="adminProducts" class="product-list"></div>
+            </div>
+          </div>
+
+          <div class="tab-panel" data-panel="shipping">
             <div class="admin-card">
-              <h4>معلومات المتجر</h4>
+              <h4>خيارات الشحن</h4>
+
               <div class="field">
-                <label>اسم المتجر</label>
-                <input id="storeName" type="text" />
+                <label>كل سطر بصيغة: العنوان | السعر | الملاحظة</label>
+                <textarea id="shippingOptions"></textarea>
               </div>
+
               <div class="field">
-                <label>السطر العلوي</label>
-                <input id="topBarText" type="text" />
+                <label>ملاحظة الشحن</label>
+                <textarea id="shippingNote"></textarea>
               </div>
-              <div class="field">
-                <label>الوصف</label>
-                <textarea id="siteDescription"></textarea>
-              </div>
-              <div class="field">
-                <label>واتساب</label>
-                <input id="whatsappNumber" type="text" />
-              </div>
-              <div class="field">
-                <label>البريد</label>
-                <input id="emailField" type="email" />
-              </div>
+
               <div class="action-row">
-                <button class="admin-btn alt" id="saveGeneralBtn">حفظ</button>
+                <button class="admin-btn primary" id="saveShippingBtn">حفظ الشحن</button>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="tab-panel" data-panel="design">
-          <div class="admin-grid">
+          <div class="tab-panel" data-panel="backup">
             <div class="admin-card">
-              <h4>الألوان</h4>
-              <div class="field">
-                <label>الأسود</label>
-                <input id="colorBlack" type="color" />
-              </div>
-              <div class="field">
-                <label>الذهبي</label>
-                <input id="colorGold" type="color" />
-              </div>
-              <div class="field">
-                <label>الذهبي الغامق</label>
-                <input id="colorGoldDark" type="color" />
-              </div>
-              <div class="field">
-                <label>البيج</label>
-                <input id="colorBeige" type="color" />
-              </div>
-            </div>
+              <h4>النسخ الاحتياطي</h4>
 
-            <div class="admin-card">
-              <h4>الخطوط والحجم</h4>
-              <div class="field">
-                <label>خط العناوين</label>
-                <select id="fontTitle">
-                  <option value="'Arial', sans-serif">Arial</option>
-                  <option value="'Segoe UI', sans-serif">Segoe UI</option>
-                  <option value="'Tahoma', sans-serif">Tahoma</option>
-                </select>
-              </div>
-              <div class="field">
-                <label>حجم النص</label>
-                <input id="bodySize" type="number" min="12" max="24" />
-              </div>
-              <div class="field">
-                <label>حجم العناوين</label>
-                <input id="titleSize" type="number" min="18" max="48" />
-              </div>
-              <div class="field">
-                <label>استدارة الحواف</label>
-                <input id="radiusSize" type="number" min="0" max="30" />
-              </div>
               <div class="action-row">
-                <button class="admin-btn" id="saveDesignBtn">حفظ التصميم</button>
-                <button class="admin-btn danger" id="resetDesignBtn">استعادة الافتراضي</button>
+                <button class="admin-btn dark" id="exportBtn">تصدير JSON</button>
+                <button class="admin-btn red" id="resetAllBtn">استعادة الافتراضي</button>
               </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="tab-panel" data-panel="media">
-          <div class="admin-grid">
-            <div class="admin-card">
-              <h4>اللوجو</h4>
-              <div class="field">
-                <label>تحميل لوجو</label>
-                <input id="logoUpload" type="file" accept="image/*" />
+              <div class="field" style="margin-top: 18px;">
+                <label>استيراد JSON</label>
+                <input id="importFile" type="file" accept=".json" />
               </div>
-            </div>
-
-            <div class="admin-card">
-              <h4>صورة الغلاف</h4>
-              <div class="field">
-                <label>تحميل صورة</label>
-                <input id="heroUpload" type="file" accept="image/*" />
-              </div>
-            </div>
-
-            <div class="admin-card">
-              <h4>صورة من نحن</h4>
-              <div class="field">
-                <label>تحميل صورة</label>
-                <input id="aboutUpload" type="file" accept="image/*" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="tab-panel" data-panel="products">
-          <div class="admin-card">
-            <h4>إدارة المنتجات</h4>
-
-            <div class="action-row">
-              <button class="admin-btn" id="addProductBtn">إضافة منتج جديد</button>
-            </div>
-
-            <div id="adminProducts" class="product-list"></div>
-          </div>
-        </div>
-
-        <div class="tab-panel" data-panel="shipping">
-          <div class="admin-card">
-            <h4>خيارات الشحن</h4>
-            <div class="field">
-              <label>الخيارات بصيغة: الاسم | السعر | ملاحظة</label>
-              <textarea id="shippingOptions"></textarea>
-            </div>
-            <div class="action-row">
-              <button class="admin-btn alt" id="saveShippingBtn">حفظ</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="tab-panel" data-panel="backup">
-          <div class="admin-card">
-            <h4>النسخ الاحتياطي</h4>
-            <div class="action-row">
-              <button class="admin-btn alt" id="exportBtn">تصدير JSON</button>
-              <button class="admin-btn danger" id="resetAllBtn">استعادة افتراضية</button>
-            </div>
-
-            <div class="field" style="margin-top:16px;">
-              <label>استيراد JSON</label>
-              <input id="importFile" type="file" accept=".json" />
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div id="toast" class="toast">تمت العملية</div>
+    <div id="toast" class="toast"></div>
 
     <script>
       const STORAGE_KEY = "asala_mada_store_v1";
+      const CART_KEY = "asala_mada_cart_v1";
+
+      const categoryList = [
+        "الكل",
+        "أثاث ملكي",
+        "أثاث مكتبي",
+        "بيوهات ومداخل",
+        "ترابيزات",
+        "مباخر",
+        "صواني وكسترات",
+        "لوحات",
+        "فازات",
+        "مقاعد جلسات",
+        "كراسي",
+        "طاولات زهر",
+        "مداخل وبيوهات",
+        "عكاز صدف",
+        "أخرى"
+      ];
 
       const defaultState = {
         admin: {
@@ -1504,19 +1624,20 @@
           whatsapp: "96551118069",
           email: "info@asala-mada.com",
           logo: "",
-          heroImage: "https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&w=1200&q=80",
+          heroImage: "https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&w=1800&q=80",
           aboutImage: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80"
         },
         design: {
-          black: "#2d1d14",
-          gold: "#b98b48",
-          goldDark: "#9d5c3b",
-          beige: "#f8f1e8",
+          black: "#271a14",
+          gold: "#c4a06c",
+          goldDark: "#a36f31",
+          beige: "#f7f1e6",
           bodySize: 16,
           titleSize: 32,
           radius: 18
         },
         shipping: {
+          note: "🚚 التوصيل: داخل الكويت حسب المناطق • شحن جميع دول الخليج • شحن جميع أنحاء العالم",
           options: [
             { label: "داخل الكويت", price: 1.5, note: "حسب المناطق" },
             { label: "دول الخليج", price: 3, note: "تسليم سريع" },
@@ -1526,98 +1647,154 @@
         products: [
           {
             id: 1,
-            name: "طقم صواني الملكة",
-            tag: "أثاث ملكي",
-            desc: "قطع فاخرة مصنوعة يدويًا من الخشب والصدف الطبيعي.",
+            name: "طقم صواني الملكة نفرتيتي",
+            version: "👑 إصدار فرعوني",
+            category: "صواني وكسترات",
+            status: "متوفر",
             price: 0,
             image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
-            emoji: "🪑"
+            desc: "طقم صواني فاخر من الخشب والصدف الطبيعي، مستوحى من القصور المصرية القديمة.",
+            story: "مصمم يدوياً ليحمل لمسة ملكية من التراث المصري مع تفاصيل دقيقة في الحواف والزخارف.",
+            emoji: "🍽️"
           },
           {
             id: 2,
-            name: "طقم مكتب فاخر",
-            tag: "أثاث مكتبي",
-            desc: "ديكور أنيق ومتانة عالية مع لمسة فرعونية.",
+            name: "طقم مكتب الملك فاروق",
+            version: "👑 إصدار ملكي",
+            category: "أثاث مكتبي",
+            status: "متوفر",
             price: 0,
             image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80",
+            desc: "طقم مكتب فخم يضفي هوية مهيبة على أي غرفة مكتب أو استقبال.",
+            story: "مزج بين الخشب الدافئ والصدف المصقول لتقديم قطعة متينة، عصرية، ومعبرة عن الفخامة.",
             emoji: "🪑"
           },
           {
             id: 3,
-            name: "بوهوه مداخل",
-            tag: "مداخل",
-            desc: "ديكور استقبالي فاخر يهمس بالأصالة والهيبة.",
+            name: "بوهوة مداخل فاخرة",
+            version: "👑 إصدار فخم",
+            category: "بيوهات ومداخل",
+            status: "متوفر",
             price: 0,
             image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+            desc: "بوهوة فاخرة تضيف حضورًا واقتدارًا عند المدخل أو قاعة الاستقبال.",
+            story: "تجهيز يدوي دقيق مع تصميمات معمارية مستوحاة من الحرفية العربية القديمة.",
             emoji: "🚪"
           },
           {
             id: 4,
-            name: "ترابيزة سفرة",
-            tag: "ترابيزات",
-            desc: "سفرة فخمة مناسبة للمجالس والضيافات الرسمية.",
+            name: "ترابيزة سفرة الملك فاروق",
+            version: "👑 إصدار ملكي",
+            category: "ترابيزات",
+            status: "متوفر",
             price: 0,
             image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=80",
+            desc: "ترابيزة فاخرة تناسب الضيافة الرسمية والديكور الفاخر في القاعة.",
+            story: "تصميم متوازن يجمع بين الخشب الطبيعي والصدف المصقول، مع تفاصيل تعكس النبل والهدوء.",
             emoji: "🍽️"
           },
           {
             id: 5,
-            name: "مبخر كلاسيكي",
-            tag: "مباخر",
-            desc: "مبخرة أنيقة تضيف عبقاً وجمالاً إلى المكان.",
+            name: "مبخر الحوش المصري",
+            version: "👑 إصدار كلاسيكي",
+            category: "مباخر",
+            status: "متوفر",
             price: 0,
             image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
+            desc: "مبخر فخم يضيف عبقًا وهدوءًا إلى الجدران والديكور الداخلي.",
+            story: "وزن متوازن ونقوش مميزة تجعل منه قطعة ديكور فاخرة مميزة ومناسبة للمجالس الهادئة.",
             emoji: "🔥"
           },
           {
             id: 6,
-            name: "صواني كسترات",
-            tag: "صواني",
-            desc: "أسلوب ضيافة فاخر يليق بالاستقبال.",
+            name: "طقم صواني كسترات",
+            version: "👑 إصدار ضيافة",
+            category: "صواني وكسترات",
+            status: "متوفر",
             price: 0,
             image: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80",
+            desc: "طقم ضيافة فاخر يلائم المناسبات والمجالس الرسمية الفخمة.",
+            story: "استخدامات فنية متوازنة تجعل كل صينية قطعة فنية تمثل الضيافة العربية الأصيلة.",
             emoji: "🍽️"
           },
           {
             id: 7,
-            name: "لوحة قرآنية",
-            tag: "لوحات",
-            desc: "زخارف فاخرة تجمع بين الفن والروحانية.",
+            name: "لوحة قرآنية مزخرفة",
+            version: "👑 إصدار فني",
+            category: "لوحات",
+            status: "متوفر",
             price: 0,
             image: "https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&w=900&q=80",
+            desc: "لوحة فنية مزخرفة تجمع بين روح العمارة الإسلامية والهوية المصرية.",
+            story: "مصممة بحرفية دقيقة لتناسب جدران المنزل الراقية أو قاعة الاستقبال.",
             emoji: "🖼️"
           },
           {
             id: 8,
-            name: "فازة فاخرة",
-            tag: "فازات",
-            desc: "مزج بين الطبيعة والذوق الفاخر.",
+            name: "فازة النيل الملكية",
+            version: "👑 إصدار فرعوني",
+            category: "فازات",
+            status: "متوفر",
             price: 0,
             image: "https://images.unsplash.com/photo-1484101403633-562f891dc89a?auto=format&fit=crop&w=900&q=80",
+            desc: "فازة فاخرة تضيف لمسة تراثية إلى أي مساحة ديكور.",
+            story: "توازن بين الألوان الدافئة والصدف المصقول يلامس الروح المصرية بطابع أنيق حديث.",
             emoji: "🏺"
+          },
+          {
+            id: 9,
+            name: "كرسي محمد علي باشا",
+            version: "👑 إصدار كلاسيكي",
+            category: "كراسي",
+            status: "متوفر",
+            price: 0,
+            image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80",
+            desc: "كرسي فخم عندي بصمة عريقة، مناسب للديكور الفاخر والمجالس الرسمية.",
+            story: "خيط الخشب والتفاصيل الذهبية والصدف الطبيعي يمنحان للكرسي طابعًا ملكيًا حقيقيًا.",
+            emoji: "🪑"
+          },
+          {
+            id: 10,
+            name: "طقم السلطان قايتباي",
+            version: "👑 إصدار سلطاني",
+            category: "أثاث ملكي",
+            status: "متوفر",
+            price: 0,
+            image: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80",
+            desc: "طقم فاخر يجمع بين المتانة والأناقة في قطعة واحدة تعكس هيبة التراث.",
+            story: "رسم أنيق ومؤثر على جميع الزوايا، مناسب للقاعات الكبرى والمجالس الراقية.",
+            emoji: "🪑"
           }
         ]
       };
 
       let state = loadState();
-      const cart = [];
+      const cart = loadCart();
 
       function loadState() {
         try {
           const saved = localStorage.getItem(STORAGE_KEY);
           if (saved) return JSON.parse(saved);
-        } catch (e) {
-          console.warn("Local storage unavailable");
-        }
+        } catch (e) {}
         return JSON.parse(JSON.stringify(defaultState));
       }
 
       function saveState() {
+        try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
+        catch (e) {}
+      }
+
+      function loadCart() {
         try {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+          const saved = localStorage.getItem(CART_KEY);
+          return saved ? JSON.parse(saved) : [];
         } catch (e) {
-          console.warn("Could not save to localStorage");
+          return [];
         }
+      }
+
+      function saveCart() {
+        localStorage.setItem(CART_KEY, JSON.stringify(cart));
       }
 
       function showToast(msg) {
@@ -1628,113 +1805,192 @@
         showToast.timer = setTimeout(() => toast.classList.remove("show"), 1800);
       }
 
-      function applyDesign() {
-        const root = document.documentElement;
-        root.style.setProperty("--ink", state.design.black || "#2d1d14");
-        root.style.setProperty("--gold", state.design.gold || "#b98b48");
-        root.style.setProperty("--gold-2", "#d9b06c");
-        root.style.setProperty("--shell", state.design.goldDark || "#9d5c3b");
-        root.style.setProperty("--bg", state.design.beige || "#f8f1e8");
+      function renderServices() {
+        const box = document.getElementById("servicesBox");
+        if (!box) return;
 
-        document.body.style.fontSize = `${Number(state.design.bodySize || 16)}px`;
-        document.querySelectorAll("h1,h2,h3,h4,h5").forEach((el) => {
-          el.style.fontFamily = state.design.titleFont || "'Segoe UI', sans-serif";
-        });
-      }
+        const data = [
+          { icon: "🐚", title: "أسرع خدمة شحن", text: "نصل كل مكان بالعالم" },
+          { icon: "✨", title: "أفضل خدمة ما بعد البيع", text: "8 صباحًا - 11 مساءً" },
+          { icon: "🪵", title: "أفضل سعر وجودة", text: "صناعة مميزة بعناية فائقة" },
+          { icon: "🇪🇬", title: "صنع في مصر", text: "شغل يدوي كامل" }
+        ];
 
-      function renderHero() {
-        const hero = document.querySelector(".hero-box");
-        if (!hero) return;
-
-        const image = state.store.heroImage || defaultState.store.heroImage;
-        const main = document.querySelector(".hero-art");
-        if (main) {
-          main.style.background = `linear-gradient(160deg, rgba(190,130,76,.18), rgba(255,255,255,.18)), url('${image}') center/cover no-repeat`;
-        }
+        box.innerHTML = data.map(item => `
+          <div class="service-item">
+            <div class="icon">${item.icon}</div>
+            <strong>${item.title}</strong>
+            <span>${item.text}</span>
+          </div>
+        `).join("");
       }
 
       function renderProducts() {
-        const grid = document.getElementById("productsGrid");
+        const grid = document.getElementById("productGrid");
         if (!grid) return;
 
-        grid.innerHTML = state.products.map((p) => `
-          <article class="product">
-            <div class="product-visual"><span class="emoji">${p.emoji || "🐚"}</span></div>
-            <div class="product-body">
-              <div class="product-tag">🐚 ${p.tag || "منتج"}</div>
-              <h3>${p.name}</h3>
-              <p>${p.desc}</p>
-              <div class="action-row" style="margin-top:16px;">
-                <button class="admin-btn" onclick="addToCart(${p.id})">أضف للسلة</button>
-                <button class="btn secondary" onclick="previewProduct(${p.id})">عرض</button>
+        grid.innerHTML = state.products.map(product => `
+          <article class="product-card">
+            <div class="product-media" data-id="${product.id}" title="عرض التفاصيل">
+              <img src="${product.image}" alt="${product.name}" />
+              <span class="product-badge">${product.status || "متوفر"}</span>
+            </div>
+
+            <div class="product-content">
+              <span class="product-version">${product.version || "👑 إصدار أصيل"}</span>
+              <h3 class="product-title">${product.name}</h3>
+              <p class="product-desc">${product.desc}</p>
+
+              <div class="product-actions">
+                <button class="btn btn-gold" onclick="addToCart(${product.id})">أضف للسلة</button>
+                <a class="btn btn-green" href="https://wa.me/${state.store.whatsapp}?text=${encodeURIComponent(`السلام عليكم 🌹\nأرغب في طلب: ${product.name}\n— صنع في مصر — صدف مصري طبيعي`)}" target="_blank">واتساب</a>
               </div>
             </div>
           </article>
         `).join("");
+
+        document.querySelectorAll(".product-media").forEach(el => {
+          el.addEventListener("click", () => openProductPreview(Number(el.dataset.id)));
+        });
       }
 
-      function addToCart(productId) {
-        const product = state.products.find((p) => p.id === productId);
+      function openProductPreview(productId) {
+        const product = state.products.find(p => p.id === productId);
         if (!product) return;
 
-        const found = cart.find((item) => item.id === productId);
-        if (found) {
-          found.qty += 1;
-        } else {
-          cart.push({ ...product, qty: 1 });
-        }
+        const modal = document.getElementById("productPreviewModal");
+        if (!modal) return;
 
+        const name = document.getElementById("previewProductName");
+        const version = document.getElementById("previewProductVersion");
+        const image = document.getElementById("previewProductImage");
+        const desc = document.getElementById("previewProductDesc");
+        const story = document.getElementById("previewProductStory");
+        const wa = document.getElementById("previewWhatsApp");
+        const addBtn = document.getElementById("previewAddToCart");
+
+        name.textContent = product.name;
+        version.textContent = product.version || "إصدار أصيل";
+        image.src = product.image;
+        desc.textContent = product.desc;
+        story.textContent = product.story || "قطعة فاخرة تصنع يدويًا في مصر.";
+        wa.href = `https://wa.me/${state.store.whatsapp}?text=${encodeURIComponent(`السلام عليكم 🌹\nأرغب في طلب: ${product.name}\n— صنع في مصر — صدف مصري طبيعي`)}`;
+
+        addBtn.onclick = () => {
+          addToCart(product.id);
+          modal.classList.remove("open");
+        };
+
+        modal.classList.add("open");
+      }
+
+      // Admin modal not yet created for preview; keep a simple alert fallback
+      const previewHtml = `
+        <div class="modal" id="productPreviewModal">
+          <div class="modal-card">
+            <div class="modal-header">
+              <h3>تفاصيل المنتج</h3>
+              <button class="close-btn" onclick="document.getElementById('productPreviewModal').classList.remove('open')">إغلاق</button>
+            </div>
+            <div class="login-box">
+              <img id="previewProductImage" src="" style="width:100%;height:360px;object-fit:cover;border-radius:12px;margin-bottom:14px;" />
+              <div class="field">
+                <label>الإصدار</label>
+                <div id="previewProductVersion" style="font-weight:800;color:var(--gold-deep);"></div>
+              </div>
+              <div class="field">
+                <label>اسم المنتج</label>
+                <div id="previewProductName" style="font-size:1.3rem;font-weight:800;"></div>
+              </div>
+              <div class="field">
+                <label>الوصف</label>
+                <div id="previewProductDesc"></div>
+              </div>
+              <div class="field">
+                <label>حكاية الصنعة</label>
+                <div id="previewProductStory"></div>
+              </div>
+              <div class="action-row">
+                <a class="admin-btn primary" id="previewWhatsApp" target="_blank">اطلب الآن</a>
+                <button class="admin-btn dark" id="previewAddToCart">أضف للسلة</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      document.body.insertAdjacentHTML("beforeend", previewHtml);
+
+      function addToCart(productId) {
+        const product = state.products.find(p => p.id === productId);
+        if (!product) return;
+
+        const existing = cart.find(item => item.id === productId);
+        if (existing) existing.qty += 1;
+        else cart.push({ ...product, qty: 1 });
+
+        saveCart();
         renderCart();
         showToast("تمت الإضافة إلى السلة");
       }
 
       function changeQty(productId, delta) {
-        const item = cart.find((x) => x.id === productId);
-        if (!item) return;
+        const index = cart.findIndex(item => item.id === productId);
+        if (index === -1) return;
 
-        item.qty += delta;
-        if (item.qty <= 0) {
-          const idx = cart.findIndex((x) => x.id === productId);
-          if (idx >= 0) cart.splice(idx, 1);
+        cart[index].qty += delta;
+        if (cart[index].qty <= 0) {
+          cart.splice(index, 1);
         }
 
+        saveCart();
         renderCart();
       }
 
       function renderCart() {
-        const cartItems = document.getElementById("cartItems");
-        const cartTotal = document.getElementById("cartTotal");
-        if (!cartItems) return;
+        const el = document.getElementById("cartItems");
+        const totalEl = document.getElementById("cartTotal");
+        const shippingSelect = document.getElementById("buyerShipping");
+        const shippingNote = document.getElementById("shippingNote");
+
+        if (!el) return;
 
         if (!cart.length) {
-          cartItems.innerHTML = `
-            <div class="empty-state">
+          el.innerHTML = `
+            <div class="cart-empty">
               <div class="big">🛍️</div>
               <div>السلة فارغة حاليًا</div>
             </div>
           `;
-          cartTotal.textContent = "0 د.ك";
+          totalEl.textContent = "0 د.ك";
           return;
         }
 
-        cartItems.innerHTML = cart.map((item) => `
+        el.innerHTML = cart.map(item => `
           <div class="cart-item">
             <div class="cart-thumb">${item.emoji || "🐚"}</div>
-            <div class="cart-text">
+            <div class="cart-info">
               <h4>${item.name}</h4>
-              <small>${item.tag || "منتج فاخر"}</small>
+              <small>${item.category || "منتج فاخر"}</small>
             </div>
+
             <div class="qty-wrap">
-              <button onclick="changeQty(${item.id}, -1)">−</button>
+              <button type="button" onclick="changeQty(${item.id}, -1)">−</button>
               <span>${item.qty}</span>
-              <button onclick="changeQty(${item.id}, 1)">＋</button>
+              <button type="button" onclick="changeQty(${item.id}, 1)">＋</button>
             </div>
-            <button class="remove-btn" onclick="changeQty(${item.id}, -999)">✕</button>
+
+            <button class="remove-btn" type="button" onclick="changeQty(${item.id}, -999)">✕</button>
           </div>
         `).join("");
 
-        const total = cart.reduce((sum, item) => sum + (Number(item.price) || 0) * item.qty, 0);
-        cartTotal.textContent = total > 0 ? `${total} د.ك` : "تحديد حسب الطلب";
+        totalEl.textContent = "تحديد حسب الطلب";
+
+        const options = state.shipping.options || [];
+        shippingSelect.innerHTML = options.map((opt, index) => `
+          <option value="${opt.label}">${opt.label}${opt.price ? ` — ${opt.price} د.ك` : ""}</option>
+        `).join("");
+
+        shippingNote.textContent = state.shipping.note || "لا توجد ملاحظات شحن";
       }
 
       function openCart() {
@@ -1747,80 +2003,86 @@
 
       document.getElementById("closeCartBtn").addEventListener("click", closeCart);
 
-      document.getElementById("checkoutBtn").addEventListener("click", () => {
+      function finalizeWhatsAppOrder() {
         if (!cart.length) {
           showToast("السلة فارغة");
           return;
         }
 
-        const summary = cart.map((i) => `${i.name} × ${i.qty}`).join(" | ");
-        const whatsapp = state.store.whatsapp || "96551118069";
-        const text = encodeURIComponent(
-          `السلام عليكم 🌹\nأرغب في إتمام الطلب التالي:\n${summary}\n\nراجع الرسالة وأرسلها.`
-        );
-        window.open(`https://wa.me/${whatsapp}?text=${text}`, "_blank");
-      });
+        const name = (document.getElementById("buyerName") || {}).value?.trim() || "غير محدد";
+        const phone = (document.getElementById("buyerPhone") || {}).value?.trim() || "غير محدد";
+        const shipping = (document.getElementById("buyerShipping") || {}).value || "غير محدد";
+        const address = (document.getElementById("buyerAddress") || {}).value?.trim() || "غير محدد";
+        const notes = (document.getElementById("buyerNotes") || {}).value?.trim() || "لا توجد";
+        const products = cart.map(item => `${item.name} × ${item.qty}`).join(" | ");
 
-      function previewProduct(productId) {
-        const product = state.products.find((p) => p.id === productId);
-        if (!product) return;
+        const message = `السلام عليكم 🌹\nأرغب في إتمام الطلب التالي:\n${products}\n\nالاسم: ${name}\nالهاتف: ${phone}\nوجهة التوصيل: ${shipping}\nالعنوان: ${address}\nالملاحظات: ${notes}\n\nراجع الرسالة وأرسلها.`;
 
-        alert(`${product.name}\n${product.desc}`);
+        window.open(`https://wa.me/${state.store.whatsapp}?text=${encodeURIComponent(message)}`, "_blank");
       }
+
+      document.getElementById("checkoutBtn").addEventListener("click", () => {
+        const form = document.getElementById("checkoutForm");
+        form.classList.toggle("open");
+
+        if (!form.classList.contains("open")) {
+          finalizeWhatsAppOrder();
+        }
+      });
 
       function renderAdminProducts() {
         const list = document.getElementById("adminProducts");
         if (!list) return;
 
-        list.innerHTML = state.products.map((p) => `
+        list.innerHTML = state.products.map(product => `
           <div class="mini-card">
-            <div class="mini-thumb"><img src="${p.image}" alt="${p.name}" /></div>
+            <div class="mini-thumb">
+              <img src="${product.image}" alt="${product.name}" />
+            </div>
             <div class="mini-body">
-              <h5>${p.name}</h5>
-              <p>${p.tag}</p>
+              <h5>${product.name}</h5>
+              <p>${product.category}</p>
               <div class="mini-actions">
-                <button style="background:#17110e;color:#fff" data-id="${p.id}" data-edit>تعديل</button>
-                <button style="background:#c94d38;color:#fff" data-id="${p.id}" data-delete>حذف</button>
+                <button style="background:#18130f;color:#fff" data-edit="${product.id}">تعديل</button>
+                <button style="background:#d14a38;color:#fff" data-delete="${product.id}">حذف</button>
               </div>
             </div>
           </div>
         `).join("");
 
-        list.querySelectorAll("[data-edit]").forEach((btn) => {
-          btn.addEventListener("click", () => {
-            openProductEditor(Number(btn.dataset.id));
-          });
+        list.querySelectorAll("[data-edit]").forEach(btn => {
+          btn.addEventListener("click", () => openProductModal(Number(btn.dataset.edit)));
         });
 
-        list.querySelectorAll("[data-delete]").forEach((btn) => {
+        list.querySelectorAll("[data-delete]").forEach(btn => {
           btn.addEventListener("click", () => {
-            const id = Number(btn.dataset.id);
-            state.products = state.products.filter((p) => p.id !== id);
+            const id = Number(btn.dataset.delete);
+            state.products = state.products.filter(p => p.id !== id);
             saveState();
-            renderAdminProducts();
             renderProducts();
+            renderAdminProducts();
           });
         });
       }
 
-      function openProductEditor(productId = null) {
-        const product = productId ? state.products.find((p) => p.id === productId) : null;
+      function openProductModal(productId = null) {
+        const product = productId ? state.products.find(p => p.id === productId) : null;
 
         const wrap = document.createElement("div");
         wrap.style.position = "fixed";
         wrap.style.inset = "0";
-        wrap.style.background = "rgba(0,0,0,0.45)";
+        wrap.style.background = "rgba(0,0,0,0.5)";
+        wrap.style.zIndex = "400";
         wrap.style.display = "flex";
         wrap.style.alignItems = "center";
         wrap.style.justifyContent = "center";
-        wrap.style.zIndex = "400";
         wrap.style.padding = "20px";
 
         wrap.innerHTML = `
-          <div style="width:min(760px,100%);background:white;border-radius:18px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.2);">
-            <div style="padding:18px 20px;background:linear-gradient(135deg,#1f1713,#3a261f);color:white;display:flex;align-items:center;justify-content:space-between;">
-              <h3 style="margin:0;">${product ? "تعديل المنتج" : "إضافة منتج جديد"}</h3>
-              <button data-close style="background:transparent;border:none;color:#fff;font-size:1.4rem;cursor:pointer;">✕</button>
+          <div style="width:min(760px,100%);background:white;border-radius:18px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.22);">
+            <div style="padding:18px 20px;background:linear-gradient(135deg,#1d1713,#342b27);color:white;display:flex;align-items:center;justify-content:space-between;">
+              <h3 style="margin:0; color:white; font-family:'Cairo',sans-serif;">${product ? "تعديل المنتج" : "إضافة منتج جديد"}</h3>
+              <button data-close style="background:transparent;border:1px solid rgba(255,255,255,0.2);color:white;border-radius:10px;padding:8px 12px;cursor:pointer;">✕</button>
             </div>
 
             <div style="padding:20px;">
@@ -1830,13 +2092,30 @@
               </div>
 
               <div class="field">
-                <label>التصنيف</label>
-                <input id="mTag" value="${product ? product.tag : ""}" />
+                <label>الإصدار</label>
+                <input id="mVersion" value="${product ? product.version || "" : ""}" />
               </div>
 
               <div class="field">
-                <label>الإيموجي</label>
-                <input id="mEmoji" value="${product ? product.emoji || "🐚" : "🐚"}" />
+                <label>الفئة</label>
+                <select id="mCategory">
+                  ${categoryList.filter(c => c !== "الكل").map(cat => `
+                    <option value="${cat}" ${product && product.category === cat ? "selected" : ""}>${cat}</option>
+                  `).join("")}
+                </select>
+              </div>
+
+              <div class="field">
+                <label>الحالة</label>
+                <select id="mStatus">
+                  <option value="متوفر" ${product && product.status === "متوفر" ? "selected" : ""}>متوفر</option>
+                  <option value="غير متوفر" ${product && product.status === "غير متوفر" ? "selected" : ""}>غير متوفر</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label>السعر (مخفي من الواجهة)</label>
+                <input id="mPrice" type="number" value="${product ? product.price || 0 : 0}" />
               </div>
 
               <div class="field">
@@ -1845,13 +2124,23 @@
               </div>
 
               <div class="field">
+                <label>رفع صورة</label>
+                <input id="mUpload" type="file" accept="image/*" />
+              </div>
+
+              <div class="field">
                 <label>الوصف</label>
                 <textarea id="mDesc">${product ? product.desc : ""}</textarea>
               </div>
 
+              <div class="field">
+                <label>حكاية الصنعة</label>
+                <textarea id="mStory">${product ? product.story : ""}</textarea>
+              </div>
+
               <div class="action-row">
-                <button class="admin-btn" id="saveProductBtn">حفظ</button>
-                <button class="admin-btn danger" id="cancelProductBtn">إلغاء</button>
+                <button class="admin-btn primary" id="saveProductBtn">حفظ المنتج</button>
+                <button class="admin-btn red" id="cancelProductBtn">إلغاء</button>
               </div>
             </div>
           </div>
@@ -1862,26 +2151,40 @@
         wrap.querySelector("[data-close]").addEventListener("click", () => wrap.remove());
         wrap.querySelector("#cancelProductBtn").addEventListener("click", () => wrap.remove());
 
+        const upload = wrap.querySelector("#mUpload");
+        upload.addEventListener("change", async (e) => {
+          const file = e.target.files[0];
+          if (!file) return;
+          const reader = new FileReader();
+          reader.onload = () => {
+            document.getElementById("mImage").value = reader.result;
+          };
+          reader.readAsDataURL(file);
+        });
+
         wrap.querySelector("#saveProductBtn").addEventListener("click", () => {
-          const item = {
+          const value = {
             id: productId || Date.now(),
             name: document.getElementById("mName").value.trim(),
-            tag: document.getElementById("mTag").value.trim(),
-            emoji: document.getElementById("mEmoji").value.trim() || "🐚",
+            version: document.getElementById("mVersion").value.trim(),
+            category: document.getElementById("mCategory").value,
+            status: document.getElementById("mStatus").value,
+            price: Number(document.getElementById("mPrice").value || 0),
             image: document.getElementById("mImage").value.trim() || "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80",
             desc: document.getElementById("mDesc").value.trim(),
-            price: 0
+            story: document.getElementById("mStory").value.trim(),
+            emoji: product ? (product.emoji || "🐚") : "🐚"
           };
 
-          if (!item.name) {
+          if (!value.name) {
             alert("اسم المنتج مطلوب");
             return;
           }
 
           if (productId) {
-            state.products = state.products.map((p) => p.id === productId ? item : p);
+            state.products = state.products.map(p => p.id === productId ? value : p);
           } else {
-            state.products.unshift(item);
+            state.products.unshift(value);
           }
 
           saveState();
@@ -1889,28 +2192,6 @@
           renderAdminProducts();
           wrap.remove();
         });
-      }
-
-      function fillAdminFields() {
-        document.getElementById("adminEmailInput").value = state.admin.email || "";
-        document.getElementById("adminPasswordInput").value = state.admin.password || "";
-        document.getElementById("storeName").value = state.store.name || "";
-        document.getElementById("topBarText").value = state.store.topbar || "";
-        document.getElementById("siteDescription").value = state.store.description || "";
-        document.getElementById("whatsappNumber").value = state.store.whatsapp || "";
-        document.getElementById("emailField").value = state.store.email || "";
-
-        document.getElementById("colorBlack").value = state.design.black || "#2d1d14";
-        document.getElementById("colorGold").value = state.design.gold || "#b98b48";
-        document.getElementById("colorGoldDark").value = state.design.goldDark || "#9d5c3b";
-        document.getElementById("colorBeige").value = state.design.beige || "#f8f1e8";
-        document.getElementById("bodySize").value = state.design.bodySize || 16;
-        document.getElementById("titleSize").value = state.design.titleSize || 32;
-        document.getElementById("radiusSize").value = state.design.radius || 18;
-
-        document.getElementById("shippingOptions").value = state.shipping.options
-          .map((o) => `${o.label}|${o.price}|${o.note}`)
-          .join("\n");
       }
 
       function saveAdminCredentials() {
@@ -1937,7 +2218,7 @@
 
         saveState();
         renderAll();
-        showToast("تم حفظ إعدادات المتجر");
+        showToast("تم حفظ معلومات المتجر");
       }
 
       function saveDesign() {
@@ -1959,12 +2240,35 @@
         saveState();
         fillAdminFields();
         applyDesign();
-        showToast("تمت الاستعادة");
+        showToast("تمت استعادة الألوان الافتراضية");
+      }
+
+      function fillAdminFields() {
+        document.getElementById("adminEmailInput").value = state.admin.email || "";
+        document.getElementById("adminPasswordInput").value = state.admin.password || "";
+        document.getElementById("storeName").value = state.store.name || "";
+        document.getElementById("topBarText").value = state.store.topbar || "";
+        document.getElementById("siteDescription").value = state.store.description || "";
+        document.getElementById("whatsappNumber").value = state.store.whatsapp || "";
+        document.getElementById("emailField").value = state.store.email || "";
+
+        document.getElementById("colorBlack").value = state.design.black || defaultState.design.black;
+        document.getElementById("colorGold").value = state.design.gold || defaultState.design.gold;
+        document.getElementById("colorGoldDark").value = state.design.goldDark || defaultState.design.goldDark;
+        document.getElementById("colorBeige").value = state.design.beige || defaultState.design.beige;
+        document.getElementById("bodySize").value = state.design.bodySize || defaultState.design.bodySize;
+        document.getElementById("titleSize").value = state.design.titleSize || defaultState.design.titleSize;
+        document.getElementById("radiusSize").value = state.design.radius || defaultState.design.radius;
+
+        document.getElementById("shippingOptions").value = (state.shipping.options || []).map(o => `${o.label}|${o.price}|${o.note}`).join("\n");
+        document.getElementById("shippingNote").value = state.shipping.note || "";
       }
 
       function saveShipping() {
-        const lines = document.getElementById("shippingOptions").value.split("\n").map((l) => l.trim()).filter(Boolean);
-        state.shipping.options = lines.map((line) => {
+        const text = document.getElementById("shippingOptions").value.trim();
+        const lines = text ? text.split("\n").filter(Boolean) : [];
+
+        state.shipping.options = lines.map(line => {
           const [label, price, note] = line.split("|");
           return {
             label: label || "خدمة",
@@ -1973,7 +2277,9 @@
           };
         });
 
+        state.shipping.note = document.getElementById("shippingNote").value.trim() || defaultState.shipping.note;
         saveState();
+        renderCart();
         showToast("تم حفظ خيارات الشحن");
       }
 
@@ -1995,8 +2301,9 @@
             state = { ...JSON.parse(JSON.stringify(defaultState)), ...imported };
             saveState();
             renderAll();
-            showToast("تم استيراد البيانات");
-          } catch (_) {
+            fillAdminFields();
+            alert("تم استيراد البيانات بنجاح");
+          } catch (err) {
             alert("ملف JSON غير صالح");
           }
         };
@@ -2008,41 +2315,37 @@
         state = JSON.parse(JSON.stringify(defaultState));
         saveState();
         renderAll();
+        fillAdminFields();
         showToast("تمت الاستعادة");
       }
 
       function renderAll() {
         renderProducts();
+        renderServices();
         renderAdminProducts();
-        fillAdminFields();
-        renderHero();
         renderCart();
+        fillAdminFields();
+        applyDesign();
       }
 
-      function handleImageUpload(fileInputId, key) {
-        const input = document.getElementById(fileInputId);
-        const file = input.files[0];
-        if (!file) return;
+      function applyDesign() {
+        const root = document.documentElement;
 
-        const reader = new FileReader();
-        reader.onload = (e) => {
-          state.store[key] = e.target.result;
-          saveState();
-          renderAll();
-          showToast("تم تحديث الصورة");
-        };
-        reader.readAsDataURL(file);
+        root.style.setProperty("--ink", state.design.black || "#271a14");
+        root.style.setProperty("--gold", state.design.gold || "#c4a06c");
+        root.style.setProperty("--gold-deep", state.design.goldDark || "#a36f31");
+        root.style.setProperty("--bg", state.design.beige || "#f7f1e6");
+        root.style.setProperty("--radius", `${Number(state.design.radius || 18)}px`);
+
+        document.body.style.fontSize = `${Number(state.design.bodySize || 16)}px`;
+
+        document.querySelectorAll("h1, h2, h3, h4, h5, h6").forEach(el => {
+          el.style.fontFamily = document.getElementById("fontTitle")?.value || "'Amiri', serif";
+        });
       }
 
       document.getElementById("adminLauncher").addEventListener("click", () => {
         document.getElementById("loginModal").classList.add("open");
-      });
-
-      document.querySelectorAll("[data-close]").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const modal = btn.closest(".modal");
-          if (modal) modal.classList.remove("open");
-        });
       });
 
       document.getElementById("loginBtn").addEventListener("click", () => {
@@ -2052,17 +2355,21 @@
         if (email === state.admin.email && pass === state.admin.password) {
           document.getElementById("loginModal").classList.remove("open");
           document.getElementById("adminModal").classList.add("open");
+          fillAdminFields();
         } else {
           alert("بيانات الدخول غير صحيحة");
         }
       });
 
-      document.querySelectorAll(".tab-btn").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          document.querySelectorAll(".tab-btn").forEach((b) => b.classList.remove("active"));
-          document.querySelectorAll(".tab-panel").forEach((panel) => panel.classList.remove("active"));
-          btn.classList.add("active");
-          document.querySelector(`.tab-panel[data-panel="${btn.dataset.tab}"]`).classList.add("active");
+      document.querySelectorAll("[data-close]").forEach(button => {
+        button.addEventListener("click", () => {
+          const target = button.dataset.close;
+          if (target === "login") {
+            document.getElementById("loginModal").classList.remove("open");
+          }
+          if (target === "admin") {
+            document.getElementById("adminModal").classList.remove("open");
+          }
         });
       });
 
@@ -2073,22 +2380,73 @@
       document.getElementById("saveShippingBtn").addEventListener("click", saveShipping);
       document.getElementById("exportBtn").addEventListener("click", exportJSON);
       document.getElementById("resetAllBtn").addEventListener("click", resetAll);
-      document.getElementById("addProductBtn").addEventListener("click", () => openProductEditor());
+      document.getElementById("addProductBtn").addEventListener("click", () => openProductModal());
 
-      document.getElementById("logoUpload").addEventListener("change", () => handleImageUpload("logoUpload", "logo"));
-      document.getElementById("heroUpload").addEventListener("change", () => handleImageUpload("heroUpload", "heroImage"));
-      document.getElementById("aboutUpload").addEventListener("change", () => handleImageUpload("aboutUpload", "aboutImage"));
-      document.getElementById("importFile").addEventListener("change", (e) => importJSON(e.target.files[0]));
+      document.getElementById("importFile").addEventListener("change", (e) => {
+        const file = e.target.files[0];
+        if (file) importJSON(file);
+      });
 
-      document.querySelectorAll(".faq-question").forEach((btn) => {
+      document.getElementById("logoUpload").addEventListener("change", function() {
+        const file = this.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = () => {
+          state.store.logo = reader.result;
+          saveState();
+          const brand = document.querySelector(".brand-mark");
+          if (brand) {
+            brand.innerHTML = "<img src='" + reader.result + "' style='width:100%;height:100%;object-fit:cover;border-radius:50%;' />";
+          }
+        };
+        reader.readAsDataURL(file);
+      });
+
+      document.getElementById("heroUpload").addEventListener("change", function() {
+        const file = this.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = () => {
+          state.store.heroImage = reader.result;
+          saveState();
+          document.querySelector(".hero").style.background = `linear-gradient(180deg, rgba(15, 10, 7, 0.18), rgba(15, 10, 7, 0.7)), url('${reader.result}') center/cover no-repeat`;
+        };
+        reader.readAsDataURL(file);
+      });
+
+      document.getElementById("aboutUpload").addEventListener("change", function() {
+        const file = this.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = () => {
+          state.store.aboutImage = reader.result;
+          saveState();
+          const storyImage = document.querySelector(".story-card img");
+          if (storyImage) storyImage.src = reader.result;
+        };
+        reader.readAsDataURL(file);
+      });
+
+      document.querySelectorAll(".faq-q").forEach(btn => {
         btn.addEventListener("click", () => {
           const item = btn.parentElement;
           item.classList.toggle("active");
         });
       });
 
+      document.querySelectorAll(".tab-btn").forEach(tab => {
+        tab.addEventListener("click", () => {
+          document.querySelectorAll(".tab-btn").forEach(t => t.classList.remove("active"));
+          document.querySelectorAll(".tab-panel").forEach(panel => panel.classList.remove("active"));
+          tab.classList.add("active");
+          document.querySelector(`.tab-panel[data-panel="${tab.dataset.tab}"]`).classList.add("active");
+        });
+      });
+
       renderAll();
       renderCart();
+      applyDesign();
+      fillAdminFields();
     </script>
   </body>
 </html>
