@@ -1,1249 +1,179 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>أصالة التراث المصري</title>
-    <meta
-      name="description"
-      content="متحف أنتيك عالمي ومتجر فاخر للقطع التراثية المصرية"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --bg: #0b0b09;
-        --bg-soft: #14110f;
-        --panel: #1b1714;
-        --panel-2: #221d1a;
-        --gold: #c9a663;
-        --gold-soft: #e7cf8c;
-        --ivory: #f3efe7;
-        --ivory-2: #ddd2bf;
-        --green: #25d366;
-        --green-deep: #1ca853;
-        --muted: #b7a992;
-        --line: rgba(201, 166, 99, 0.25);
-        --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        margin: 0;
-        font-family: "Cairo", sans-serif;
-        background:
-          radial-gradient(circle at top, rgba(201, 166, 99, 0.12), transparent 30%),
-          linear-gradient(180deg, #090909 0%, #12100e 50%, #0c0c0c 100%);
-        color: var(--ivory);
-      }
-
-      img {
-        width: 100%;
-        display: block;
-      }
-
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-
-      .container {
-        width: min(1200px, calc(100% - 32px));
-        margin: 0 auto;
-      }
-
-      .topbar {
-        position: sticky;
-        top: 0;
-        z-index: 50;
-        backdrop-filter: blur(12px);
-        background: rgba(11, 11, 9, 0.72);
-        border-bottom: 1px solid rgba(201, 166, 99, 0.14);
-      }
-
-      .nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        min-height: 82px;
-        gap: 18px;
-      }
-
-      .brand {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        font-weight: 700;
-      }
-
-      .brand-mark {
-        position: relative;
-        width: 42px;
-        height: 42px;
-        border: 1px solid var(--gold);
-        display: grid;
-        place-items: center;
-        border-radius: 12px;
-        background: linear-gradient(135deg, rgba(201, 166, 99, 0.18), rgba(201, 166, 99, 0.04));
-        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
-      }
-
-      .brand-mark::before {
-        content: "👑";
-        font-size: 22px;
-        filter: drop-shadow(0 4px 12px rgba(201, 166, 99, 0.4));
-      }
-
-      .brand-text {
-        font-size: 1.25rem;
-        letter-spacing: 0.2px;
-      }
-
-      .brand-sub {
-        display: block;
-        color: var(--gold-soft);
-        font-size: 0.72rem;
-        letter-spacing: 1.2px;
-      }
-
-      .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 28px;
-        color: var(--ivory-2);
-        font-size: 0.98rem;
-      }
-
-      .nav-links a {
-        opacity: 0.9;
-        transition: 0.25s ease;
-      }
-
-      .nav-links a:hover {
-        color: var(--gold-soft);
-      }
-
-      .nav-btn {
-        background: linear-gradient(135deg, var(--gold), #d8b77a);
-        color: #111;
-        border: none;
-        border-radius: 999px;
-        padding: 12px 22px;
-        font-weight: 700;
-        cursor: pointer;
-        box-shadow: 0 10px 24px rgba(201, 166, 99, 0.25);
-      }
-
-      .hero {
-        position: relative;
-        overflow: hidden;
-        padding: 54px 0 30px;
-      }
-
-      .hero::after {
-        content: "";
-        position: absolute;
-        width: 760px;
-        height: 760px;
-        border-radius: 50%;
-        background: radial-gradient(circle, rgba(201, 166, 99, 0.12), transparent 57%);
-        right: -170px;
-        top: -210px;
-        pointer-events: none;
-      }
-
-      .hero-grid {
-        display: grid;
-        grid-template-columns: 1.06fr 0.94fr;
-        align-items: center;
-        gap: 50px;
-      }
-
-      .eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        padding: 9px 16px;
-        background: rgba(255, 255, 255, 0.02);
-        color: var(--gold-soft);
-        font-size: 0.82rem;
-        letter-spacing: 0.6px;
-      }
-
-      .eyebrow::before {
-        content: "";
-        width: 9px;
-        height: 9px;
-        border-radius: 50%;
-        background: var(--gold);
-        box-shadow: 0 0 18px rgba(201, 166, 99, 0.8);
-      }
-
-      h1, h2, h3 {
-        margin: 0;
-        font-family: "Amiri", serif;
-        font-weight: 700;
-        line-height: 1.08;
-      }
-
-      .hero h1 {
-        margin-top: 22px;
-        font-size: clamp(2.8rem, 5vw, 5rem);
-        color: var(--ivory);
-      }
-
-      .hero p {
-        margin-top: 20px;
-        color: rgba(243, 239, 231, 0.78);
-        line-height: 2.1;
-        font-size: 1.04rem;
-      }
-
-      .actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-        margin-top: 28px;
-      }
-
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 54px;
-        padding: 0 22px;
-        border-radius: 999px;
-        border: 1px solid transparent;
-        font-weight: 700;
-        transition: 0.25s ease;
-        cursor: pointer;
-      }
-
-      .btn-primary {
-        background: linear-gradient(135deg, var(--gold), var(--gold-soft));
-        color: #12100d;
-        box-shadow: 0 20px 32px rgba(201, 166, 99, 0.2);
-      }
-
-      .btn-secondary {
-        background: rgba(255, 255, 255, 0.02);
-        border-color: rgba(201, 166, 99, 0.35);
-        color: var(--ivory);
-      }
-
-      .btn:hover {
-        transform: translateY(-2px);
-      }
-
-      .stats {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 18px;
-        margin-top: 28px;
-      }
-
-      .stat {
-        min-width: 148px;
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(201, 166, 99, 0.15);
-        border-radius: 18px;
-        padding: 14px 16px;
-      }
-
-      .stat strong {
-        display: block;
-        font-size: 1.4rem;
-        color: var(--gold-soft);
-      }
-
-      .stat span {
-        color: var(--muted);
-        font-size: 0.8rem;
-      }
-
-      .showcase {
-        position: relative;
-        min-height: 620px;
-      }
-
-      .feature-card {
-        position: relative;
-        height: 100%;
-        min-height: 620px;
-        border-radius: 32px;
-        overflow: hidden;
-        background: linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.55)),
-          url("https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=900&q=80") center/cover no-repeat;
-        border: 1px solid rgba(201, 166, 99, 0.25);
-        box-shadow: var(--shadow);
-      }
-
-      .feature-overlay {
-        position: absolute;
-        inset: auto 0 0 0;
-        padding: 26px 24px 20px;
-        background: linear-gradient(180deg, transparent, rgba(10, 9, 8, 0.92));
-      }
-
-      .feature-tag {
-        display: inline-block;
-        background: rgba(201, 166, 99, 0.12);
-        border: 1px solid rgba(201, 166, 99, 0.25);
-        color: var(--gold-soft);
-        border-radius: 999px;
-        padding: 7px 12px;
-        font-size: 0.74rem;
-        margin-bottom: 10px;
-      }
-
-      .feature-name {
-        font-family: "Amiri", serif;
-        font-size: clamp(2.1rem, 2.4vw, 3.1rem);
-        margin-bottom: 8px;
-      }
-
-      .feature-meta {
-        display: flex;
-        justify-content: space-between;
-        gap: 16px;
-        align-items: center;
-        color: var(--ivory-2);
-        font-size: 0.92rem;
-      }
-
-      .feature-price {
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: var(--gold-soft);
-      }
-
-      .mini-card {
-        position: absolute;
-        width: clamp(180px, 21vw, 220px);
-        background: rgba(20, 16, 13, 0.9);
-        border: 1px solid rgba(201, 166, 99, 0.2);
-        border-radius: 20px;
-        padding: 14px;
-        backdrop-filter: blur(10px);
-        box-shadow: var(--shadow);
-      }
-
-      .mini-card.one {
-        left: -16px;
-        bottom: 30px;
-      }
-
-      .mini-card.two {
-        right: -8px;
-        top: 24px;
-      }
-
-      .mini-card img {
-        border-radius: 14px;
-        height: 150px;
-        object-fit: cover;
-        margin-bottom: 12px;
-      }
-
-      .mini-card strong {
-        font-size: 1rem;
-        color: var(--ivory);
-      }
-
-      .mini-card span {
-        display: block;
-        margin-top: 6px;
-        color: var(--gold-soft);
-        font-size: 0.8rem;
-      }
-
-      .trust-bar {
-        padding: 18px 0 4px;
-      }
-
-      .trust-box {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(180px, 1fr));
-        gap: 14px;
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(201, 166, 99, 0.15);
-        border-radius: 22px;
-        padding: 18px 20px;
-      }
-
-      .trust-item {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        color: var(--ivory);
-        padding: 8px 6px;
-      }
-
-      .trust-item .icon {
-        width: 44px;
-        height: 44px;
-        display: grid;
-        place-items: center;
-        border-radius: 14px;
-        background: rgba(201, 166, 99, 0.1);
-        color: var(--gold-soft);
-        font-size: 1.35rem;
-      }
-
-      .trust-item strong {
-        display: block;
-        font-size: 0.92rem;
-      }
-
-      .trust-item span {
-        display: block;
-        font-size: 0.78rem;
-        color: var(--muted);
-      }
-
-      .section {
-        padding: 110px 0 20px;
-      }
-
-      .section-head {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-        align-items: end;
-        margin-bottom: 30px;
-      }
-
-      .section-head p {
-        margin: 0 0 10px;
-        color: var(--gold-soft);
-        font-weight: 700;
-        letter-spacing: 1.1px;
-      }
-
-      .section-head h2 {
-        font-size: clamp(2.2rem, 3vw, 3.2rem);
-      }
-
-      .section-note {
-        color: var(--muted);
-        max-width: 420px;
-        line-height: 1.9;
-      }
-
-      .product-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(250px, 1fr));
-        gap: 24px;
-      }
-
-      .product-card {
-        background: linear-gradient(180deg, rgba(31, 26, 22, 0.96), rgba(18, 15, 13, 0.96));
-        border: 1px solid rgba(201, 166, 99, 0.18);
-        border-radius: 28px;
-        overflow: hidden;
-        box-shadow: 0 18px 46px rgba(0, 0, 0, 0.22);
-        transition: 0.25s ease;
-      }
-
-      .product-card:hover {
-        transform: translateY(-6px);
-        border-color: rgba(201, 166, 99, 0.4);
-      }
-
-      .product-card img {
-        height: 290px;
-        object-fit: cover;
-      }
-
-      .product-body {
-        padding: 18px 18px 22px;
-      }
-
-      .product-meta {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-        margin-bottom: 8px;
-      }
-
-      .product-meta span {
-        background: rgba(201, 166, 99, 0.08);
-        border: 1px solid rgba(201, 166, 99, 0.25);
-        border-radius: 999px;
-        color: var(--gold-soft);
-        font-size: 0.72rem;
-        padding: 6px 10px;
-      }
-
-      .product-title {
-        font-family: "Amiri", serif;
-        font-size: 2rem;
-        margin: 4px 0 8px;
-      }
-
-      .product-desc {
-        color: rgba(243, 239, 231, 0.75);
-        line-height: 1.9;
-        min-height: 86px;
-      }
-
-      .product-footer {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-        margin-top: 18px;
-        padding-top: 14px;
-        border-top: 1px solid rgba(201, 166, 99, 0.12);
-      }
-
-      .price {
-        font-weight: 800;
-        color: var(--gold-soft);
-        font-size: 1.2rem;
-      }
-
-      .made {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        font-size: 0.75rem;
-        color: #d9edd8;
-        background: rgba(37, 211, 102, 0.08);
-        border: 1px solid rgba(37, 211, 102, 0.2);
-        border-radius: 999px;
-        padding: 7px 10px;
-      }
-
-      .story {
-        padding-top: 90px;
-      }
-
-      .story-grid {
-        display: grid;
-        grid-template-columns: 0.95fr 1.05fr;
-        gap: 24px;
-        align-items: center;
-      }
-
-      .story-visual {
-        position: relative;
-        min-height: 540px;
-        border-radius: 32px;
-        overflow: hidden;
-        border: 1px solid rgba(201, 166, 99, 0.25);
-        box-shadow: var(--shadow);
-        background: linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.45)),
-          url("https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80") center/cover no-repeat;
-      }
-
-      .story-badge {
-        position: absolute;
-        left: 26px;
-        bottom: 24px;
-        background: rgba(17, 17, 14, 0.82);
-        border: 1px solid rgba(201, 166, 99, 0.3);
-        border-radius: 18px;
-        padding: 18px 18px 14px;
-        backdrop-filter: blur(3px);
-      }
-
-      .story-badge strong {
-        display: block;
-        color: var(--gold-soft);
-        font-size: 1.4rem;
-      }
-
-      .story-badge span {
-        color: var(--ivory-2);
-        font-size: 0.8rem;
-      }
-
-      .story-copy {
-        padding: 14px 6px 6px;
-      }
-
-      .story-copy p {
-        color: rgba(243, 239, 231, 0.76);
-        line-height: 2.1;
-        margin-top: 22px;
-      }
-
-      .story-features {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(180px, 1fr));
-        gap: 18px;
-        margin-top: 28px;
-      }
-
-      .story-feature {
-        border: 1px solid rgba(201, 166, 99, 0.12);
-        border-radius: 18px;
-        padding: 18px 16px;
-        background: rgba(255, 255, 255, 0.02);
-      }
-
-      .story-feature .label {
-        color: var(--gold-soft);
-        font-weight: 700;
-        margin-bottom: 8px;
-      }
-
-      .story-feature .text {
-        color: var(--muted);
-        line-height: 1.8;
-      }
-
-      .cta-strip {
-        margin-top: 90px;
-        padding: 0 0 30px;
-      }
-
-      .cta-box {
-        background:
-          linear-gradient(135deg, rgba(201, 166, 99, 0.12), rgba(201, 166, 99, 0.02)),
-          rgba(20, 19, 17, 0.96);
-        border: 1px solid rgba(201, 166, 99, 0.2);
-        border-radius: 30px;
-        padding: 40px 28px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-        box-shadow: var(--shadow);
-      }
-
-      .cta-box h3 {
-        font-size: clamp(2rem, 3vw, 3rem);
-      }
-
-      .cta-box p {
-        margin: 10px 0 0;
-        color: var(--muted);
-      }
-
-      footer {
-        padding: 12px 0 58px;
-      }
-
-      .site-footer {
-        border-top: 1px solid rgba(201, 166, 99, 0.12);
-        padding-top: 28px;
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr 0.8fr 1fr;
-        gap: 22px;
-      }
-
-      .footer-brand {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        margin-bottom: 18px;
-      }
-
-      .footer-brand .brand-mark {
-        width: 38px;
-        height: 38px;
-      }
-
-      .footer-brand strong {
-        font-size: 1.1rem;
-      }
-
-      .site-footer p, .site-footer a, .site-footer li {
-        color: var(--muted);
-        line-height: 2;
-        font-size: 0.96rem;
-      }
-
-      .site-footer ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .footer-title {
-        color: var(--ivory);
-        font-weight: 700;
-        margin-bottom: 12px;
-      }
-
-      .copyright {
-        margin-top: 20px;
-        padding-top: 18px;
-        border-top: 1px solid rgba(201, 166, 99, 0.12);
-        color: var(--muted);
-        text-align: center;
-      }
-
-      .whatsapp {
-        position: fixed;
-        left: 22px;
-        bottom: 22px;
-        width: 62px;
-        height: 62px;
-        border-radius: 50%;
-        display: grid;
-        place-items: center;
-        background: linear-gradient(180deg, var(--green), var(--green-deep));
-        box-shadow: 0 18px 42px rgba(37, 211, 102, 0.3);
-        color: white;
-        font-size: 1.9rem;
-        z-index: 80;
-      }
-
-      .whatsapp::before {
-        content: "✆";
-      }
-
-      .admin-panel {
-        position: fixed;
-        top: 92px;
-        left: 20px;
-        width: min(340px, calc(100% - 40px));
-        background: rgba(17, 16, 14, 0.96);
-        border: 1px solid rgba(201, 166, 99, 0.28);
-        border-radius: 18px;
-        padding: 22px 18px;
-        box-shadow: var(--shadow);
-        transform: translateX(-120%);
-        transition: 0.35s ease;
-        opacity: 0;
-        z-index: 90;
-      }
-
-      .admin-panel.open {
-        transform: translateX(0);
-        opacity: 1;
-      }
-
-      .admin-panel h4 {
-        margin: 0 0 14px;
-        color: var(--gold-soft);
-        font-size: 1.2rem;
-      }
-
-      .admin-panel .row {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 14px;
-        font-size: 0.92rem;
-        color: var(--muted);
-        padding: 8px 0;
-        border-bottom: 1px solid rgba(201, 166, 99, 0.08);
-      }
-
-      .admin-panel .row:last-child {
-        border-bottom: none;
-      }
-
-      .admin-panel strong {
-        color: var(--ivory);
-      }
-
-      @media (max-width: 1000px) {
-        .hero-grid,
-        .story-grid,
-        .site-footer {
-          grid-template-columns: 1fr;
-        }
-
-        .product-grid {
-          grid-template-columns: repeat(2, minmax(240px, 1fr));
-        }
-
-        .showcase {
-          min-height: 540px;
-        }
-      }
-
-      @media (max-width: 760px) {
-        .nav-links {
-          display: none;
-        }
-
-        .hero {
-          padding-top: 42px;
-        }
-
-        .trust-box {
-          grid-template-columns: 1fr 1fr;
-        }
-
-        .product-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .cta-box {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        .mini-card {
-          display: none;
-        }
-
-        .feature-card {
-          min-height: 520px;
-        }
-      }
-
-      @media (max-width: 520px) {
-        .brand-text {
-          font-size: 1.04rem;
-        }
-
-        .nav-btn {
-          padding: 10px 16px;
-          font-size: 0.88rem;
-        }
-
-        .trust-box {
-          grid-template-columns: 1fr;
-        }
-
-        .stats {
-          grid-template-columns: 1fr;
-          display: grid;
-        }
-
-        .actions {
-          flex-direction: column;
-          align-items: stretch;
-        }
-
-        .btn {
-          width: 100%;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header class="topbar">
-      <div class="container nav">
-        <div class="brand" aria-label="أصالة التراث المصري">
-          <div class="brand-mark"></div>
-          <div>
-            <div class="brand-text">أصالة التراث المصري</div>
-            <span class="brand-sub">MUSEUM OF HERITAGE</span>
-          </div>
-        </div>
-
-        <nav class="nav-links" aria-label="القائمة الرئيسية">
-          <a href="#home">الرئيسية</a>
-          <a href="#products">المعرض</a>
-          <a href="#story">الحكاية</a>
-          <a href="#contact">تواصل بنا</a>
-        </nav>
-
-        <button class="nav-btn" type="button">احجز استشارة</button>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أصالة التراث المصري | عاشق ومعشوق</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C9A961; --gold-light:#d4af37; --brown:#8B7355; --bg:#F8F6F0; --card:#ffffff; --text:#2c2c2c; --green:#25D366; --red:#c0392b;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Cairo',sans-serif}
+body{background:var(--bg);color:var(--text);line-height:1.8;padding-bottom:60px}
+h1,h2,h3{font-family:'Amiri',serif;color:var(--brown)}
+header{background:#111;color:#fff;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+.brand{font-size:20px;font-weight:800;color:var(--gold);font-family:'Amiri',serif}
+.admin-toggle-btn{background:var(--gold);color:#111;border:none;padding:8px 16px;border-radius:20px;font-weight:800;cursor:pointer}
+.hero{background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://images.unsplash.com/photo-1600210492486-724d80a4f3c7?w=1200') center/cover;color:#fff;text-align:center;padding:80px 20px}
+.hero h1{font-size:clamp(30px,5vw,50px);color:#fff;margin-bottom:15px}
+.hero p{font-size:16px;margin-bottom:25px;opacity:0.9}
+.btn{display:inline-block;background:var(--gold);color:#111;padding:12px 30px;border-radius:30px;font-weight:800;text-decoration:none}
+.container{max-width:1200px;margin:40px auto;padding:0 20px}
+.section-title{text-align:center;margin-bottom:30px}
+.section-title h2{font-size:35px;color:var(--brown)}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:25px}
+.product-card{background:var(--card);border-radius:15px;overflow:hidden;box-shadow:0 5px 20px rgba(0,0,0,0.08);display:flex;flex-direction:column;border:1px solid rgba(201,169,97,0.2)}
+.product-img{height:250px;width:100%;object-fit:cover}
+.product-body{padding:20px;display:flex;flex-direction:column;flex:1}
+.product-cat{font-size:12px;color:var(--gold);font-weight:700;margin-bottom:5px}
+.product-name{font-size:18px;font-weight:800;color:var(--brown);margin-bottom:10px}
+.product-price{font-size:20px;font-weight:800;color:var(--gold);margin-bottom:15px;font-family:'Amiri',serif}
+.btn-wa{background:var(--green);color:#fff;text-align:center;padding:12px;border-radius:10px;font-weight:800;text-decoration:none;display:block;margin-top:auto;transition:0.2s}
+.btn-wa:hover{background:#128C7E}
+/* لوحة التحكم */
+#adminPanel{display:none;background:#fff;border:3px solid var(--gold);border-radius:15px;padding:25px;margin:20px auto;max-width:900px}
+#adminPanel.active{display:block}
+.form-group{margin-bottom:15px}
+.form-group label{display:block;font-weight:800;color:var(--brown);margin-bottom:5px}
+.form-group input, .form-group textarea{width:100%;padding:10px;border:1px solid #ccc;border-radius:8px;font-size:15px}
+.admin-actions{display:flex;gap:10px;margin-top:20px}
+.btn-admin{padding:10px 20px;border:none;border-radius:8px;font-weight:800;cursor:pointer}
+.btn-save{background:var(--green);color:#fff}
+.btn-del{background:var(--red);color:#fff}
+.item-row{display:flex;justify-content:space-between;align-items:center;background:#f9f5ef;padding:10px 15px;border-radius:8px;margin-bottom:10px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand" id="headerTitle">أصالة التراث المصري</div>
+  <button class="admin-toggle-btn" onclick="toggleAdmin()">⚙️ لوحة التحكم</button>
+</header>
+
+<!-- لوحة التحكم -->
+<div class="container">
+  <div id="adminPanel">
+    <h2>🔐 لوحة التحكم البسيطة</h2>
+    <p style="font-size:13px;color:#666;margin-bottom:15px">عدّل المنتجات أو الأسعار وسيتم حفظها وتحديثها فوراً للعملاء.</p>
+    
+    <div id="adminProductsList"></div>
+
+    <hr style="margin:20px 0">
+    <h3>➕ إضافة منتج جديد</h3>
+    <div class="form-group"><label>اسم المنتج</label><input type="text" id="newTitle" placeholder="مثال: مبخرة صدف أرابيسك"></div>
+    <div class="form-group"><label>السعر (بالدينار أو اكتب "حسب الطلب")</label><input type="text" id="newPrice" placeholder="مثال: 25"></div>
+    <div class="form-group"><label>رابط الصورة</label><input type="text" id="newImg" placeholder="https://images.unsplash.com/..."></div>
+    <button class="btn-admin btn-save" onclick="addProduct()">➕ حفظ وإضافة المنتج للمتجر</button>
+  </div>
+</div>
+
+<!-- واجهة المتجر -->
+<div class="hero">
+  <h1 id="mainHeroTitle">لما العشق يتحول لتحفة فنية</h1>
+  <p>صدف طبيعي 100% مصنع بحب من القلب لتزيين بيوتكم بأرقى تراث مصري أصیل.</p>
+  <a href="#products" class="btn">اكتشف المجموعة 👇</a>
+</div>
+
+<div class="container" id="products">
+  <div class="section-title">
+    <h2>منتجاتنا المميزة</h2>
+  </div>
+  <div class="products-grid" id="productsGrid"></div>
+</div>
+
+<footer style="background:#111;color:#fff;text-align:center;padding:30px;margin-top:50px">
+  <p>© أصالة التراث المصري — شحن لجميع أنحاء العالم</p>
+  <p style="color:var(--gold);margin-top:8px">واتساب مباشرة: 96551118069+</p>
+</footer>
+
+<script>
+// رقم الواتساب الثابت
+const waNumber = "96551118069";
+
+// المنتجات الافتراضية (تُحفظ تلقائياً في المتصفح لتتحدث فوراً)
+let defaultProducts = [
+  {id: 1, name: "ترابيزة أبا نجمة صدف طبيعي", price: "45 د.ك", img: "https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?w=800"},
+  {id: 2, name: "مبخرة ساعة رملية أرابيسك", price: "18 د.ك", img: "https://images.unsplash.com/photo-1603006905003-be475563bc59?w=800"},
+  {id: 3, name: "صندوق مجوهرات وشكمجية صدف", price: "30 د.ك", img: "https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800"},
+  {id: 4, name: "كرسي عرش ملكي مطعم بالصدف", price: "حسب الطلب", img: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800"}
+];
+
+// جلب المنتجات من التخزين المحلي أو استخدام الافتراضية
+let products = JSON.parse(localStorage.getItem('asala_products')) || defaultProducts;
+
+function renderStore() {
+  const grid = document.getElementById('productsGrid');
+  grid.innerHTML = products.map(p => `
+    <div class="product-card">
+      <img src="${p.img}" class="product-img" alt="${p.name}">
+      <div class="product-body">
+        <div class="product-cat">أصالة التراث المصري</div>
+        <div class="product-name">${p.name}</div>
+        <div class="product-price">${p.price}</div>
+        <a href="https://wa.me/${waNumber}?text=${encodeURIComponent('السلام عليكم، أريد طلب أو الاستفسار عن: ' + p.name + ' (السعر: ' + p.price + ')')}" target="_blank" class="btn-wa">💬 اطلب فوراً على واتساب</a>
       </div>
-    </header>
+    </div>
+  `).join('');
+}
 
-    <main id="home">
-      <section class="hero">
-        <div class="container hero-grid">
-          <div>
-            <span class="eyebrow">متحف أنتيك عالمي • متجر فاخر</span>
-            <h1>كل قطعة لها قصة… وكل قصة تستحق أن تُروى.</h1>
-            <p>
-              نختار لك تحفًا فاخرة من تراث مصر العريق، بلمسة عصرية أنيقة تجمع بين
-              الفن القديم، الأصالة، والقيمة التاريخية. كل قطعة تُعرض كتحفة فنية
-              تحمل هوية مصرية أصيلة.
-            </p>
-
-            <div class="actions">
-              <a class="btn btn-primary" href="#products">استكشف القطع</a>
-              <a class="btn btn-secondary" href="#contact">تواصل عبر واتساب</a>
-            </div>
-
-            <div class="stats">
-              <div class="stat">
-                <strong>+3000</strong>
-                <span>قطعة مختارة</span>
-              </div>
-              <div class="stat">
-                <strong>24/7</strong>
-                <span>استشارة حصرية</span>
-              </div>
-              <div class="stat">
-                <strong>مضمون</strong>
-                <span>ضمان مدى الحياة</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="showcase" aria-label="عرض القطع التراثية">
-            <div class="feature-card">
-              <div class="feature-overlay">
-                <span class="feature-tag">مختارة بعناية</span>
-                <div class="feature-name">مجموعة الملوك</div>
-                <div class="feature-meta">
-                  <span>تحف مصرية أصلية</span>
-                  <span class="feature-price">٤.٢٥٠ ج.م</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="mini-card one">
-              <img
-                src="https://images.unsplash.com/photo-1501084817091-a4f3d1d19e07?auto=format&fit=crop&w=700&q=80"
-                alt="تحفة مصرية"
-              />
-              <strong>صدف مصري طبيعي</strong>
-              <span>ديكور فاخر</span>
-            </div>
-
-            <div class="mini-card two">
-              <img
-                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=700&q=80"
-                alt="رسم تراثي"
-              />
-              <strong>متحف منزلي</strong>
-              <span>صنع في مصر</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="trust-bar">
-        <div class="container">
-          <div class="trust-box">
-            <div class="trust-item">
-              <div class="icon">✓</div>
-              <div>
-                <strong>ضمان مدى الحياة</strong>
-                <span>على جميع القطع</span>
-              </div>
-            </div>
-
-            <div class="trust-item">
-              <div class="icon">✦</div>
-              <div>
-                <strong>توصيل آمن</strong>
-                <span>في جميع المحافظات</span>
-              </div>
-            </div>
-
-            <div class="trust-item">
-              <div class="icon">◎</div>
-              <div>
-                <strong>مصدر موثوق</strong>
-                <span>قطع مختارة بعناية</span>
-              </div>
-            </div>
-
-            <div class="trust-item">
-              <div class="icon">🇪🇬</div>
-              <div>
-                <strong>صنع في مصر</strong>
-                <span>هوية أصيلة</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="products">
-        <div class="container">
-          <div class="section-head">
-            <div>
-              <p>مجموعتنا</p>
-              <h2>تحف مختارة بعناية</h2>
-            </div>
-            <div class="section-note">
-              نضم بين الجمال الفاخر والأصالة المصرية، مع إظهار كل قطعة كتحفة لها
-              قصة، قيمة تاريخية، وجمال خاص.
-            </div>
-          </div>
-
-          <div class="product-grid">
-            <article class="product-card">
-              <img
-                src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=900&q=80"
-                alt="تحفة تراثية 1"
-              />
-              <div class="product-body">
-                <div class="product-meta">
-                  <span>قطع فاخرة</span>
-                  <span>مميزة</span>
-                </div>
-                <h3 class="product-title">مزهرية فرعونية</h3>
-                <p class="product-desc">
-                  مزهرية مصنوعة يدويًا بلمسات تقليدية، تمزج بين الطابع الملكي
-                  والهوية المصرية المعاصرة.
-                </p>
-                <div class="product-footer">
-                  <div class="price">١.٨٠٠ ج.م</div>
-                  <div class="made">✓ صنع في مصر</div>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <img
-                src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=900&q=80"
-                alt="تحفة تراثية 2"
-              />
-              <div class="product-body">
-                <div class="product-meta">
-                  <span>ديكور أنيق</span>
-                  <span>حصري</span>
-                </div>
-                <h3 class="product-title">تابوت صغير</h3>
-                <p class="product-desc">
-                  قطعة فنية تحمل تفاصيل تراثية مميزة وتستخدم كعنصر ديكور فاخر في
-                  الاستوديوهات والبيوت الملكية.
-                </p>
-                <div class="product-footer">
-                  <div class="price">٢.٩٠٠ ج.م</div>
-                  <div class="made">✓ صنع في مصر</div>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <img
-                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80"
-                alt="تحفة تراثية 3"
-              />
-              <div class="product-body">
-                <div class="product-meta">
-                  <span>تراثي</span>
-                  <span>نادر</span>
-                </div>
-                <h3 class="product-title">برواز ملكي</h3>
-                <p class="product-desc">
-                  برواز مخطط يضم لمسات فرعونية وتجهيزات فاخرة، يناسب غرف المعيشة
-                  والمكاتب الراقية.
-                </p>
-                <div class="product-footer">
-                  <div class="price">٣.٤٠٠ ج.م</div>
-                  <div class="made">✓ صنع في مصر</div>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <img
-                src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=900&q=80"
-                alt="تحفة تراثية 4"
-              />
-              <div class="product-body">
-                <div class="product-meta">
-                  <span>طبيعي</span>
-                  <span>فني</span>
-                </div>
-                <h3 class="product-title">صدف مصري طبيعي</h3>
-                <p class="product-desc">
-                  قطعة متميزة تضيف دفئًا فنيًا وندوة طبيعية، مستوحاة من جمال البحر
-                  والرخام المصري.
-                </p>
-                <div class="product-footer">
-                  <div class="price">٩٥٠ ج.م</div>
-                  <div class="made">✓ صنع في مصر</div>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <img
-                src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=900&q=80"
-                alt="تحفة تراثية 5"
-              />
-              <div class="product-body">
-                <div class="product-meta">
-                  <span>مخصص</span>
-                  <span>فاخر</span>
-                </div>
-                <h3 class="product-title">طقم استقبال</h3>
-                <p class="product-desc">
-                  طقم أنيق يجمع بين الألوان الملكية والأعمال اليدوية، مناسب للبيوت
-                  التي تحب التميز والهوية المصرية.
-                </p>
-                <div class="product-footer">
-                  <div class="price">٥.١٠٠ ج.م</div>
-                  <div class="made">✓ صنع في مصر</div>
-                </div>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <img
-                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80"
-                alt="تحفة تراثية 6"
-              />
-              <div class="product-body">
-                <div class="product-meta">
-                  <span>تراث</span>
-                  <span>مميز</span>
-                </div>
-                <h3 class="product-title">خزانة أثاث</h3>
-                <p class="product-desc">
-                  قطعة ديكور مميزة تجمع بين الفن المصري القديم والنجارة الحديثة، مع
-                  لمسات ملكية فاخرة.
-                </p>
-                <div class="product-footer">
-                  <div class="price">٦.٢٠٠ ج.م</div>
-                  <div class="made">✓ صنع في مصر</div>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="story" id="story">
-        <div class="container story-grid">
-          <div class="story-visual">
-            <div class="story-badge">
-              <strong>حكاية كل قطعة</strong>
-              <span>تاريخ، جمال، وذاكرة مصر</span>
-            </div>
-          </div>
-
-          <div class="story-copy">
-            <span class="eyebrow">قصتنا</span>
-            <h2 style="margin-top: 18px; font-size: clamp(2.4rem, 3vw, 3.7rem);">
-              كل قطعة تحمل ذاكرة مصر ودفئها.
-            </h2>
-
-            <p>
-              في “أصالة التراث المصري” نؤمن أن كل عنصر فني ليس مجرد قطعة، بل قصة
-              عاشت في الزمن، موحية بملامح الحضارة المصرية وجمالها المتجدد. نختار
-              القطع بعناية، مع الالتزام بجودة التنفيذ، الأصالة، والفخامة التي تُرضي
-              ذوق المحبّين للهوية المصرية.
-            </p>
-
-            <p>
-              نعمل على إبراز التراث في صياغة أنيقة وعصرية تناسب منازلكم، محالكم،
-              ومتاحفكم، مع التأكيد على “صنع في مصر” كهوية أساسية تعكس الحرفية
-              والتميز المحلي.
-            </p>
-
-            <div class="story-features">
-              <div class="story-feature">
-                <div class="label">الهوية</div>
-                <div class="text">أسود فاخر + ذهبي ملكي + بيج فاخر</div>
-              </div>
-
-              <div class="story-feature">
-                <div class="label">التركيز</div>
-                <div class="text">كل قطعة بأسلوب شخصي، فخم، ومميز</div>
-              </div>
-
-              <div class="story-feature">
-                <div class="label">الضمان</div>
-                <div class="text">ضمان مدى الحياة يضمن الراحة والثقة</div>
-              </div>
-
-              <div class="story-feature">
-                <div class="label">التجربة</div>
-                <div class="text">تواصل سهل، خدمة ذكية، واستشارة خاصة</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="cta-strip">
-        <div class="container">
-          <div class="cta-box" id="contact">
-            <div>
-              <h3>ابدأ رحلتك مع القطع التراثية الفاخرة</h3>
-              <p>استشرنا الآن لتختار القطعة التي تتناسب مع ذوقك وهويتك.</p>
-            </div>
-
-            <div class="actions">
-              <a class="btn btn-primary" href="https://wa.me/966500000000" target="_blank" rel="noreferrer">تواصل واتساب</a>
-              <a class="btn btn-secondary" href="mailto:hello@asalahheritage.com">hello@asalahheritage.com</a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="container">
-        <div class="site-footer">
-          <div>
-            <div class="footer-brand">
-              <div class="brand-mark"></div>
-              <strong>أصالة التراث المصري</strong>
-            </div>
-            <p>
-              متجر وفنون فاخرة تجمع بين التراث المصري والأجواء الملكية، لتجعل
-              كل قطعة في منزلك تحفة فنية تحمل قصة.
-            </p>
-          </div>
-
-          <div>
-            <div class="footer-title">روابط سريعة</div>
-            <ul>
-              <li><a href="#home">الرئيسية</a></li>
-              <li><a href="#products">المعرض</a></li>
-              <li><a href="#story">حكايتنا</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <div class="footer-title">الشروط</div>
-            <ul>
-              <li><a href="#">ضمان مدى الحياة</a></li>
-              <li><a href="#">التوصيل</a></li>
-              <li><a href="#">الاسترجاع</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <div class="footer-title">تواصل</div>
-            <ul>
-              <li><a href="tel:+966500000000">+966 50 000 0000</a></li>
-              <li><a href="mailto:hello@asalahheritage.com">hello@asalahheritage.com</a></li>
-              <li>الرياض • القاهرة • دبي</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="copyright">© <span id="year"></span> أصالة التراث المصري — كل قطعة لها قصة.</div>
+function renderAdmin() {
+  const list = document.getElementById('adminProductsList');
+  list.innerHTML = products.map((p, index) => `
+    <div class="item-row">
+      <div>
+        <b>${p.name}</b><br>
+        <small style="color:#C9A66B">السعر: ${p.price}</small>
       </div>
-    </footer>
+      <div>
+        <button class="btn-admin btn-del" onclick="deleteProduct(${index})">حذف</button>
+      </div>
+    </div>
+  `).join('');
+}
 
-    <a class="whatsapp" href="https://wa.me/966500000000" target="_blank" rel="noreferrer" aria-label="واتساب"></a>
+function toggleAdmin() {
+  const panel = document.getElementById('adminPanel');
+  panel.classList.toggle('active');
+  if(panel.classList.contains('active')) {
+    renderAdmin();
+  }
+}
 
-    <aside class="admin-panel" id="adminPanel" aria-label="لوحة التحكم المخفية">
-      <h4>لوحة التحكم المخفية</h4>
-      <div class="row"><span>النمط</span><strong>Royal Heritage</strong></div>
-      <div class="row"><span>النسخة</span><strong>V2.1</strong></div>
-      <div class="row"><span>التجربة</span><strong>مفعّلة</strong></div>
-      <div class="row"><span>الحالة</span><strong>عرض أولي</strong></div>
-    </aside>
+function addProduct() {
+  const name = document.getElementById('newTitle').value;
+  const price = document.getElementById('newPrice').value;
+  const img = document.getElementById('newImg').value || 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800';
+  
+  if(!name || !price) {
+    alert('برجاء كتابة اسم المنتج والسعر!');
+    return;
+  }
+  
+  products.unshift({id: Date.now(), name, price, img});
+  localStorage.setItem('asala_products', JSON.stringify(products));
+  
+  document.getElementById('newTitle').value = '';
+  document.getElementById('newPrice').value = '';
+  document.getElementById('newImg').value = '';
+  
+  renderStore();
+  renderAdmin();
+  alert('✅ تمت إضافة المنتج وتحديث المتجر فوراً!');
+}
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
+function deleteProduct(index) {
+  if(confirm('هل أنت متأكد من حذف هذا المنتج؟')) {
+    products.splice(index, 1);
+    localStorage.setItem('asala_products', JSON.stringify(products));
+    renderStore();
+    renderAdmin();
+  }
+}
 
-      const adminPanel = document.getElementById("adminPanel");
+// التشغيل عند فتح الصفحة
+window.onload = function() {
+  renderStore();
+};
+</script>
 
-      document.addEventListener("keydown", function (event) {
-        if (event.ctrlKey && event.shiftKey && event.key.toLowerCase() === "a") {
-          adminPanel.classList.toggle("open");
-        }
-      });
-    </script>
-  </body>
+</body>
 </html>
