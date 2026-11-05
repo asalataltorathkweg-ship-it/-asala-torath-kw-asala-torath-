@@ -63,7 +63,7 @@ button{cursor:pointer;font-family:inherit}
 .admin-trigger{margin-top:15px;font-size:13px;color:var(--gold);cursor:pointer;display:inline-block;border:1px dashed var(--gold);padding:6px 15px;border-radius:20px;transition:0.3s}
 .admin-trigger:hover{background:var(--gold);color:var(--black)}
 
-/* نافذة عرض تفاصيل المنتج */
+/* Modal View */
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:2000;display:none;align-items:center;justify-content:center;padding:20px;overflow-y:auto}
 .modal-overlay.open{display:flex}
 .modal-box{background:#fff;border-radius:15px;max-width:800px;width:100%;max-height:90vh;overflow-y:auto;position:relative}
@@ -73,9 +73,8 @@ button{cursor:pointer;font-family:inherit}
 .modal-body h2{font-size:28px;margin-bottom:10px}
 .modal-body .price{font-size:24px;color:var(--gold);font-weight:800;margin-bottom:20px}
 .modal-body .specs{font-size:14px;color:#444;line-height:2;margin-bottom:20px}
-.modal-body .specs strong{color:var(--wine)}
 
-/* لوحة التحكم السرية */
+/* Admin Panel Modals */
 .admin-modal{position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:3000;display:none;align-items:center;justify-content:center;padding:20px;overflow-y:auto}
 .admin-modal.open{display:flex}
 .admin-box{background:#fff;border-radius:15px;max-width:900px;width:100%;max-height:90vh;overflow-y:auto;padding:30px;color:#222;position:relative}
@@ -96,7 +95,7 @@ button{cursor:pointer;font-family:inherit}
 
 <header class="header">
   <div class="brand">
-    <img id="brandLogo" class="brand-logo" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=200" alt="لوجو">
+    <img id="brandLogo" class="brand-logo" src="1.jpg" alt="لوجو">
     <div class="brand-text">
       <h1 id="storeName">أصالة التراث المصري</h1>
       <span id="slogan">ASALA EGYPTIAN HERITAGE</span>
@@ -146,7 +145,7 @@ button{cursor:pointer;font-family:inherit}
     <a href="https://www.tiktok.com/@user1178392961513" target="_blank">تيك توك</a>
   </div>
   
-  <!-- أيقونة لوحة التحكم في أسفل نهاية الصفحة -->
+  <!-- أيقونة لوحة التحكم السرية المحمية في أسفل نهاية الصفحة -->
   <div>
     <span class="admin-trigger" onclick="openLoginModal()">⚙️ دخول لوحة التحكم (الادمن)</span>
   </div>
@@ -177,14 +176,14 @@ button{cursor:pointer;font-family:inherit}
   <div class="admin-box" style="max-width: 400px;">
     <button class="admin-close" onclick="closeLoginModal()">✕</button>
     <h3 style="color:var(--wine); margin-bottom: 20px; text-align:center;">تسجيل دخول الادمن</h3>
-    <p style="font-size:12px; color:#666; margin-bottom:15px; text-align:center;">الإيميل الافتراضي: admin@asala.com<br>كلمة السر الافتراضية: 123456</p>
+    <p style="font-size:12px; color:#666; margin-bottom:15px; text-align:center;">الإيميل: admin@asala.com<br>كلمة السر: 123456</p>
     <input type="email" id="adminEmailInput" class="form-control" placeholder="البريد الإلكتروني">
     <input type="password" id="adminPassInput" class="form-control" placeholder="كلمة السر">
     <button class="btn-admin" style="width:100%" onclick="checkAdminLogin()">دخول لوحة التحكم</button>
   </div>
 </div>
 
-<!-- نافذة لوحة التحكم الرئيسية لإدارة وتغيير كل المنتجات والأسعار والسيناريوهات -->
+<!-- نافذة لوحة التحكم الرئيسية لإدارة المنتجات والأسعار -->
 <div class="admin-modal" id="adminPanelModal">
   <div class="admin-box">
     <button class="admin-close" onclick="closeAdminPanel()">✕</button>
@@ -195,7 +194,7 @@ button{cursor:pointer;font-family:inherit}
       <input type="text" id="newName" class="form-control" placeholder="اسم المنتج">
       <input type="text" id="newCat" class="form-control" placeholder="التصنيف (مثال: ترابيزات، أثاث ملكي)">
       <input type="text" id="newPrice" class="form-control" placeholder="السعر (مثال: 2520 د.ك أو حسب الطلب)">
-      <input type="text" id="newImg" class="form-control" placeholder="رابط صورة المنتج (URL)">
+      <input type="text" id="newImg" class="form-control" placeholder="رابط صورة المنتج (مثال: 1.jpg)">
       <textarea id="newDesc" class="form-control" placeholder="وصف المنتج المختصر"></textarea>
       <textarea id="newFullDesc" class="form-control" placeholder="الوصف الكامل والتفاصيل والمقاسات"></textarea>
       <button class="btn-admin" onclick="addNewProduct()">➕ إضافة المنتج للموقع فوراً</button>
@@ -209,28 +208,21 @@ button{cursor:pointer;font-family:inherit}
 </div>
 
 <script>
-// البيانات الافتراضية للـ 17 منتجاً (قابلة للتعديل والمسح والإضافة بالكامل عبر لوحة التحكم)
+// المنتجات الـ 10 الحصرية المستخرجة من الصور المباشرة (1.jpg إلى 10.jpg)
 const defaultProducts = [
-  {id:1, name:"ترابيزة أبا نجمة", cat:"ترابيزات", desc:"قطعة فنية تُضفي بريقاً ملكياً. مثمنة الأضلاع، مطعّمة بصدف طبيعي ملون ونقشة النجمة الإسلامية.", fullDesc:"ترابيزة فاخرة بنقشة النجمة المركزية.", materials:"صدف مصري طبيعي 100%", size:"مثمنة الأضلاع", price:"2520 د.ك", img:"https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?w=800"},
-  {id:2, name:"ترابيزة فلامنجو زينة", cat:"ترابيزات", desc:"الأناقة والعملية في تصميم واحد. ثمانية الأضلاع قابلة للطي، مطعّمة بصدف ملون ونقوش أرابيسك.", fullDesc:"ترابيزة جانبية مثمنة.", materials:"خشب زان + صدف", size:"مثمنة", price:"840 د.ك", img:"https://images.unsplash.com/photo-1600210492486-724d80a4f3c7?w=800"},
-  {id:3, name:"كرسي مشبك صدف أرابيسك", cat:"أثاث ملكي", desc:"تحفة فنية نادرة. مطعّم بالصدف الطبيعي 100%، قابل للطي، ومصنوع من خشب الزان المتين.", fullDesc:"كرسي مشبك ملكي مطعّم بالصدف.", materials:"خشب زان + صدف مصري", size:"ارتفاع 110سم", price:"2640 د.ك", img:"https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800"},
-  {id:4, name:"كونسول 3 أدراج", cat:"أثاث ملكي", desc:"قطعة فاخرة ومتحفية. بواجهة منحنية، 3 درج بزخرفة نجمة ثمانية، تطعيم صدف كامل.", fullDesc:"كونسول بومبيه بواجهة منحنية.", materials:"خشب زان + صدف", size:"3 أدراج", price:"1440 د.ك", img:"https://images.unsplash.com/photo-1578500494198-246f612d3b3d?w=800"},
-  {id:5, name:"مبخرة صدف أرابيسك", cat:"مباخر", desc:"عبق الأصالة والفخامة. من خشب الزان المطعم بصدف طبيعي 100% ونقوش هندسية إسلامية.", fullDesc:"مبخرة ملكية من خشب الزان.", materials:"خشب زان + صدف", size:"ارتفاع 25سم", price:"54 د.ك", img:"https://images.unsplash.com/photo-1603006905003-be475563bc59?w=800"},
-  {id:6, name:"تابوت عروسة 60 سم", cat:"صناديق", desc:"هدية الزفاف التي تُورّث للأجيال. مطعّم بصدف أبيض ناصع ونقوش إسلامية.", fullDesc:"صندوق عروسة فاخر.", materials:"خشب + صدف أبيض", size:"60 سم", price:"720 د.ك", img:"https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800"},
-  {id:7, name:"صندوق بخور 3 درج", cat:"صناديق", desc:"تحفة فنية لحفظ أغلى الذكريات. مطعّم بصدف طبيعي 100%، يتميز بثلاثة أدراج مخفية.", fullDesc:"صندوق بخور فاخر بـ 3 أدراج مخفية.", materials:"خشب الزان + صدف", size:"3 أدراج", price:"288 د.ك", img:"https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800"},
-  {id:8, name:"كرسي أرابيسك عرش", cat:"أثاث ملكي", desc:"رمز السلطة والفخامة. مطعّم بالكامل بصدف مصري أصلي ونقوش زهرية.", fullDesc:"كرسي عرش ملكي ضخم.", materials:"خشب + صدف كامل", size:"ظهر عالي", price:"2200 د.ك", img:"https://images.unsplash.com/photo-1618220179428-22790b461013?w=800"},
-  {id:9, name:"طاولة شطرنج صدف ملكي", cat:"ترابيزات", desc:"تجسيد للفخامة والمتعة. مطعّمة بالصدف الطبيعي والأرابيسك، مع هيكل خشبي منحوت.", fullDesc:"طاولة شطرنج فاخرة.", materials:"خشب + صدف", size:"80x80سم", price:"19 د.ك", img:"https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800"},
-  {id:10, name:"علبة مناديل صدف مجروش", cat:"ديكورات", desc:"لمسة ملكية لأدق التفاصيل. مغطاة بالكامل بصدف مجروش لامع ونقوش خضراء أنيقة.", fullDesc:"علبة مناديل ملكية.", materials:"خشب + صدف مجروش", size:"25x13x8سم", price:"33 د.ك", img:"https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?w=800"},
-  {id:11, name:"طقم صالون صدف", cat:"أثاث منزلي", desc:"فخامة ملكية لصالونك. طقم كامل مطعّم بالصدف الطبيعي.", fullDesc:"طقم صالون كامل.", materials:"خشب + صدف", size:"طقم كامل", price:"حسب الطلب", img:"https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800"},
-  {id:12, name:"مكتب صدف", cat:"أثاث مكتبي", desc:"مكتب فاخر مطعّم بالصدف، يجمع بين الرقي والوظيفة.", fullDesc:"مكتب فاخر.", materials:"خشب + صدف", size:"حسب الطلب", price:"حسب الطلب", img:"https://images.unsplash.com/photo-1578500494198-246f612d3b3d?w=800"},
-  {id:13, name:"طاولة مكتب صدف", cat:"أثاث مكتبي", desc:"طاولة مكتب أنيقة بتفاصيل صدفية فاخرة.", fullDesc:"طاولة مكتب.", materials:"خشب + صدف", size:"حسب الطلب", price:"حسب الطلب", img:"https://images.unsplash.com/photo-1603006905003-be475563bc59?w=800"},
-  {id:14, name:"بارافان 3 ضلفة", cat:"بيوهات و مداخل", desc:"بارافان فاخر مطعّم بالصدف، يضيف لمسة ملكية للمداخل.", fullDesc:"بارافان.", materials:"خشب + صدف", size:"3 ضلفة", price:"حسب الطلب", img:"https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800"},
-  {id:15, name:"مرايا مدخل صدف", cat:"بيوهات و مداخل", desc:"مرايا فاخرة بإطار مطعّم بالصدف الطبيعي.", fullDesc:"مرايا.", materials:"خشب + صدف", size:"حسب الطلب", price:"حسب الطلب", img:"https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800"},
-  {id:16, name:"صندوق صدف - الشكمجية", cat:"صناديق و شكمجيات", desc:"صندوق فاخر مطعّم بالصدف، لحفظ المجوهرات والذكريات.", fullDesc:"صندوق.", materials:"خشب + صدف", size:"حسب الطلب", price:"حسب الطلب", img:"https://images.unsplash.com/photo-1618220179428-22790b461013?w=800"},
-  {id:17, name:"عكاز صدف", cat:"عكاز صدف", desc:"عكاز مطعّم بالصدف، يجمع بين الأصالة والعملية.", fullDesc:"عكاز.", materials:"خشب + صدف", size:"حسب الطلب", price:"حسب الطلب", img:"https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800"}
+  {id:1, name:"طاولة مثمنة صدف أرابيسك أصلي", cat:"ترابيزات", desc:"قطعة فنية تُضفي بريقاً ملكياً. مطعّمة بصدف طبيعي وموزاييك خشبي هندسي فاخر.", fullDesc:"طاولة مثمنة الأضلاع مصممة بعناية يدوية.", materials:"صدف مصري طبيعي 100% + خشب زان", size:"مثمنة الأضلاع", price:"2520 د.ك", img:"1.jpg"},
+  {id:2, name:"طاولة فلامنجو جانبية مطعمة", cat:"ترابيزات", desc:"الأناقة والعملية في تصميم واحد. مطعّمة بصدف لؤلؤي ونقوش أرابيسك متقنة.", fullDesc:"طاولة جانبية بتصميم متميز وقاعدة متينة.", materials:"خشب زان + صدف طبيعي", size:"مقاس قياسي", price:"840 د.ك", img:"2.jpg"},
+  {id:3, name:"كرسي مشبك صدف تراثي", cat:"أثاث ملكي", desc:"تحفة فنية نادرة مستوحاة من التراث، مطعّمة بالصدف الطبيعي ومصنوعة من خشب الزان المتين.", fullDesc:"كرسي مشبك ملكي قابل للطي والتخزين.", materials:"خشب زان + صدف مصري", size:"ارتفاع ملكي", price:"2640 د.ك", img:"3.jpg"},
+  {id:4, name:"كونسول بومبيه 3 أدراج صدف", cat:"أثاث ملكي", desc:"قطعة فاخرة ومتحفية منحنية الواجهة، مزخرفة بنقوش هندسية دقيقة من الصدف الخالص.", fullDesc:"كونسول فخم بثلاثة أدراج واسعة.", materials:"خشب زان + صدف أصلي", size:"3 أدراج", price:"1440 د.ك", img:"4.jpg"},
+  {id:5, name:"مبخرة ساعة رملية أرابيسك", cat:"مباخر", desc:"عبق الأصالة والفخامة. من خشب الزان المطعم بصدف طبيعي 100% ونقوش نجمية إسلامية.", fullDesc:"مبخرة بتصميم ساعة رملية فريدة.", materials:"خشب زان + صدف", size:"ارتفاع 25سم", price:"54 د.ك", img:"5.jpg"},
+  {id:6, name:"تابوت وصندوق عروسة فاخر", cat:"صناديق", desc:"هدية الزفاف التي تُورّث للأجيال. مطعّم بصدف ناصع ونقوش هندسية إسلامية متداخلة.", fullDesc:"صندوق عروسة ملكي مغطى بالكامل بالصدف.", materials:"خشب + صدف أبيض", size:"60 سم", price:"720 د.ك", img:"6.jpg"},
+  {id:7, name:"صندوق مجوهرات وشكمجية متعدد الأدراج", cat:"صناديق وشكمجيات", desc:"تحفة فنية لحفظ أغلى الذكريات مع أدراج متعددة مخفية وتطعيم يدوي بالكامل.", fullDesc:"صندوق بخور ومجوهرات بـ 5 أدراج.", materials:"خشب الزان + صدف", size:"متعدد الأدراج", price:"288 د.ك", img:"7.jpg"},
+  {id:8, name:"كرسي عرش أرابيسك بظهر عالي", cat:"أثاث ملكي", desc:"رمز السلطة والفخامة بتصميم شرقي أصيل ومطعّم بالكامل بصدف مصري نقي.", fullDesc:"كرسي عرش بظهر مرتفع ومقسّم.", materials:"خشب + صدف كامل", size:"ظهر عالي ومريح", price:"2200 د.ك", img:"8.jpg"},
+  {id:9, name:"طاولة شطرنج صدف ملكي", cat:"ترابيزات وألعاب", desc:"تجسيد للفخامة والمتعة مع لوح شطرنج مطعّم بالصدف الطبيعي والأرابيسك الشرقي.", fullDesc:"طاولة شطرنج فاخرة للديوانيات.", materials:"خشب + صدف وعاج صناعي", size:"80x80سم", price:"19 د.ك", img:"9.jpg"},
+  {id:10, name:"علبة مناديل صدف مجروش ملون", cat:"ديكورات", desc:"لمسة ملكية لأدق التفاصيل بتطعيم الصدف المجروش والأحجار الكريمة الملونة.", fullDesc:"علبة مناديل راقية تناسب المجالس الفاخرة.", materials:"خشب + صدف مجروش", size:"قياسي", price:"33 د.ك", img:"10.jpg"}
 ];
 
-let products = JSON.parse(localStorage.getItem('asala_dyn_products')) || defaultProducts;
+let products = JSON.parse(localStorage.getItem('asala_dyn_products_10')) || defaultProducts;
 const waNumber = "96551118069";
 
 function renderProducts() {
@@ -262,7 +254,7 @@ function openModal(id) {
     <strong>الوصف الكامل:</strong> ${p.fullDesc || p.desc}<br>
     <strong>المواد:</strong> ${p.materials || 'صدف طبيعي 100%'}<br>
     <strong>المقاسات:</strong> ${p.size || 'حسب الطلب'}<br>
-    <strong>حكاية المنتج:</strong> مصنوع يدوياً من خان الخليلي ليناسب ديوانيتكم في الكويت.
+    <strong>حكاية المنتج:</strong> مصنوع يدوياً من خان الخليلي ليناسب ديوانيتكم في الكويت بكل فخامة.
   `;
   document.getElementById('modalWa').href = `https://wa.me/${waNumber}?text=${encodeURIComponent('أريد الاستفسار عن: ' + p.name)}`;
   document.getElementById('productModal').classList.add('open');
@@ -272,7 +264,6 @@ function closeModal() {
   document.getElementById('productModal').classList.remove('open');
 }
 
-// دوال لوحة التحكم والحماية بالإيميل وكلمة السر
 function openLoginModal() {
   document.getElementById('loginModal').classList.add('open');
 }
@@ -285,14 +276,13 @@ function checkAdminLogin() {
   const email = document.getElementById('adminEmailInput').value;
   const pass = document.getElementById('adminPassInput').value;
   
-  // بيانات الدخول الرسمية للادمن
   if(email === 'admin@asala.com' && pass === '123456') {
     closeLoginModal();
     document.getElementById('adminPanelModal').classList.add('open');
     renderAdminList();
     alert('مرحباً بك يا ملك في لوحة التحكم!');
   } else {
-    alert('الإيميل أو كلمة السر خطأ! تأكد من البيانات.');
+    alert('الإيميل أو كلمة السر خطأ!');
   }
 }
 
@@ -316,14 +306,14 @@ function renderAdminList() {
 
 function addNewProduct() {
   const name = document.getElementById('newName').value;
-  const cat = document.getElementById('newCat').value || 'أثاث فخم';
+  const cat = document.getElementById('newCat').value || 'تحف فخمة';
   const price = document.getElementById('newPrice').value;
-  const img = document.getElementById('newImg').value || 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800';
+  const img = document.getElementById('newImg').value || '1.jpg';
   const desc = document.getElementById('newDesc').value;
   const fullDesc = document.getElementById('newFullDesc').value;
 
   if(!name || !price) {
-    alert('يرجى إدخال اسم المنتج والسعر على الأقل!');
+    alert('يرجى إدخال اسم المنتج والسعر!');
     return;
   }
 
@@ -333,11 +323,10 @@ function addNewProduct() {
   };
 
   products.unshift(newP);
-  localStorage.setItem('asala_dyn_products', JSON.stringify(products));
+  localStorage.setItem('asala_dyn_products_10', JSON.stringify(products));
   renderProducts();
   renderAdminList();
 
-  // تفريغ الحقول
   document.getElementById('newName').value = '';
   document.getElementById('newCat').value = '';
   document.getElementById('newPrice').value = '';
@@ -345,13 +334,13 @@ function addNewProduct() {
   document.getElementById('newDesc').value = '';
   document.getElementById('newFullDesc').value = '';
 
-  alert('✅ تمت إضافة المنتج بنجاح وتحديث المتجر فوراً!');
+  alert('✅ تمت إضافة المنتج وتحديث الموقع فوراً!');
 }
 
 function deleteProduct(index) {
-  if(confirm('هل أنت متأكد من حذف هذا المنتج نهائياً؟')) {
+  if(confirm('هل أنت متأكد من مسح هذا المنتج نهائياً؟')) {
     products.splice(index, 1);
-    localStorage.setItem('asala_dyn_products', JSON.stringify(products));
+    localStorage.setItem('asala_dyn_products_10', JSON.stringify(products));
     renderProducts();
     renderAdminList();
     alert('🗑️ تم الحذف بنجاح');
